@@ -59,7 +59,7 @@ body {
 }
 #texto2{
     position: relative;
-    top: -725px;
+    top: -752px;
     color: #ffffff;
     left: 759px;
     font-size: 34px;
@@ -67,7 +67,7 @@ body {
 }
 #texto3{
     position: relative;
-    top: -767px;
+    top: -819px;
     color: #ffffff;
     left: 454px;
     font-size: 34px;
@@ -75,14 +75,40 @@ body {
 }
 #texto4{
     position: relative;
-    top: -809px;
+    top: -887px;
     color: #ffffff;
     left: 122px;
     font-size: 34px;
     font-family: 'Merriweather Sans', sans-serif;
 }
-
-
+#pedacos1{
+    position: relative;
+    color: #ffffff;
+    left: 28px;
+    font-size: 18px;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+#pedacos2{
+    position: relative;
+    color: #ffffff;
+    left: 28px;
+    font-size: 18px;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+#pedacos3{
+    position: relative;
+    color: #ffffff;
+    left: 13px;
+    font-size: 18px;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+#pedacos4{
+    position: relative;
+    color: #ffffff;
+    left: 38px;
+    font-size: 18px;
+    font-family: 'Merriweather Sans', sans-serif;
+}
 
 #menu {
     margin-top:-28%;

@@ -40,15 +40,19 @@
 
     <div id="texto1">
         <p>GIGANTE</p>
+        <p id="pedacos1">12 pedaços</p>
     </div>
     <div id="texto2">
         <p>GRANDE</p>
+        <p id="pedacos2">8 pedaços</p>
     </div>
     <div id="texto3">
         <p>MÉDIA</p>
+        <p id="pedacos3">6 pedaços</p>
     </div>
     <div id="texto4">
         <p>PEQUENA</p>
+        <p id="pedacos4">4 pedaços</p>
     </div>
     
 </div>

@@ -16,7 +16,7 @@
     <header>
         <div class="cabecalho">
 		    <div id="logo">
-			<img src="./imagens/logo.png" width="290" height="255">
+			<img id="logo1" src="./imagens/logo.png" width="290" height="255">
 		    </div>
         </div>
 
@@ -24,9 +24,9 @@
     <ul>
         <li><a class="exemplo" href="index.php">Home</a></li>
         <li><a class="exemplo" id="sobre" href="sobre.php">Sobre</a></li>
-        <li><a class="exemplo" href="cardapio.php">Cardapio</a></li>
+        <li><a class="exemplo" href="tamanho.php">Cardapio</a></li>
         <li><a class="exemplo" href="Redes.php" >Redes</a></li>
-        <li><a class="exemplo" href="listaraluno.php">Administração</a></li>
+        <li><a class="exemplo" href="listarproduto.php">Administração</a></li>
     </div>
     </ul>
 
