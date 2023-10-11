@@ -42,13 +42,13 @@
         <p>GIGANTE</p>
     </div>
     <div id="texto2">
-        
+        <p>GRANDE</p>
     </div>
     <div id="texto3">
-        
+        <p>MÉDIA</p>
     </div>
     <div id="texto4">
-        >
+        <p>PEQUENA</p>
     </div>
     
 </div>
