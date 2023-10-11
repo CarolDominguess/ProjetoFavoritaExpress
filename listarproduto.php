@@ -36,15 +36,15 @@
     				<td>$nome</td>
     				<td>$quantidade</td>
 					<td>$preco</td>
-    				<td><a href='formeditaraluno.php?id=$id&nome=$nome&quantidade=$quantidade&preco=$preco'>Editar</a></td>
-    				<td><a href='excluiraluno.php?id=$id'>Excluir</a></td>
+    				<td><a href='formeditarproduto.php?id=$id&nome=$nome&quantidade=$quantidade&preco=$preco'>Editar</a></td>
+    				<td><a href='excluirproduto.php?id=$id'>Excluir</a></td>
     			</tr>";
     	}
     	?>    
     </table>
     <br/>
     <!-- Link para uma nova pagina de cadastro de aluno. -->
-    <a href="cadastroaluno.php">Novo Produto</a> <br><br><br>
+    <a href="cadastroproduto.php">Novo Produto</a> <br><br><br>
 	<a href="index.php">Me leve de volta</a>
 </body>
 </html>

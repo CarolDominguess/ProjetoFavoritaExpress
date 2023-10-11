@@ -11,5 +11,5 @@
     mysqli_query($conexao, $excluir);
 
     //Redireciona para a pagina inicial.
-    header("Location: listaraluno.php");
+    header("Location: listarproduto.php");
 ?>

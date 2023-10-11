@@ -12,7 +12,7 @@
     	$quantidade = $_GET["quantidade"];
         $preco = $_GET["preco"];
     ?>
-    <form action="editaraluno.php?id=<?php echo $id; ?>" method="post">
+    <form action="editarproduto.php?id=<?php echo $id; ?>" method="post">
         Nome: <input type="text" id="nome" name="nome" value="<?php echo $nome; ?>" /><br/>        
         Quantidade: <input type="text" id="quantidade" name="quantidade" value="<?php echo $quantidade; ?>" /><br/>       
         Preço: <input type="text" id="preco" name="preco" value="<?php echo $preco; ?>" /><br/>

@@ -7,7 +7,7 @@
     <h2>Cadastro de Produtos</h2>
     <br/>
     <!--formulário para cadastro de aluno, passando os parametro via post. -->
-    <form action="inseriraluno.php" method="post">
+    <form action="inserirproduto.php" method="post">
         Nome: <input type="text" id="nome" name="nome"/><br/>        
         Quantidade: <input type="text" id="quantidade" name="quantidade"/><br/>
         Preço: <input type="text" id="preco" name="preco"/><br/>

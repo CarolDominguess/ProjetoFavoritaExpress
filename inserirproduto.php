@@ -12,5 +12,5 @@
     mysqli_query($conexao, $inserir);
 
     //Redireciona para a pagina inicial.
-    header("Location: listaraluno.php");
+    header("Location: listarproduto.php");
 ?>
