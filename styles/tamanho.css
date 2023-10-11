@@ -15,9 +15,13 @@ body {
            
 }
 #tamanho{
-    background-image: url("../imagens/tamanho.png");
-    height: 280px;
-    background-size: cover
+    background-image: url(../imagens/tamanho.png);
+    height: 339px;
+    width: 1294px;
+    right: -60px;
+    background-size: cover;
+    position: relative;
+    top: 200px;
 }
 
 
