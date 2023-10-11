@@ -33,6 +33,7 @@ body{
 .wrapper h1 {
     font-size: 36px;
     text-align: center;
+    font-family: 'Merriweather Sans', sans-serif;
 }
 
 .wrapper .input-box {
