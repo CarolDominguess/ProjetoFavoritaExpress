@@ -21,9 +21,34 @@
 
     <h2 id="texto"></h2>
 
-    <div id="tamanho">
+    <div id="tamanho1">
         <div id="pizza"></div>
         
+    </div>
+    <div id="tamanho2">
+        <div id="pizza"></div>
+        
+    </div>
+    <div id="tamanho3">
+        <div id="pizza"></div>
+        
+    </div>
+    <div id="tamanho4">
+        <div id="pizza"></div>
+        
+    </div>
+
+    <div id="texto1">
+        <p>GIGANTE</p>
+    </div>
+    <div id="texto2">
+        
+    </div>
+    <div id="texto3">
+        
+    </div>
+    <div id="texto4">
+        >
     </div>
     
 </div>

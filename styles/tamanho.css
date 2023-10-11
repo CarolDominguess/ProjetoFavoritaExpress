@@ -14,16 +14,50 @@ body {
             overflow-x: hidden;
            
 }
-#tamanho{
-    background-image: url(../imagens/tamanho.png);
-    height: 339px;
-    width: 1294px;
+#tamanho1{
+    background-image: url(../imagens/pizzaGG.png);
+    height: 247px;
+    width: 261px;
     right: -60px;
     background-size: cover;
     position: relative;
-    top: 200px;
+    top: 266px;
 }
-
+#tamanho2{
+    background-image: url(../imagens/pizzaGG.png);
+    height: 299px;
+    width: 275px;
+    right: -325px;
+    background-size: cover;
+    position: relative;
+    top: 2px;
+}
+#tamanho3{
+    background-image: url(../imagens/pizzaGG.png);
+    height: 332px;
+    width: 324px;
+    right: -619px;
+    background-size: cover;
+    position: relative;
+    top: -315px;
+}
+#tamanho4{
+    background-image: url(../imagens/pizzaGG.png);
+    height: 323px;
+    width: 358px;
+    right: -936px;
+    background-size: cover;
+    position: relative;
+    top: -660px;
+}
+#texto1{
+    position: relative;
+    top: 215px;
+    color: aliceblue;
+    left: 1107px;
+    font-size: 28px;
+    font-family: 'Merriweather Sans', sans-serif;
+}
 
 #texto{
     text-align: center;
