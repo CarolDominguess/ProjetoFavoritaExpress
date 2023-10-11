@@ -16,7 +16,7 @@
     <header>
         <div class="cabecalho">
 		    <div id="logo">
-			<img src="./imagens/logo.png" width="290" height="255">
+			<img id="logo1" src="./imagens/logo.png" width="290" height="255">
 		    </div>
         </div>
 
