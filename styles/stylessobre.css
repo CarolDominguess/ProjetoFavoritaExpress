@@ -1,0 +1,180 @@
+A {text-decoration: none;}
+    * {
+            margin:0;
+            box-sizing: 0;
+        }
+body {
+            width: 100vw;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-image: url("../imagens/fundosobre.jpg");
+            background-size: 100%;
+            position: fixed;
+            margin: 0;
+            overflow: hidden
+           
+}
+#logo{
+    text-align: center;
+}
+#video{
+    text-align: right;
+    width: 600px;
+    height: 300px;
+    font-size: 30px;
+    position: fixed;
+    top: 310px;
+    right: 60px;
+   
+}
+#display{
+    display: flex;
+}
+#texto2{
+    text-align: left;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-family: 'Merriweather Sans', sans-serif;
+    position: fixed;
+    top: 376px;
+    left: 63px;
+
+}
+#menu {
+    margin-top:-28%;
+    
+}
+header{
+display: block;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+
+}
+
+li{
+display: inline-block;
+margin: 20px;
+
+}
+
+ul{
+    text-align: left;
+    width: 100%;
+    color: rgb(243, 239, 239);
+    font-size: 15px;
+    font-family: 'Merriweather Sans', sans-serif;
+    position: fixed;
+    top: 100px;
+    
+}
+
+#sobre{
+    color: #d7a41d;
+}
+@font-face {
+    font-family: minhaFonte;
+    src: url(../fonts/AadPro-Bold.woff2);
+}
+@font-face {
+    font-family: minhaFonte2;
+    src: url(../fonts/Mooli-Regular.ttf);
+}
+@font-face {
+    font-family: minhaFonte3;
+    src: url(../fonts/JosefinSans-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: minhaFonte4;
+    src: url(../fonts/Nunito-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: minhaFonte5;
+    src: url(../fonts/MerriweatherSans-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: minhaFonte6;
+    src: url(../fonts/GraviolaSoftRegular.otf);
+}
+
+
+#inscreva-se-btn{
+    background-color: #ca0808;
+    border-radius: 50px;
+    right: 100px; 
+    position: fixed;
+    font-size: 30px;
+    font-family: minhaFonte;
+    margin: 0px;
+    top: 110px;
+
+}
+#inscreva-se-btn:hover{
+border: 2px solid white;
+background: transparent;
+padding: 1px;
+border-radius: 50px;
+transition-delay: 0s;
+transition-duration: 0.4s;
+opacity: 1;
+
+}
+
+#menudireito{
+    font-family: 'Merriweather Sans', sans-serif;
+    right: 10px; 
+    position:absolute;
+    font-size: 25px;
+    font-family: minhaFonte;
+    display: inline-block;
+    margin: 0px;
+    
+}
+
+#text{
+    font-size: 15px;
+    font-family: minhaFonte6;
+    margin:0;
+    width: 150px;
+    cursor: pointer; 
+    text-align: center;
+    position: relative;
+    top: -6px;
+}
+
+.exemplo{
+    color: #e9e7e6;
+}
+.exemplo:hover{
+    color: #d7a41d;
+}
+
+@media screen and (min-width: 1500px) {
+    body {
+            width: 100vw;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-image: url("../imagens/pizza1.jpg");
+            background-size: 2000px;
+            position: fixed;
+            margin: 0;
+            overflow: hidden
+    }
+
+}
+
+@media screen and (min-width: 1500px) {
+    ul{
+        text-align: left;
+        width: 100%;
+        color: rgb(243, 239, 239);
+        font-size: 15px;
+        font-family: 'Merriweather Sans', sans-serif;
+        position: fixed;
+        top: 100px;
+        right: auto;
+        
+    }
+
+}

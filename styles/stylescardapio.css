@@ -1,0 +1,489 @@
+A {text-decoration: none;}
+    * {
+            margin:0;
+            box-sizing: 0;
+        }
+body {
+            width: 100vw;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-image: url("../imagens/fundomadeira.jpg");
+            background-size: 100%;
+            margin: 0;
+            overflow-y:auto;
+            overflow-x: hidden;
+           
+}
+#scroll{
+    width: 100vw;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-image: url("../imagens/fundomadeira.jpg");
+            background-size: 100%;
+            margin: 0;
+            overflow-y:auto;
+            overflow-x: hidden;
+}
+
+#caixa{
+    width: 115vw;
+    height: 18rem;
+    background: transparent;
+    margin: 31rem auto 0 auto;
+    border: solid 0px;
+    display: flex;
+    padding: 0rem;
+    margin-left: 2rem;
+}
+
+#caixa div{
+    min-width: 17rem;
+    max-height: 35rem;
+    border: solid 0px;
+    margin-left: 3rem;
+    
+}
+#caixa div p{
+    margin-top: 40%;
+    margin-left: 40%;
+    font: bold 2rem sans-serif;
+    color: white;
+}
+#pizza1{
+    background-image: url("../imagens/pizzamodelo1.png");
+    height: 271px;
+    background-size: cover
+}
+
+#texto1{
+    position: relative;
+    top: 200px;
+    left: -59px;
+}
+#pizza2{
+    background-image: url("../imagens/pizzamodelo2.png");
+    height: 273px;
+    background-size: cover
+}
+#texto2{
+    position: relative;
+    top: 200px;
+    left: -59px;
+}
+#pizza3{
+    background-image: url("../imagens/pizzamodelo3.png");
+    height: 270px;
+    background-size: cover
+}
+#texto3{
+    position: relative;
+    top: 200px;
+    left: -59px;
+}
+#pizza7{
+    background-image: url("../imagens/pizzamodelo7.png");
+    height: 288px;
+    background-size: cover
+}
+#texto7{
+    position: relative;
+    top: 200px;
+}
+#pizza5{
+    background-image: url("../imagens/pizzamodelo5.png");
+    height: 267px;
+    background-size: cover
+}
+#texto5{
+    position: relative;
+    top: 200px;
+    left: -59px;
+}
+#pizza6{
+    background-image: url("../imagens/pizzamodelo6.png");
+    height: 280px;
+    background-size: cover;
+    margin-left: 3rem;
+}
+#texto6{
+    position: relative;
+    top: 200px;
+    left: -59px;
+}
+#pizza4{
+    background-image: url("../imagens/pizzamodelo4.png");
+    height: 287px;
+    background-size: cover;
+    margin-left: 2rem;
+}
+#texto4{
+    position: relative;
+    top: 200px;
+    left: -59px;
+}
+#caixaa{
+    width: 96vw;
+    height: 15rem;
+    background: transparent;
+    margin: 23rem auto 0 auto;
+    border: solid 0px;
+    display: flex;
+    padding: 3rem;
+    margin-left: -1rem;
+    
+}
+
+#caixaa div{
+    min-width: 19rem;
+    max-height: 35rem;
+    border: solid 0px;
+    
+}
+#caixaa div p{
+    margin-top: 40%;
+    margin-left: 40%;
+    font: bold 2rem sans-serif;
+    color: white;
+}
+#caixaaa{
+    width: 96vw;
+    height: 15rem;
+    background: transparent;
+    margin: -43rem auto 0 auto;
+    border: solid 0px;
+    display: flex;
+    padding: 3rem;
+    margin-left: 2rem;
+    
+}
+
+#caixaaa div{
+    min-width: 17rem;
+    max-height: 35rem;
+    border: solid 0px;
+    
+}
+#caixaaa div p{
+    margin-top: 40%;
+    margin-left: 40%;
+    font: bold 2rem sans-serif;
+    color: white;
+}
+#pizza8{
+    background-image: url("../imagens/pizzamodelo8.png");
+    height: 288px;
+    background-size: cover
+}
+#texto8{
+    position: relative;
+    top: 200px;
+}
+#pizza11{
+    background-image: url("../imagens/pizzamodelo11.png");
+    height: 281px;
+    background-size: cover;
+    margin-left: 4rem;
+}
+#texto11{
+    position: relative;
+    top: 200px;
+    left: -59px;
+}
+#pizza9{
+    background-image: url("../imagens/pizzamodelo9.png");
+    height: 291px;
+    background-size: cover;
+    
+}
+#texto9{
+    position: relative;
+    top: 200px;
+}
+#pizza10{
+    background-image: url("../imagens/pizzamodelo10.png");
+    height: 280px;
+    background-size: cover
+}
+#texto10{
+    position: relative;
+    top: 200px;
+}
+#pizza12{
+    background-image: url("../imagens/pizzamodelo12.png");
+    height: 280px;
+    background-size: cover
+}
+#texto12{
+    position: relative;
+    top: 200px;
+}
+#caixaaaa{
+    width: 96vw;
+    height: 15rem;
+    background: transparent;
+    margin: 4rem auto 0 auto;
+    border: solid 0px;
+    display: flex;
+    padding: 3rem;
+    margin-left: 0rem;
+    
+}
+
+#caixaaaa div{
+    min-width: 17rem;
+    max-height: 35rem;
+    border: solid 0px;
+    margin-left: 2rem;
+    
+}
+#caixaaaa div p{
+    margin-top: 40%;
+    margin-left: 40%;
+    font: bold 2rem sans-serif;
+    color: white;
+}
+#caixaaaaa{
+    width: 96vw;
+    height: 15rem;
+    background: transparent;
+    margin: 4rem auto 0 auto;
+    border: solid 0px;
+    display: flex;
+    padding: 3rem;
+    margin-left: -1rem;
+    
+}
+
+#caixaaaaa div{
+    min-width: 17rem;
+    max-height: 35rem;
+    border: solid 0px;
+    margin-left: 3rem;
+    
+}
+#caixaaaaa div p{
+    margin-top: 40%;
+    margin-left: 40%;
+    font: bold 2rem sans-serif;
+    color: white;
+}
+#pizza13{
+    background-image: url("../imagens/pizzamodelo13.png");
+    height: 311px;
+    background-size: cover;
+    margin-left: 2rem;
+}
+#texto13{
+    position: relative;
+    top: 200px;
+}
+#pizza14{
+    background-image: url("../imagens/pizzamodelo14.png");
+    height: 315px;
+    background-size: cover;
+    margin-left: 1rem;
+}
+#texto14{
+    position: relative;
+    top: 200px;
+}
+#pizza15{
+    background-image: url("../imagens/pizzamodelo15.png");
+    height: 291px;
+    background-size: cover;
+    margin-left: 1rem;
+}
+#texto15{
+    position: relative;
+    top: 200px;
+}
+#pizza16{
+    background-image: url("../imagens/pizzamodelo16.png");
+    height: 289px;
+    background-size: cover;
+    margin-left: 1rem;
+}
+#texto16{
+    position: relative;
+    top: 200px;
+}
+#pizza17{
+    background-image: url("../imagens/pizzamodelo17.png");
+    height: 280px;
+    background-size: cover
+}
+#texto17{
+    position: relative;
+    top: 200px;
+}
+#pizza18{
+    background-image: url("../imagens/pizzamodelo18.png");
+    height: 280px;
+    background-size: cover
+}
+#texto18{
+    position: relative;
+    top: 200px;
+}
+#pizza19{
+    background-image: url("../imagens/pizzamodelo19.png");
+    height: 280px;
+    background-size: cover
+}
+#texto19{
+    position: relative;
+    top: 200px;
+}
+#pizza20{
+    background-image: url("../imagens/pizzamodelo20.png");
+    height: 280px;
+    background-size: cover
+}
+#texto20{
+    position: relative;
+    top: 200px;
+}
+
+
+
+
+#texto{
+    text-align: center;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-family: 'Merriweather Sans', sans-serif;
+    position: fixed;
+    top: 69px;
+    
+}
+#menu {
+    margin-top:-28%;
+    
+}
+header{
+display: block;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+
+}
+
+li{
+display: inline-block;
+margin: 20px;
+
+}
+
+ul{
+    text-align: left;
+    width: 100%;
+    color: rgb(243, 239, 239);
+    font-size: 15px;
+    font-family: 'Merriweather Sans', sans-serif;
+    position: fixed;
+    top: 100px;
+    
+}
+@font-face {
+    font-family: minhaFonte;
+    src: url(../fonts/AadPro-Bold.woff2);
+}
+@font-face {
+    font-family: minhaFonte2;
+    src: url(../fonts/Mooli-Regular.ttf);
+}
+@font-face {
+    font-family: minhaFonte3;
+    src: url(../fonts/JosefinSans-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: minhaFonte4;
+    src: url(../fonts/Nunito-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: minhaFonte5;
+    src: url(../fonts/MerriweatherSans-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: minhaFonte6;
+    src: url(../fonts/GraviolaSoftRegular.otf);
+}
+
+
+#inscreva-se-btn{
+    border: 2px solid #ca0808;
+    background-color: #ca0808;
+    border-radius: 50px;
+    right: 100px; 
+    position: fixed;
+    font-size: 30px;
+    font-family: minhaFonte;
+    margin: 0px;
+    top: 70px;
+
+}
+#inscreva-se-btn:hover{
+border: 2px solid white;
+background: transparent;
+padding: -1px;
+border-radius: 50px;
+transition-delay: 0s;
+transition-duration: 0.4s;
+opacity: 1;
+
+}
+
+#menudireito{
+    font-family: 'Merriweather Sans', sans-serif;
+    right: 10px; 
+    position:absolute;
+    font-size: 25px;
+    font-family: minhaFonte;
+    display: inline-block;
+    margin: 0px;
+    
+}
+
+#text{
+    color: white;
+    font-size: 15px;
+    font-family: minhaFonte7;
+    margin:0;
+    width: 150px;
+    cursor: pointer; 
+    text-align: center;
+    position: relative;
+    top: -6px;
+}
+
+
+
+@media screen and (min-width: 1500px) {
+    body {
+            width: 100vw;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-image: url("../imagens/pizza1.jpg");
+            background-size: 2000px;
+            position: fixed;
+            margin: 0;
+            overflow: hidden
+    }
+
+}
+
+
+@media screen and (max-width: 1172px) {
+    #texto{
+        text-align: center;
+        width: 100%;
+        color: rgb(243, 239, 239);
+        font-size: 70px;
+        font-family: 'Merriweather Sans', sans-serif;
+        position: fixed;
+        top: 5000px;
+        
+    }
+
+}
