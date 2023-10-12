@@ -15,7 +15,7 @@
 <body>
     <header>
     <div id="menudireito">
-        <a href="acesse.php" id="inscreva-se-btn"><li id="text">Faça seu pedido</li></a>
+        <a href="cardapio.php" id="inscreva-se-btn"><li id="text">Faça seu pedido</li></a>
     </div>
     </header>   
 

@@ -15,39 +15,39 @@ body {
 }
 #tamanho1{
     background-image: url(../imagens/pizzaGG.png);
-    height: 247px;
-    width: 261px;
+    height: 223px;
+    width: 244px;
     right: -84px;
     background-size: cover;
     position: relative;
-    top: 224px;
+    top: 162px;
 }
 #tamanho2{
     background-image: url(../imagens/pizzaGG.png);
-    height: 299px;
-    width: 275px;
+    height: 279px;
+    width: 253px;
     right: -358px;
     background-size: cover;
     position: relative;
-    top: -41px;
+    top: -83px;
 }
 #tamanho3{
     background-image: url(../imagens/pizzaGG.png);
-    height: 332px;
-    width: 324px;
+    height: 296px;
+    width: 305px;
     right: -665px;
     background-size: cover;
     position: relative;
-    top: -357px;
+    top: -383px;
 }
 #tamanho4{
     background-image: url(../imagens/pizzaGG.png);
-    height: 328px;
-    width: 358px;
+    height: 300px;
+    width: 329px;
     right: -1001px;
     background-size: cover;
     position: relative;
-    top: -701px;
+    top: -688px;
 }
 #texto1{
     position: relative;
@@ -59,7 +59,7 @@ body {
 }
 #texto2{
     position: relative;
-    top: -752px;
+    top: -804px;
     color: #ffffff;
     left: 759px;
     font-size: 34px;
@@ -67,7 +67,7 @@ body {
 }
 #texto3{
     position: relative;
-    top: -819px;
+    top: -933px;
     color: #ffffff;
     left: 454px;
     font-size: 34px;
@@ -75,7 +75,7 @@ body {
 }
 #texto4{
     position: relative;
-    top: -887px;
+    top: -1064px;
     color: #ffffff;
     left: 122px;
     font-size: 34px;
@@ -83,32 +83,78 @@ body {
 }
 #pedacos1{
     position: relative;
-    color: #ffffff;
+    color: rgb(189, 189, 189);
     left: 28px;
     font-size: 18px;
     font-family: 'Merriweather Sans', sans-serif;
 }
 #pedacos2{
     position: relative;
-    color: #ffffff;
+    color: rgb(189, 189, 189);
     left: 28px;
     font-size: 18px;
     font-family: 'Merriweather Sans', sans-serif;
 }
 #pedacos3{
     position: relative;
-    color: #ffffff;
+    color: rgb(189, 189, 189);
     left: 13px;
     font-size: 18px;
     font-family: 'Merriweather Sans', sans-serif;
 }
 #pedacos4{
     position: relative;
-    color: #ffffff;
+    color: rgb(189, 189, 189);
     left: 38px;
     font-size: 18px;
     font-family: 'Merriweather Sans', sans-serif;
 }
+
+#preco1{
+    position: relative;
+    color: yellow;
+    left: 9px;
+    font-size: 50px;
+    font-family: minhaFonte7;
+}
+#preco2{
+    position: relative;
+    color: yellow;
+    left: 11px;
+    font-size: 50px;
+    font-family: minhaFonte7;
+}
+#preco3{
+    position: relative;
+    color: yellow;
+    left: -10px;
+    font-size: 50px;
+    font-family: minhaFonte7;
+}
+#preco4{
+    position: relative;
+    color: yellow;
+    left: 28px;
+    font-size: 50px;
+    font-family: minhaFonte7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #menu {
     margin-top:-28%;
@@ -161,6 +207,10 @@ ul{
 @font-face {
     font-family: minhaFonte6;
     src: url(../fonts/GraviolaSoftRegular.otf);
+}
+@font-face {
+    font-family: minhaFonte7;
+    src: url(../fonts/GROBOLD.ttf);
 }
 
 

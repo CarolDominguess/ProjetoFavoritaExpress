@@ -15,7 +15,7 @@
 <body>
     <header>
     <div id="menudireito">
-        <a href="acesse.php" id="inscreva-se-btn"><li id="text">Faça seu pedido</li></a>
+        <a href="cardapio.php" id="inscreva-se-btn"><li id="text">Faça seu pedido</li></a>
     </div>
     </header>   
 
@@ -41,18 +41,23 @@
     <div id="texto1">
         <p>GIGANTE</p>
         <p id="pedacos1">12 pedaços</p>
+        <p id="preco1">75,00</p>
+
     </div>
     <div id="texto2">
         <p>GRANDE</p>
         <p id="pedacos2">8 pedaços</p>
+        <p id="preco2">75,00</p>
     </div>
     <div id="texto3">
         <p>MÉDIA</p>
         <p id="pedacos3">6 pedaços</p>
+        <p id="preco3">75,00</p>
     </div>
     <div id="texto4">
         <p>PEQUENA</p>
         <p id="pedacos4">4 pedaços</p>
+        <p id="preco4">75,00</p>
     </div>
     
 </div>
