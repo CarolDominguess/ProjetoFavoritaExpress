@@ -20,7 +20,7 @@ body {
     right: -84px;
     background-size: cover;
     position: relative;
-    top: 162px;
+    top: 175px;
 }
 #tamanho2{
     background-image: url(../imagens/pizzaGG.png);
@@ -29,7 +29,7 @@ body {
     right: -358px;
     background-size: cover;
     position: relative;
-    top: -83px;
+    top: -68px;
 }
 #tamanho3{
     background-image: url(../imagens/pizzaGG.png);
@@ -38,7 +38,7 @@ body {
     right: -665px;
     background-size: cover;
     position: relative;
-    top: -383px;
+    top: -356px;
 }
 #tamanho4{
     background-image: url(../imagens/pizzaGG.png);
@@ -47,37 +47,37 @@ body {
     right: -1001px;
     background-size: cover;
     position: relative;
-    top: -688px;
+    top: -666px;
 }
 #texto1{
     position: relative;
-    top: -683px;
+    top: -651px;
     color: #ffffff;
-    left: 1100px;
+    left: 1090px;
     font-size: 34px;
     font-family: 'Merriweather Sans', sans-serif;
 }
 #texto2{
     position: relative;
-    top: -804px;
+    top: -800px;
     color: #ffffff;
-    left: 759px;
+    left: 740px;
     font-size: 34px;
     font-family: 'Merriweather Sans', sans-serif;
 }
 #texto3{
     position: relative;
-    top: -933px;
+    top: -949px;
     color: #ffffff;
-    left: 454px;
+    left: 444px;
     font-size: 34px;
     font-family: 'Merriweather Sans', sans-serif;
 }
 #texto4{
     position: relative;
-    top: -1064px;
+    top: -1096px;
     color: #ffffff;
-    left: 122px;
+    left: 124px;
     font-size: 34px;
     font-family: 'Merriweather Sans', sans-serif;
 }
@@ -137,6 +137,38 @@ body {
     left: 28px;
     font-size: 50px;
     font-family: minhaFonte7;
+}
+#sifrao1{
+    position: relative;
+    color: rgb(255, 0, 0);
+    left: -12px;
+    font-size: 19px;
+    font-family: minhaFonte7;
+    top: -54px;
+}
+#sifrao2{
+    position: relative;
+    color: rgb(255, 0, 0);
+    left: -10px;
+    font-size: 19px;
+    font-family: minhaFonte7;
+    top: -54px;
+}
+#sifrao3{
+    position: relative;
+    color: rgb(255, 0, 0);
+    left: -30px;
+    font-size: 19px;
+    font-family: minhaFonte7;
+    top: -54px;
+}
+#sifrao4{
+    position: relative;
+    color: rgb(255, 0, 0);
+    left: 8px;
+    font-size: 19px;
+    font-family: minhaFonte7;
+    top: -54px;
 }
 
 

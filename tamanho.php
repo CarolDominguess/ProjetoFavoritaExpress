@@ -15,7 +15,7 @@
 <body>
     <header>
     <div id="menudireito">
-        <a href="cardapio.php" id="inscreva-se-btn"><li id="text">Faça seu pedido</li></a>
+        <a href="cardapio.php" id="inscreva-se-btn"><li id="text">Escolha o Sabor</li></a>
     </div>
     </header>   
 
@@ -42,22 +42,27 @@
         <p>GIGANTE</p>
         <p id="pedacos1">12 pedaços</p>
         <p id="preco1">75,00</p>
+        <p id="sifrao1">R$</p>
+
 
     </div>
     <div id="texto2">
         <p>GRANDE</p>
         <p id="pedacos2">8 pedaços</p>
         <p id="preco2">75,00</p>
+        <p id="sifrao2">R$</p>
     </div>
     <div id="texto3">
         <p>MÉDIA</p>
         <p id="pedacos3">6 pedaços</p>
         <p id="preco3">75,00</p>
+        <p id="sifrao3">R$</p>
     </div>
     <div id="texto4">
         <p>PEQUENA</p>
         <p id="pedacos4">4 pedaços</p>
         <p id="preco4">75,00</p>
+        <p id="sifrao4">R$</p>
     </div>
     
 </div>
