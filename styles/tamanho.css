@@ -20,7 +20,7 @@ body {
     right: -84px;
     background-size: cover;
     position: relative;
-    top: 175px;
+    top: 136px;
 }
 #tamanho2{
     background-image: url(../imagens/pizzaGG.png);
@@ -29,7 +29,7 @@ body {
     right: -358px;
     background-size: cover;
     position: relative;
-    top: -68px;
+    top: -104px;
 }
 #tamanho3{
     background-image: url(../imagens/pizzaGG.png);
@@ -38,7 +38,7 @@ body {
     right: -665px;
     background-size: cover;
     position: relative;
-    top: -356px;
+    top: -394px;
 }
 #tamanho4{
     background-image: url(../imagens/pizzaGG.png);
@@ -47,11 +47,11 @@ body {
     right: -1001px;
     background-size: cover;
     position: relative;
-    top: -666px;
+    top: -704px;
 }
 #texto1{
     position: relative;
-    top: -651px;
+    top: -696px;
     color: #ffffff;
     left: 1090px;
     font-size: 34px;
@@ -59,7 +59,7 @@ body {
 }
 #texto2{
     position: relative;
-    top: -800px;
+    top: -843px;
     color: #ffffff;
     left: 740px;
     font-size: 34px;
@@ -67,7 +67,7 @@ body {
 }
 #texto3{
     position: relative;
-    top: -949px;
+    top: -991px;
     color: #ffffff;
     left: 444px;
     font-size: 34px;
@@ -75,7 +75,7 @@ body {
 }
 #texto4{
     position: relative;
-    top: -1096px;
+    top: -1138px;
     color: #ffffff;
     left: 124px;
     font-size: 34px;
@@ -170,7 +170,15 @@ body {
     font-family: minhaFonte7;
     top: -54px;
 }
-
+#menutexto{
+    text-align: center;
+    position: relative;
+    top: 56px;
+    left: auto;
+    color: #f9f9f9;
+    font-size: 50px;
+    font-family: 'minhaFonte7';
+}
 
 
 
@@ -269,7 +277,40 @@ opacity: 1;
 
 }
 
+#inscreva-se-btnn{
+    border: 2px solid #ca0808;
+    background-color: #ca0808;
+    border-radius: 50px;
+    right: 1180px; 
+    position: fixed;
+    font-size: 30px;
+    font-family: minhaFonte;
+    margin: 0px;
+    top: 70px;
+
+}
+#inscreva-se-btnn:hover{
+border: 2px solid white;
+background: transparent;
+padding: -1px;
+border-radius: 50px;
+transition-delay: 0s;
+transition-duration: 0.4s;
+opacity: 1;
+
+}
+
 #menudireito{
+    font-family: 'Merriweather Sans', sans-serif;
+    right: 10px; 
+    position:absolute;
+    font-size: 25px;
+    font-family: minhaFonte;
+    display: inline-block;
+    margin: 0px;
+    
+}
+#menuesquerdo{
     font-family: 'Merriweather Sans', sans-serif;
     right: 10px; 
     position:absolute;

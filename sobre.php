@@ -36,7 +36,8 @@
     </header>
     <div id="display">
         <iframe id= "video" width="360" height="715" src="https://www.youtube.com/embed/n9SwPwxtJB8?si=zCQb-nU0rWyJ6G7N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <h2 id="texto2">Lorem ipsum dolor sit amet. Ab ipsum Quis sed dolorem tempore aut voluptas<br> reiciendis. 
+        <p id="texto1">Welcome to Favorita Express</p>
+            <h2 id="texto2">Lorem ipsum dolor sit amet. Ab ipsum Quis sed dolorem tempore aut voluptas<br> reiciendis. 
         Et voluptate eveniet aut officiis quia est repellendus nostrum. <br>
          Aut obcaecati laborum est minus enim aut provident ipsam et consectetur<br> doloribus quo
          excepturi dolorem.</h2>

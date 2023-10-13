@@ -34,6 +34,16 @@ body {
 #display{
     display: flex;
 }
+#texto1{
+    text-align: left;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-family: minhaFonte7;
+    position: fixed;
+    top: 312px;
+    left: 202px;
+}
 #texto2{
     text-align: left;
     width: 100%;
@@ -100,6 +110,10 @@ ul{
 @font-face {
     font-family: minhaFonte6;
     src: url(../fonts/GraviolaSoftRegular.otf);
+}
+@font-face {
+    font-family: minhaFonte7;
+    src: url(../fonts/Graviola-Regular.otf);
 }
 
 

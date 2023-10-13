@@ -14,8 +14,14 @@
 
 <body>
     <header>
+    <div id="menutexto">
+        <p>Escolha o tamanho</p>
+    </div>
     <div id="menudireito">
         <a href="cardapio.php" id="inscreva-se-btn"><li id="text">Escolha o Sabor</li></a>
+    </div>
+    <div id="menuesquerdo">
+        <a href="index.php" id="inscreva-se-btnn"><li id="text">Voltar</li></a>
     </div>
     </header>   
 
