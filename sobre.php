@@ -40,7 +40,7 @@
         <h2 id="textolocal">Localização</h2>
     </div>
     <div id="menudireito">
-        <a href="#" id="inscreva-se-btn" style="color: #f8dddd;"><li id="text">Faça seu pedido</li></a>
+        <a href="https://wa.me//5544999604040?text=Olá,%20gostaria%20de%20realizar%20um%20pedido!!" id="inscreva-se-btn" style="color: #f8dddd;"><li id="text">Faça seu pedido</li></a>
     </div>
     </header>
     <div id="display">
