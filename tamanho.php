@@ -55,19 +55,19 @@
     <div id="texto2">
         <p>GRANDE</p>
         <p id="pedacos2">8 pedaços</p>
-        <p id="preco2">75,00</p>
+        <p id="preco2">55,00</p>
         <p id="sifrao2">R$</p>
     </div>
     <div id="texto3">
         <p>MÉDIA</p>
         <p id="pedacos3">6 pedaços</p>
-        <p id="preco3">75,00</p>
+        <p id="preco3">45,00</p>
         <p id="sifrao3">R$</p>
     </div>
     <div id="texto4">
         <p>PEQUENA</p>
         <p id="pedacos4">4 pedaços</p>
-        <p id="preco4">75,00</p>
+        <p id="preco4">30,00</p>
         <p id="sifrao4">R$</p>
     </div>
     
