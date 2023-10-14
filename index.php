@@ -35,11 +35,13 @@
     <i class="fa-solid fa-phone" style="color: #d7a41d;"></i>
         <h2 id="textotel">(44) 3423-6461</h2>
     </div>
+
     <div id="localizacao">
     <svg id="iconelocal" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#d7a41d}</style><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
-    <i class="fa-solid fa-phone" style="color: #d7a41d;"></i>
-        <h2 id="textolocal">Localização</h2>
+        <i class="fa-solid fa-phone" style="color: #d7a41d;"></i>
+        <a id="textolocal" href="localização.php">Localização</a>
     </div>
+
     <div id="menudireito">
         <a href="https://wa.me//5544999604040?text=Olá,%20gostaria%20de%20realizar%20um%20pedido!!" id="inscreva-se-btn" style="color: #f8dddd;"><li id="text">Faça seu pedido</li></a>
     </div>
