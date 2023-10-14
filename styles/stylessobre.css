@@ -7,7 +7,7 @@ body {
             width: 100vw;
             height: 100vh;
             background-repeat: no-repeat;
-            background-image: url("../imagens/fundosobre.jpg");
+            background-image: url("../imagens/backgroundmaisescuro.png");
             background-size: 100%;
             position: fixed;
             margin: 0;
@@ -18,18 +18,27 @@ body {
     text-align: center;
 }
 #logo1{
-    width: 328px;
+    width: 312px;
+    height: 245px;
     
 }
-#video{
-    text-align: right;
-    width: 600px;
-    height: 300px;
-    font-size: 30px;
-    position: fixed;
-    top: 310px;
-    right: 60px;
-   
+#banner1{
+    position: relative;
+    top: 399px;
+    left: 838px;
+    height: 345px;
+    width: 226px;
+}
+#banner2{
+    position: relative;
+    top: 399px;
+    left: 874px;
+    height: 345px;
+    width: 226px;
+}
+.exemplo{
+    transition-delay: 0s;
+    transition-duration: 0.3s;
 }
 #display{
     display: flex;
@@ -38,23 +47,38 @@ body {
     text-align: left;
     width: 100%;
     color: rgb(255, 255, 255);
-    font-size: 30px;
+    font-size: 40px;
     font-family: minhaFonte7;
     position: fixed;
-    top: 312px;
-    left: 202px;
+    top: 252px;
+    left: 139px;
 }
 #texto2{
-    text-align: left;
+    text-align: center;
     width: 100%;
-    color: rgb(255, 255, 255);
     font-size: 18px;
-    font-family: 'Merriweather Sans', sans-serif;
+    font-family: minhaFonte7;
     position: fixed;
-    top: 376px;
-    left: 63px;
+    top: 332px;
+    left: -326px;
+    color: #d7a41d;
+    font-weight: 100;
 
 }
+#texto3{
+    text-align: center;
+    width: 100%;
+    font-size: 18px;
+    font-family: minhaFonte7;
+    position: fixed;
+    top: 390px;
+    left: -326px;
+    color: rgb(189, 189, 189);
+    font-weight: 100;
+
+}
+
+
 #menu {
     margin-top:-28%;
     
@@ -118,20 +142,21 @@ ul{
 
 
 #inscreva-se-btn{
+    border: 2px solid #ca0808;
     background-color: #ca0808;
     border-radius: 50px;
-    right: 100px; 
+    right: 62px; 
     position: fixed;
     font-size: 30px;
     font-family: minhaFonte;
     margin: 0px;
-    top: 110px;
+    top: 108px;
 
 }
 #inscreva-se-btn:hover{
 border: 2px solid white;
 background: transparent;
-padding: 1px;
+padding: -1px;
 border-radius: 50px;
 transition-delay: 0s;
 transition-duration: 0.4s;
@@ -151,8 +176,9 @@ opacity: 1;
 }
 
 #text{
+    color: white;
     font-size: 15px;
-    font-family: minhaFonte6;
+    font-family: minhaFonte7;
     margin:0;
     width: 150px;
     cursor: pointer; 

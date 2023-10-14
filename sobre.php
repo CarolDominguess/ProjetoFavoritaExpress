@@ -35,12 +35,12 @@
     </div>
     </header>
     <div id="display">
-        <iframe id= "video" width="360" height="715" src="https://www.youtube.com/embed/n9SwPwxtJB8?si=zCQb-nU0rWyJ6G7N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <img id="banner1" src="./imagens/banner1.png">
+    <img id="banner2" src="./imagens/banner2.png">
         <p id="texto1">Welcome to Favorita Express</p>
-            <h2 id="texto2">Lorem ipsum dolor sit amet. Ab ipsum Quis sed dolorem tempore aut voluptas<br> reiciendis. 
-        Et voluptate eveniet aut officiis quia est repellendus nostrum. <br>
-         Aut obcaecati laborum est minus enim aut provident ipsam et consectetur<br> doloribus quo
-         excepturi dolorem.</h2>
+        <h2 id="texto2">Nossos chefs trabalham 24 horas por dia, 7 dias por semana e estão prontos
+        <br> para receber visitantes a qualquer hora do dia e da noite.</h2>
+        <p id="texto3">Gostaríamos de aproveitar esta oportunidade para recebê-lo em nossa Pizza House.<br> Oferecemos um ambiente acolhedor e amigável para compartilhar uma refeição com a <br>família e amigos a qualquer hora do dia ou da noite.</p>
 	</div>
 </body>
 </html>
