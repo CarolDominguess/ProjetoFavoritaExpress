@@ -50,6 +50,7 @@
         <h2 id="texto2">Nossos chefs trabalham 24 horas por dia, 7 dias por semana e estão prontos
         <br> para receber visitantes a qualquer hora do dia e da noite.</h2>
         <p id="texto3">Gostaríamos de aproveitar esta oportunidade para recebê-lo em nossa Pizza House.<br> Oferecemos um ambiente acolhedor e amigável para compartilhar uma refeição com a <br>família e amigos a qualquer hora do dia ou da noite.</p>
+        <a href="maissobre.php" id="maissobre" style="color: #f8dddd;"><li id="text">Saiba mais</li></a>
 	</div>
 </body>
 </html>
