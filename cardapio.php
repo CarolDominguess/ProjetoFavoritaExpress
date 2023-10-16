@@ -20,9 +20,7 @@
     <div id="sabores">
         <p>Opções de Sabores</p>
     </div>
-    </header>   
-
-    <h2 id="texto"></h2>
+    </header>
 
 <br><br><br><br><br>
 <div id="scroll">
