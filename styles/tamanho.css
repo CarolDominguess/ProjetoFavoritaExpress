@@ -182,20 +182,6 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #menu {
     margin-top:-28%;
     
@@ -251,6 +237,10 @@ ul{
 @font-face {
     font-family: minhaFonte7;
     src: url(../fonts/GROBOLD.ttf);
+}
+@font-face {
+    font-family: minhaFonte8;
+    src: url(../fonts/Graviola-Regular.otf);
 }
 
 
@@ -324,7 +314,7 @@ opacity: 1;
 #text{
     color: white;
     font-size: 15px;
-    font-family: minhaFonte7;
+    font-family: minhaFonte8;
     margin:0;
     width: 150px;
     cursor: pointer; 
