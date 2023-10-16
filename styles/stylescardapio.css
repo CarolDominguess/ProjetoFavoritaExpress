@@ -27,7 +27,7 @@ body {
 #sabores{
     position: relative;
     top: 50px;
-    left: 50px;
+    text-align: center;
     color: aliceblue;
 }
 #caixa{
