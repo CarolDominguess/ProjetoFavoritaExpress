@@ -18,22 +18,22 @@ body {
     text-align: center;
 }
 #logo1{
-    width: 299px;
-    height: 235px;
+    width: 286px;
+    height: 224px;
     
 }
 #banner1{
     position: relative;
-    top: 399px;
-    left: 838px;
+    top: 416px;
+    left: 802px;
     height: 345px;
     width: 226px;
 }
 #banner2{
     position: relative;
-    top: 399px;
-    left: 874px;
-    height: 345px;
+    top: 415px;
+    left: 840px;
+    height: 347px;
     width: 226px;
 }
 .exemplo{
@@ -50,8 +50,8 @@ body {
     font-size: 40px;
     font-family: minhaFonte7;
     position: fixed;
-    top: 252px;
-    left: 139px;
+    top: 257px;
+    left: 145px;
 }
 #texto2{
     text-align: center;
@@ -59,7 +59,7 @@ body {
     font-size: 18px;
     font-family: minhaFonte7;
     position: fixed;
-    top: 332px;
+    top: 342px;
     left: -326px;
     color: #d7a41d;
     font-weight: 100;
@@ -71,7 +71,7 @@ body {
     font-size: 18px;
     font-family: minhaFonte7;
     position: fixed;
-    top: 390px;
+    top: 412px;
     left: -326px;
     color: rgb(189, 189, 189);
     font-weight: 100;
@@ -151,7 +151,7 @@ ul{
     font-size: 30px;
     font-family: minhaFonte;
     margin: 0px;
-    top: 494px;
+    top: 514px;
 }
 #maissobre:hover{
     border: 2px solid white;

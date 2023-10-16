@@ -7,7 +7,7 @@
     $preco = $_POST["preco"];
 
     
-    $inserir = "insert into bebidas (nome, quantidade, preco) values ('$nome', '$quantidade', '$preco')";
+    $inserir = "insert into bebidas (nome, quantidade, validade, preco) values ('$nome', '$quantidade', '$validade', '$preco')";
     
     mysqli_query($conexao, $inserir);
 

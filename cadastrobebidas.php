@@ -10,6 +10,7 @@
     <form action="inserirbebida.php" method="post">
         Nome: <input type="text" id="nome" name="nome"/><br/>        
         Quantidade: <input type="text" id="quantidade" name="quantidade"/><br/>
+        Validade: <input type="text" id="validade" name="validade"/><br/>
         Preço: <input type="text" id="preco" name="preco"/><br/>
         <input type="submit" value="Salvar"/>
     </form>

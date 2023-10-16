@@ -5,11 +5,12 @@
     $id = $_GET["id"];
     $nome = $_POST["nome"];
     $quantidade = $_POST["quantidade"];
+    $validade = $_POST["validade"];
     $preco = $_POST["preco"];
 
 
     //Cria o SQL para alterar os dados do aluno no banco de dados, o ID não precisa porque é autoincrement.
-    $alterar = "update produto set nome = '$nome', quantidade ='$quantidade', preco = '$preco' where id = $id";
+    $alterar = "update produto set nome = '$nome', quantidade ='$quantidade', validade ='$validade', preco = '$preco' where id = $id";
     //Executa o SQL no banco de dados da conexão.
     mysqli_query($conexao, $alterar);
 

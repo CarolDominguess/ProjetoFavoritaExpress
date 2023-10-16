@@ -12,6 +12,7 @@
     		<td><b>Código</b></td>
     		<td><b>Nome</b></td>
     		<td><b>Quantidade</b></td>
+			<td><b>Validade</b></td>
 			<td><b>Preço</b></td>
     		<td><b>Editar</b></td>
     		<td><b>Excluir</b></td>
@@ -28,6 +29,7 @@
     		$id = $row["id"];
     		$nome = $row["nome"];
     		$quantidade = $row["quantidade"];
+			$validade = $row["validade"];
 			$preco = $row["preco"];
 
     		//imprime na página uma nova linha dentro da tabela com os dados do aluno e um link para excluir o aluno passando o ID por parametro via GET.
@@ -35,8 +37,9 @@
     				<td>$id</td>
     				<td>$nome</td>
     				<td>$quantidade</td>
+					<td>$validade</td>
 					<td>$preco</td>
-    				<td><a href='formeditarproduto.php?id=$id&nome=$nome&quantidade=$quantidade&preco=$preco'>Editar</a></td>
+    				<td><a href='formeditarproduto.php?id=$id&nome=$nome&quantidade=$quantidade&validade=$validade&preco=$preco'>Editar</a></td>
     				<td><a href='excluirproduto.php?id=$id'>Excluir</a></td>
     			</tr>";
     	}
@@ -51,6 +54,7 @@
     		<td><b>Código</b></td>
     		<td><b>Nome</b></td>
     		<td><b>Quantidade</b></td>
+			<td><b>Validade</b></td>
 			<td><b>Preço</b></td>
     		<td><b>Editar</b></td>
     		<td><b>Excluir</b></td>
@@ -67,6 +71,7 @@
     		$id = $row["id"];
     		$nome = $row["nome"];
     		$quantidade = $row["quantidade"];
+			$validade = $row["validade"];
 			$preco = $row["preco"];
 
     		//imprime na página uma nova linha dentro da tabela com os dados do aluno e um link para excluir o aluno passando o ID por parametro via GET.
@@ -74,8 +79,9 @@
     				<td>$id</td>
     				<td>$nome</td>
     				<td>$quantidade</td>
+					<td>$validade</td>
 					<td>$preco</td>
-    				<td><a href='formeditarbebida.php?id=$id&nome=$nome&quantidade=$quantidade&preco=$preco'>Editar</a></td>
+    				<td><a href='formeditarbebida.php?id=$id&nome=$nome&quantidade=$quantidade&validade=$validade&preco=$preco'>Editar</a></td>
     				<td><a href='excluirbebida.php?id=$id'>Excluir</a></td>
     			</tr>";
     	}
