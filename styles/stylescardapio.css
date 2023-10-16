@@ -25,6 +25,7 @@ body {
             overflow-x: hidden;
 }
 #sabores{
+    font-family: minhaFonte8;
     position: relative;
     top: 50px;
     text-align: center;
