@@ -25,7 +25,10 @@ body {
             overflow-x: hidden;
 }
 #sabores{
-
+    position: relative;
+    top: 50px;
+    left: 50px;
+    color: aliceblue;
 }
 #caixa{
     width: 115vw;
