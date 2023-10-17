@@ -364,40 +364,52 @@ body {
     left: -49px;
 }
 #pizza17{
-    background-image: url("../imagens/pizzamodelo17.png");
-    height: 280px;
-    background-size: cover
+    background-image: url(../imagens/pizzamodelo17.png);
+    height: 329px;
+    background-size: 317px;
+    background-repeat: no-repeat;
+    margin-left: -12px;
 }
 #texto17{
     position: relative;
-    top: 200px;
+    top: 133px;
+    left: -153px;
 }
 #pizza18{
     background-image: url("../imagens/pizzamodelo18.png");
-    height: 280px;
-    background-size: cover
+    height: 302px;
+    background-size: 319px;
+    background-repeat: no-repeat;
+    margin-left: -121px;
 }
 #texto18{
     position: relative;
     top: 200px;
+    left: -28px;
 }
 #pizza19{
-    background-image: url("../imagens/pizzamodelo19.png");
-    height: 280px;
-    background-size: cover
+    background-image: url(../imagens/pizzamodelo19.png);
+    height: 302px;
+    background-size: 317px;
+    background-repeat: no-repeat;
+    margin-left: 18px;
 }
 #texto19{
     position: relative;
-    top: 200px;
+    top: 196px;
+    left: -45px;
 }
 #pizza20{
-    background-image: url("../imagens/pizzamodelo20.png");
-    height: 280px;
-    background-size: cover
+    background-image: url(../imagens/pizzamodelo20.png);
+    height: 317px;
+    background-size: 331px;
+    background-repeat: no-repeat;
+    margin-left: -22px;
 }
 #texto20{
     position: relative;
-    top: 200px;
+    top: 168px;
+    left: -84px;
 }
 
 
