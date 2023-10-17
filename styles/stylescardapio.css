@@ -33,10 +33,10 @@ body {
     top: 54px;
 }
 #caixa{
-    width: 115vw;
-    height: 18rem;
+    width: 116vw;
+    height: 14rem;
     background: transparent;
-    margin: 31rem auto 0 auto;
+    margin: 37rem auto 0 auto;
     border: solid 0px;
     display: flex;
     padding: 0rem;
@@ -97,37 +97,41 @@ body {
     top: 200px;
 }
 #pizza5{
-    background-image: url("../imagens/pizzamodelo5.png");
+    background-image: url(../imagens/pizzamodelo5.png);
     height: 267px;
-    background-size: cover
+    background-repeat: no-repeat;
+    background-size: 270px;
 }
 #texto5{
     position: relative;
-    top: 200px;
-    left: -59px;
+    top: 285px;
+    left: 13px;
 }
 #pizza6{
     background-image: url(../imagens/pizzamodelo6.png);
     height: 285px;
-    background-size: 293px;
-    margin-left: 2rem;
+    background-size: 287px;
+    margin-left: 0rem;
     background-repeat: no-repeat;
 }
 #texto6{
     position: relative;
-    top: 200px;
-    left: -59px;
+    top: 284px;
+    left: 18px;
 }
 #pizza4{
-    background-image: url("../imagens/pizzamodelo4.png");
+    background-image: url(../imagens/pizzamodelo4.png);
     height: 287px;
-    background-size: cover;
-    margin-left: 2rem;
+    background-repeat: no-repeat;
+    background-size: 294px;
+    margin-left: 0rem;
 }
+
+
 #texto4{
     position: relative;
-    top: 200px;
-    left: -59px;
+    top: 287px;
+    left: 49px;
 }
 #caixaa{
     width: 96vw;
@@ -172,8 +176,6 @@ body {
 }
 
 #caixaaa div p{
-    margin-top: 40%;
-    margin-left: 40%;
     font: bold 2rem sans-serif;
     color: white;
 }
@@ -187,15 +189,16 @@ body {
     top: 200px;
 }
 #pizza11{
-    background-image: url("../imagens/pizzamodelo11.png");
+    background-image: url(../imagens/pizzamodelo11.png);
     height: 281px;
-    background-size: cover;
-    margin-left: 4rem;
+    background-repeat: no-repeat;
+    background-size: 299px;
+    margin-left: 0rem;
 }
 #texto11{
     position: relative;
-    top: 200px;
-    left: -59px;
+    top: 288px;
+    left: 6px;
 }
 #pizza9{
     background-image: url("../imagens/pizzamodelo9.png");

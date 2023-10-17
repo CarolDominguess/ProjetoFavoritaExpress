@@ -31,8 +31,8 @@
     <div id="caixaaa">
         
         <div id="pizza5"><p id="texto5">Frango Exótico</p></div>
-        <div id="pizza6"><p id="texto6">Filé de frango com champignon</p></div>
-        <div id="pizza4"><p id="texto4">Tomate Seco com Rúcula</p></div>
+        <div id="pizza6"><p id="texto6">Filé de frango<br>com champignon</p></div>
+        <div id="pizza4"><p id="texto4">Tomate Seco<br>com Rúcula</p></div>
         <div id="pizza11"><p id="texto11">Marguerita Especial</p></div>
         
     </div>
