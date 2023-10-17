@@ -9,14 +9,14 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <div class="wrapper">
+    <div class="cadastro">
         <form action="" method="POST">
             <h1>Entrar</h1>
-            <div class="input-box">
+            <div class="caixas">
                 <input type="text" name="email" placeholder="E-mail" required>
                 <div class='bx bxs-user'></div>
             </div>
-            <div class="input-box">
+            <div class="caixas">
                 <input type="password" name="senha" placeholder="Senha" required>
                 <div class='bx bxs-lock-alt' ></div>
             </div>
@@ -25,7 +25,7 @@
             </div>
 
             <button type="submit" class="btn">Entrar</button>
-            <div class="register-link">
+            <div class="registrar">
                 <p>Não tem conta? <a href="cadastrocliente.php">Registre-se</a></p>
             </div>
         </form>
