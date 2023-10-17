@@ -30,6 +30,7 @@ body {
     top: 50px;
     text-align: center;
     color: aliceblue;
+    font-size: 50px;
 }
 #caixa{
     width: 115vw;
@@ -414,6 +415,10 @@ ul{
 @font-face {
     font-family: minhaFonte6;
     src: url(../fonts/GraviolaSoftRegular.otf);
+}
+@font-face {
+    font-family: minhaFonte8;
+    src: url(../fonts/GROBOLD.ttf);
 }
 
 

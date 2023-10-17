@@ -18,7 +18,7 @@
         <a href="cardapio.php" id="inscreva-se-btn"><li id="text">Faça seu pedido</li></a>
     </div>
     <div id="sabores">
-        <p>Opções de Sabores</p>
+        <p>Opçoes de Sabores</p>
     </div>
     </header>
 
