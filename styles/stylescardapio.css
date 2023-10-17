@@ -107,10 +107,11 @@ body {
     left: -59px;
 }
 #pizza6{
-    background-image: url("../imagens/pizzamodelo6.png");
-    height: 280px;
-    background-size: cover;
-    margin-left: 3rem;
+    background-image: url(../imagens/pizzamodelo6.png);
+    height: 285px;
+    background-size: 293px;
+    margin-left: 2rem;
+    background-repeat: no-repeat;
 }
 #texto6{
     position: relative;
@@ -165,11 +166,11 @@ body {
 }
 
 #caixaaa div{
-    min-width: 17rem;
-    max-height: 35rem;
+    min-width: 20rem;
+    max-height: 40rem;
     border: solid 0px;
-    
 }
+
 #caixaaa div p{
     margin-top: 40%;
     margin-left: 40%;
