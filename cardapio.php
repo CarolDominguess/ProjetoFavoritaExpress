@@ -23,7 +23,7 @@
     <div id="caixa">
         <div id="pizza1"><p id="texto1">Brocolis com bacon</p></div>
         <div id="pizza2"><p id="texto2">Pepperoni</p></div>
-        <div id="pizza3"><p id="texto3">Pepperoni</p></div>
+        <div id="pizza3"><p id="texto3">Burrata</p></div>
         <div id="pizza7"><p id="texto7">Lombo Canadense</p></div>
         
         
@@ -37,22 +37,22 @@
         
     </div>
     <div id="caixaa">
-        <div id="pizza13"><p id="texto13">1</p></div>
+        <div id="pizza13"><p id="texto13">Levíssimo Seara</p></div>
         <div id="pizza14"><p id="texto14">Presunto Alemão com Tomate Cereja</p></div>
-        <div id="pizza15"><p id="texto15">4</p></div>
-        <div id="pizza16"><p id="texto16">4</p></div>
+        <div id="pizza15"><p id="texto15">Quatro Queijos</p></div>
+        <div id="pizza16"><p id="texto16">Presunto com Champignon</p></div>
     </div>
     <div id="caixaaaa">
-        <div id="pizza8"><p id="texto8">1</p></div>
-        <div id="pizza9"><p id="texto9">2</p></div>
-        <div id="pizza10"><p id="texto10">4</p></div>
-        <div id="pizza12"><p id="texto12">4</p></div>
+        <div id="pizza8"><p id="texto8">Charge</p></div>
+        <div id="pizza9"><p id="texto9">Chocolate ao Leite com M&M´s</p></div>
+        <div id="pizza10"><p id="texto10">CheeseCake</p></div>
+        <div id="pizza12"><p id="texto12">Sensação</p></div>
     </div>
     <div id="caixaaaaa">
-        <div id="pizza17"><p id="texto17">1</p></div>
-        <div id="pizza18"><p id="texto18">2</p></div>
-        <div id="pizza19"><p id="texto19">4</p></div>
-        <div id="pizza20"><p id="texto20">4</p></div>
+        <div id="pizza17"><p id="texto17">Chocolate Branco com M&M´s</p></div>
+        <div id="pizza18"><p id="texto18">Romeu e Julieta</p></div>
+        <div id="pizza19"><p id="texto19">Banana Caramelizada</p></div>
+        <div id="pizza20"><p id="texto20">Marshmallow com Kit Kat®</p></div>
     </div>
 </div>
 </body>

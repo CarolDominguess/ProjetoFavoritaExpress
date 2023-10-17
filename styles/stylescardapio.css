@@ -12,6 +12,18 @@ body {
             overflow-y: hidden;
            
 }
+::-webkit-scrollbar{
+    background-color: red;
+    width: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}
+::-webkit-scrollbar-thumb{
+    background-color: yellow;
+    border-radius: 5px;
+}
+
 #scroll{
     width: 100vw;
             height: 100vh;
@@ -90,7 +102,7 @@ body {
 #texto3{
     position: relative;
     top: 200px;
-    left: -59px;
+    left: -45px;
 
 }
 #pizza7{
@@ -104,6 +116,7 @@ body {
 #texto7{
     position: relative;
     top: 200px;
+    left: -36px;
 }
 #pizza5{
     background-image: url(../imagens/pizzamodelo5.png);
@@ -189,9 +202,12 @@ body {
     color: white;
 }
 #pizza8{
-    background-image: url("../imagens/pizzamodelo8.png");
-    height: 288px;
-    background-size: cover
+    background-image: url(../imagens/pizzamodelo8.png);
+    height: 303px;
+    background-size: 317px;
+    background-repeat: no-repeat;
+    margin-left: 27px;
+    margin-top: 57px;
 }
 #texto8{
     position: relative;
@@ -210,9 +226,12 @@ body {
     left: 6px;
 }
 #pizza9{
-    background-image: url("../imagens/pizzamodelo9.png");
-    height: 291px;
-    background-size: cover;
+    background-image: url(../imagens/pizzamodelo9.png);
+    height: 319px;
+    background-size: 333px;
+    background-repeat: no-repeat;
+    margin-left: 26px;
+    margin-top: 57px;
     
 }
 #texto9{
@@ -220,18 +239,24 @@ body {
     top: 200px;
 }
 #pizza10{
-    background-image: url("../imagens/pizzamodelo10.png");
-    height: 280px;
-    background-size: cover
+    background-image: url(../imagens/pizzamodelo10.png);
+    height: 314px;
+    background-size: 323px;
+    background-repeat: no-repeat;
+    margin-left: -140px;
+    margin-top: 57px;
 }
 #texto10{
     position: relative;
     top: 200px;
 }
 #pizza12{
-    background-image: url("../imagens/pizzamodelo12.png");
-    height: 280px;
-    background-size: cover
+    background-image: url(../imagens/pizzamodelo12.png);
+    height: 295px;
+    background-size: 294px;
+    background-repeat: no-repeat;
+    margin-left: 28px;
+    margin-top: 57px;
 }
 #texto12{
     position: relative;
@@ -250,10 +275,9 @@ body {
 }
 
 #caixaaaa div{
-    min-width: 17rem;
+    min-width: 19rem;
     max-height: 35rem;
     border: solid 0px;
-    margin-left: 2rem;
     
 }
 #caixaaaa div p{
@@ -269,16 +293,15 @@ body {
     margin: 4rem auto 0 auto;
     border: solid 0px;
     display: flex;
-    padding: 3rem;
+    padding: 7rem;
     margin-left: -1rem;
     
 }
 
 #caixaaaaa div{
-    min-width: 17rem;
-    max-height: 35rem;
+    min-width: 19rem;
+    max-height: 72rem;
     border: solid 0px;
-    margin-left: 3rem;
     
 }
 #caixaaaaa div p{
@@ -296,36 +319,45 @@ body {
 #texto13{
     position: relative;
     top: 200px;
+    left: -34px;
 }
 #pizza14{
-    background-image: url("../imagens/pizzamodelo14.png");
-    height: 315px;
-    background-size: cover;
-    margin-left: 1rem;
+        background-image: url(../imagens/pizzamodelo14.png);
+        height: 315px;
+        background-size: 310px;
+        background-repeat: no-repeat;
+        margin-left: 2rem;
 }
 #texto14{
     position: relative;
-    top: 200px;
+    top: 123px;
+    left: -141px;
 }
 #pizza15{
-    background-image: url("../imagens/pizzamodelo15.png");
-    height: 291px;
-    background-size: cover;
-    margin-left: 1rem;
+    background-image: url(../imagens/pizzamodelo15.png);
+    height: 300px;
+    background-size: 306px;
+    background-repeat: no-repeat;
+    margin-top: 8px;
+    margin-left: -131px;
 }
 #texto15{
     position: relative;
-    top: 200px;
+    top: 187px;
+    left: -20px;
 }
 #pizza16{
-    background-image: url("../imagens/pizzamodelo16.png");
+    background-image: url(../imagens/pizzamodelo16.png);
     height: 289px;
-    background-size: cover;
-    margin-left: 1rem;
+    background-size: 305px;
+    background-repeat: no-repeat;
+    margin-top: 12px;
+    margin-left: 22px;
 }
 #texto16{
     position: relative;
-    top: 200px;
+    top: 165px;
+    left: -49px;
 }
 #pizza17{
     background-image: url("../imagens/pizzamodelo17.png");
