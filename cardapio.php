@@ -24,7 +24,7 @@
         <div id="pizza1"><p id="texto1">Brocolis com bacon</p></div>
         <div id="pizza2"><p id="texto2">Pepperoni</p></div>
         <div id="pizza3"><p id="texto3">Pepperoni</p></div>
-        <div id="pizza7"><p id="texto7">Pepperoni</p></div>
+        <div id="pizza7"><p id="texto7">Lombo Canadense</p></div>
         
         
     </div>
@@ -38,7 +38,7 @@
     </div>
     <div id="caixaa">
         <div id="pizza13"><p id="texto13">1</p></div>
-        <div id="pizza14"><p id="texto14">2</p></div>
+        <div id="pizza14"><p id="texto14">Presunto Alemão com Tomate Cereja</p></div>
         <div id="pizza15"><p id="texto15">4</p></div>
         <div id="pizza16"><p id="texto16">4</p></div>
     </div>

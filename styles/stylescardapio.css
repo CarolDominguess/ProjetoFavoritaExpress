@@ -44,10 +44,9 @@ body {
 }
 
 #caixa div{
-    min-width: 17rem;
+    min-width: 18rem;
     max-height: 35rem;
     border: solid 0px;
-    margin-left: 3rem;
     
 }
 #caixa div p{
@@ -57,9 +56,11 @@ body {
     color: white;
 }
 #pizza1{
-    background-image: url("../imagens/pizzamodelo1.png");
+    background-image: url(../imagens/pizzamodelo1.png);
     height: 271px;
-    background-size: cover
+    background-repeat: no-repeat;
+    margin-left: 57px;
+    background-size: 270px;
 }
 
 #texto1{
@@ -68,9 +69,11 @@ body {
     left: -59px;
 }
 #pizza2{
-    background-image: url("../imagens/pizzamodelo2.png");
+    background-image: url(../imagens/pizzamodelo2.png);
     height: 273px;
-    background-size: cover
+    background-size: 269px;
+    margin-left: 16px;
+    background-repeat: no-repeat;
 }
 #texto2{
     position: relative;
@@ -78,19 +81,25 @@ body {
     left: -59px;
 }
 #pizza3{
-    background-image: url("../imagens/pizzamodelo3.png");
+    background-image: url(../imagens/pizzamodelo3.png);
     height: 270px;
-    background-size: cover
+    background-size: 266px;
+    background-repeat: no-repeat;
+    margin-left: 42px;
 }
 #texto3{
     position: relative;
     top: 200px;
     left: -59px;
+
 }
 #pizza7{
-    background-image: url("../imagens/pizzamodelo7.png");
-    height: 288px;
-    background-size: cover
+    background-image: url(../imagens/pizzamodelo7.png);
+    height: 293px;
+    background-repeat: no-repeat;
+    background-size: 292px;
+    margin-left: 22px;
+    margin-top: -7px;
 }
 #texto7{
     position: relative;
@@ -137,7 +146,7 @@ body {
     width: 96vw;
     height: 15rem;
     background: transparent;
-    margin: 23rem auto 0 auto;
+    margin: 30rem auto 0 auto;
     border: solid 0px;
     display: flex;
     padding: 3rem;
