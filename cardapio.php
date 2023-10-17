@@ -14,15 +14,11 @@
 
 <body>
     <header>
-    <div id="menudireito">
-        <a href="cardapio.php" id="inscreva-se-btn"><li id="text">Faça seu pedido</li></a>
-    </div>
-    <div id="sabores">
-        <p>Opçoes de Sabores</p>
-    </div>
+        <div id="menudireito">
+            <a href="cardapio.php" id="inscreva-se-btn"><li id="text">Faça seu pedido</li></a>
+            <h1 id="sabores1">Opçoes de Sabores</h1>
+        </div>
     </header>
-
-<br><br><br><br><br>
 <div id="scroll">
     <div id="caixa">
         <div id="pizza1"><p id="texto1">Brocolis com bacon</p></div>

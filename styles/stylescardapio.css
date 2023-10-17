@@ -6,12 +6,10 @@ A {text-decoration: none;}
 body {
             width: 100vw;
             height: 100vh;
-            background-repeat: no-repeat;
             background-image: url("../imagens/fundomadeira.jpg");
             background-size: 100%;
             margin: 0;
-            overflow-y:auto;
-            overflow-x: hidden;
+            overflow-y: hidden;
            
 }
 #scroll{
@@ -24,13 +22,15 @@ body {
             overflow-y:auto;
             overflow-x: hidden;
 }
-#sabores{
-    font-family: minhaFonte8;
-    position: relative;
-    top: 50px;
+#sabores1{
     text-align: center;
-    color: aliceblue;
+    width: 60%;
+    color: rgb(255, 255, 255);
     font-size: 50px;
+    font-family: 'minhaFonte8';
+    position: fixed;
+    right: 295px;
+    top: 54px;
 }
 #caixa{
     width: 115vw;
@@ -369,12 +369,12 @@ body {
     
 }
 header{
-display: block;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
-
-}
+    display: block;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    }
 
 li{
 display: inline-block;
@@ -415,6 +415,10 @@ ul{
 @font-face {
     font-family: minhaFonte6;
     src: url(../fonts/GraviolaSoftRegular.otf);
+}
+@font-face {
+    font-family: minhaFonte7;
+    src: url(../fonts/Graviola-Regular.otf);
 }
 @font-face {
     font-family: minhaFonte8;
