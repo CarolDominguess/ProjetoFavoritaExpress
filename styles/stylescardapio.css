@@ -212,6 +212,7 @@ body {
 #texto8{
     position: relative;
     top: 200px;
+    left: -19px;
 }
 #pizza11{
     background-image: url(../imagens/pizzamodelo11.png);
@@ -236,7 +237,8 @@ body {
 }
 #texto9{
     position: relative;
-    top: 200px;
+    top: 131px;
+    left: -149px;
 }
 #pizza10{
     background-image: url(../imagens/pizzamodelo10.png);
@@ -249,6 +251,7 @@ body {
 #texto10{
     position: relative;
     top: 200px;
+    left: -47px;
 }
 #pizza12{
     background-image: url(../imagens/pizzamodelo12.png);
@@ -261,6 +264,7 @@ body {
 #texto12{
     position: relative;
     top: 200px;
+    left: -49px;
 }
 #caixaaaa{
     width: 96vw;
