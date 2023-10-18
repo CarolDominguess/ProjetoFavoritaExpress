@@ -28,3 +28,8 @@
     </div>    
 </body>
 </html>
+<?php
+if (isset($_GET["erro"]) && $_GET["erro"] === "email_invalido") {
+    echo "<span style='color: white;'>O email inserido é inválido.</span>";
+}
+?>
