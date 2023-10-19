@@ -1,12 +1,15 @@
 
     table {
         border-collapse: collapse;
+        position: absolute;
+        top: 500px;
+        font-size: 70px;
     }
     
     td {
-        padding: 10px;
-        display: inline-block; /* Exibe as células lado a lado */
-        margin-right: 10px; /* Espaçamento entre as células */
+        padding: 25px;
+        display: inline-block;
+        margin-left: 154px;
         font-family: minhaFonte7;
         color: yellow;
     }
