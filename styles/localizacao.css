@@ -1,0 +1,22 @@
+
+    table {
+        border-collapse: collapse;
+    }
+    
+    td {
+        padding: 10px;
+        display: inline-block; /* Exibe as células lado a lado */
+        margin-right: 10px; /* Espaçamento entre as células */
+        font-family: minhaFonte7;
+        color: yellow;
+    }
+
+    tr {
+        display: contents;
+        border: 0px;
+    }
+
+    @font-face {
+        font-family: minhaFonte7;
+        src: url(../fonts/GROBOLD.ttf);
+    }

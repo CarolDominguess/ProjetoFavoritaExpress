@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/tamanho.css">
+    <link rel="stylesheet" href="./styles/localizacao.css">
 
     <title> Favorita Express</title>
 </head> 
@@ -29,48 +30,46 @@
 
     <div id="tamanho1">
         <div id="pizza"></div>
-        
     </div>
+
     <div id="tamanho2">
         <div id="pizza"></div>
-        
     </div>
+
     <div id="tamanho3">
         <div id="pizza"></div>
-        
     </div>
+
     <div id="tamanho4">
-        <div id="pizza"></div>
-        
+        <div id="pizza"></div>    
     </div>
 
-    <div id="texto1">
-        <p>GIGANTE</p>
-        <p id="pedacos1">12 pedaços</p>
-        <p id="preco1">75,00</p>
-        <p id="sifrao1">R$</p>
 
+    <table border='0'>
+    	
+    	<!-- A partir daqui inicia a busca no banco de dados para trazer as bebidas nas linhas da tabela -->
+    	<?php
+		//cria uma conexão com o banco de dados
+    	include 'conexao.php';
+    	//executa uma query buscando todas as bebidas do banco de dados e atribui a variável "resultado"
+    	$resultado = mysqli_query($conexao, "select * from precos");
+    	//quebra o resultado em linhas e faz um laço de repetição para cada linha do resultado.
+    	while($row = mysqli_fetch_array($resultado)){
+    		//cada linha do resultado de aluno possui os atributos id, nome e ra, no qual estão sendo recuperados e atribuídos a nova variáveis locais.
+			$id = $row["id"];
+            $tamanho = $row["tamanho"];
+    		$preco = $row["preco"];
+    		
 
-    </div>
-    <div id="texto2">
-        <p>GRANDE</p>
-        <p id="pedacos2">8 pedaços</p>
-        <p id="preco2">55,00</p>
-        <p id="sifrao2">R$</p>
-    </div>
-    <div id="texto3">
-        <p>MÉDIA</p>
-        <p id="pedacos3">6 pedaços</p>
-        <p id="preco3">45,00</p>
-        <p id="sifrao3">R$</p>
-    </div>
-    <div id="texto4">
-        <p>PEQUENA</p>
-        <p id="pedacos4">4 pedaços</p>
-        <p id="preco4">30,00</p>
-        <p id="sifrao4">R$</p>
-    </div>
-    
-</div>
+    		//imprime na página uma nova linha dentro da tabela com os dados do aluno e um link para excluir o aluno passando o ID por parametro via GET.
+    		echo "<tr>
+	
+    				<td>$preco</td>
+    				
+    			</tr>";
+    	}
+        ?>  
+    </table>
+
 </body>
 </html>
