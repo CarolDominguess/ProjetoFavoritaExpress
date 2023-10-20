@@ -35,7 +35,7 @@ body {
     background-image: url(../imagens/pizzaGG.png);
     height: 296px;
     width: 305px;
-    right: -686px;
+    right: -693px;
     background-size: cover;
     position: relative;
     top: -394px;
@@ -141,7 +141,7 @@ body {
 #sifrao1{
     position: relative;
     color: rgb(255, 0, 0);
-    left: 155px;
+    left: 148px;
     font-size: 19px;
     font-family: minhaFonte7;
     top: -677px;
@@ -150,7 +150,7 @@ body {
 #sifrao2{
     position: relative;
     color: rgb(255, 0, 0);
-    left: 473px;
+    left: 467px;
     font-size: 18px;
     font-family: minhaFonte7;
     top: -702px;
@@ -159,7 +159,7 @@ body {
 #sifrao3{
     position: relative;
     color: rgb(255, 0, 0);
-    left: 768px;
+    left: 765px;
     font-size: 18px;
     font-family: minhaFonte7;
     top: -723px;
