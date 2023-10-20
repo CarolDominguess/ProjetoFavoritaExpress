@@ -85,7 +85,7 @@
     		//imprime na página uma nova linha dentro da tabela com os dados do aluno e um link para excluir o aluno passando o ID por parametro via GET.
     		echo "<tr>
 
-    				<td>$preco</td>
+    				<td> $preco</td>
     				
     			</tr>";
 

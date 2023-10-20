@@ -145,37 +145,37 @@ body {
 #sifrao1{
     position: relative;
     color: rgb(255, 0, 0);
-    left: 148px;
+    left: 157px;
     font-size: 19px;
     font-family: minhaFonte7;
-    top: -677px;
+    top: -623px;
     z-index: 1;
 }
 #sifrao2{
     position: relative;
     color: rgb(255, 0, 0);
-    left: 467px;
+    left: 462px;
     font-size: 18px;
     font-family: minhaFonte7;
-    top: -702px;
+    top: -643px;
     z-index: 1;
 }
 #sifrao3{
     position: relative;
     color: rgb(255, 0, 0);
-    left: 765px;
+    left: 761px;
     font-size: 18px;
     font-family: minhaFonte7;
-    top: -723px;
+    top: -665px;
     z-index: 1;
 }
 #sifrao4{
     position: relative;
     color: rgb(255, 0, 0);
-    left: 1064px;
+    left: 1060px;
     font-size: 18px;
     font-family: minhaFonte7;
-    top: -746px;
+    top: -689px;
     z-index: 1;
 }
 #menutexto{
