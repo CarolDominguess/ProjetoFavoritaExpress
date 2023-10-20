@@ -3,6 +3,7 @@
 <head>    
     <title>Sistema Unipar</title>
 	<link rel="stylesheet" href=".//styles.css">
+	<link rel="stylesheet" href="./styles/tabela.css">
 </head>
 <body>
     <h2>Lista de Ingredientes</h2>
@@ -92,9 +93,9 @@
     <a href="cadastrobebidas.php">Novo Produto</a> <br><br><br>
 	<a href="index.php">Me leve de volta</a>
 
-	<h2>Lista de precos</h2>
+	<h2 id="texto">Lista de precos</h2>
     <br/>
-    <table border='1'>
+    <table id="tabela" border='1'>
     	<tr>
 			<td><b>Código</b></td>
     		<td><b>Tamanho</b></td>
@@ -128,8 +129,6 @@
 ?>  
     </table>
     <br/>
-    <!-- Link para uma nova pagina de cadastro de aluno. -->
-    <a href="cadastropreco.php">Novo Produto</a> <br><br><br>
-	<a href="index.php">Me leve de volta</a>
+    
 </body>
 </html>
