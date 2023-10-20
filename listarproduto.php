@@ -101,7 +101,7 @@
     		<td><b>Tamanho</b></td>
     		<td><b>Preço</b></td>
     		<td><b>Editar</b></td>
-    		<td><b>Excluir</b></td>
+    		
     	</tr>
     	<!-- A partir daqui inicia a busca no banco de dados para trazer as bebidas nas linhas da tabela -->
     	<?php
@@ -123,10 +123,10 @@
     				<td>$tamanho</td>
     				<td>$preco</td>
     				<td><a href='formeditarpreco.php?id=$id&tamanho=$tamanho&preco=$preco'>Editar</a></td>
-    				<td><a href='excluirpreco.php?id=$id'>Excluir</a></td>
+    				
     			</tr>";
     	}
-?>  
+		?>  
     </table>
     <br/>
     
