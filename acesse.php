@@ -71,11 +71,11 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $email = $_POST["email"];
         
-            // Use a função filter_var para validar o e-mail
+            // Usei a função filter_var para validar o e-mail
             if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                // O e-mail é válido, você pode prosseguir com o processamento do formulário
+                // O e-mail é válido,  prosseguir com o processamento do formulário
                 echo "Email válido: " . $email;
-                // Aqui você pode adicionar o código para lidar com o envio do formulário
+                
             } else {
                 // O e-mail não é válido, redirecione de volta ao formulário
                 echo "<span style='color:white;'>O email inserido é inválido</span>";
