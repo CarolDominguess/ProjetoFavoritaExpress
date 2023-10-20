@@ -30,18 +30,26 @@
 
     <div id="tamanho1">
         <div id="pizza"></div>
+        <p id=tamanho8>PEQUENA</p>
+        <p id="pedacos4">4 pedaços</p>  
     </div>
 
     <div id="tamanho2">
         <div id="pizza"></div>
+        <p id=tamanho7>MÉDIA</p>
+        <p id="pedacos3">6 pedaços</p>  
     </div>
 
     <div id="tamanho3">
         <div id="pizza"></div>
+        <p id=tamanho6>GRANDE</p>
+        <p id="pedacos2">8 pedaços</p>  
     </div>
 
     <div id="tamanho4">
-        <div id="pizza"></div>    
+        <div id="pizza"></div>  
+        <p id=tamanho5>GIGANTE</p>
+        <p id="pedacos1">12 pedaços</p>  
     </div>
     <div id="sifrao1">
         <p>R$</p> 

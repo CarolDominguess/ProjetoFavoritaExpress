@@ -84,30 +84,34 @@ body {
 #pedacos1{
     position: relative;
     color: rgb(189, 189, 189);
-    left: 28px;
-    font-size: 18px;
+    left: 122px;
+    font-size: 17px;
     font-family: 'Merriweather Sans', sans-serif;
+    top: 319px;
 }
 #pedacos2{
     position: relative;
     color: rgb(189, 189, 189);
-    left: 28px;
-    font-size: 18px;
+    left: 114px;
+    font-size: 17px;
     font-family: 'Merriweather Sans', sans-serif;
+    top: 306px;
 }
 #pedacos3{
     position: relative;
     color: rgb(189, 189, 189);
-    left: 13px;
-    font-size: 18px;
+    left: 99px;
+    font-size: 17px;
     font-family: 'Merriweather Sans', sans-serif;
+    top: 292px;
 }
 #pedacos4{
     position: relative;
     color: rgb(189, 189, 189);
-    left: 38px;
-    font-size: 18px;
+    left: 73px;
+    font-size: 17px;
     font-family: 'Merriweather Sans', sans-serif;
+    top: 277px;
 }
 
 #preco1{
@@ -183,8 +187,39 @@ body {
     font-size: 50px;
     font-family: 'minhaFonte7';
 }
+#tamanho5{
+    position: relative;
+    top: 319px;
+    color: white;
+    font-family: 'Merriweather Sans', sans-serif;
+    left: 110px;
+    font-size: 26px;
+}
 
-
+#tamanho6{
+    position: relative;
+    top: 306px;
+    color: white;
+    font-family: 'Merriweather Sans', sans-serif;
+    left: 101px;
+    font-size: 26px;
+}
+#tamanho7{
+    position: relative;
+    top: 294px;
+    color: white;
+    font-family: 'Merriweather Sans', sans-serif;
+    left: 98px;
+    font-size: 26px;
+}
+#tamanho8{
+    position: relative;
+    top: 278px;
+    color: white;
+    font-family: 'Merriweather Sans', sans-serif;
+    left: 61px;
+    font-size: 26px;
+}
 
 #menu {
     margin-top:-28%;
