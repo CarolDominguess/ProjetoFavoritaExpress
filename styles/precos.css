@@ -2,14 +2,18 @@
     table {
         border-collapse: collapse;
         position: absolute;
-        top: 500px;
-        font-size: 70px;
+        top: 444px;
+        font-size: 58px;
+        margin-left: 89px;
     }
-    
+    td{
+        margin-right: 30px;
+    }
+
     td {
-        padding: 25px;
+        padding: 31px;
         display: inline-block;
-        margin-left: 154px;
+        margin-left: 49px;
         font-family: minhaFonte7;
         color: yellow;
     }

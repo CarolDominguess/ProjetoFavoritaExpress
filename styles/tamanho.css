@@ -17,7 +17,7 @@ body {
     background-image: url(../imagens/pizzaGG.png);
     height: 223px;
     width: 244px;
-    right: -84px;
+    right: -117px;
     background-size: cover;
     position: relative;
     top: 136px;
@@ -26,7 +26,7 @@ body {
     background-image: url(../imagens/pizzaGG.png);
     height: 279px;
     width: 253px;
-    right: -358px;
+    right: -404px;
     background-size: cover;
     position: relative;
     top: -104px;
@@ -35,7 +35,7 @@ body {
     background-image: url(../imagens/pizzaGG.png);
     height: 296px;
     width: 305px;
-    right: -665px;
+    right: -686px;
     background-size: cover;
     position: relative;
     top: -394px;
@@ -44,7 +44,7 @@ body {
     background-image: url(../imagens/pizzaGG.png);
     height: 300px;
     width: 329px;
-    right: -1001px;
+    right: -983px;
     background-size: cover;
     position: relative;
     top: -704px;
@@ -141,34 +141,38 @@ body {
 #sifrao1{
     position: relative;
     color: rgb(255, 0, 0);
-    left: -12px;
+    left: 155px;
     font-size: 19px;
     font-family: minhaFonte7;
-    top: -54px;
+    top: -677px;
+    z-index: 1;
 }
 #sifrao2{
     position: relative;
     color: rgb(255, 0, 0);
-    left: -10px;
-    font-size: 19px;
+    left: 473px;
+    font-size: 18px;
     font-family: minhaFonte7;
-    top: -54px;
+    top: -702px;
+    z-index: 1;
 }
 #sifrao3{
     position: relative;
     color: rgb(255, 0, 0);
-    left: -30px;
-    font-size: 19px;
+    left: 768px;
+    font-size: 18px;
     font-family: minhaFonte7;
-    top: -54px;
+    top: -723px;
+    z-index: 1;
 }
 #sifrao4{
     position: relative;
     color: rgb(255, 0, 0);
-    left: 8px;
-    font-size: 19px;
+    left: 1064px;
+    font-size: 18px;
     font-family: minhaFonte7;
-    top: -54px;
+    top: -746px;
+    z-index: 1;
 }
 #menutexto{
     text-align: center;

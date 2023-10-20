@@ -43,6 +43,18 @@
     <div id="tamanho4">
         <div id="pizza"></div>    
     </div>
+    <div id="sifrao1">
+        <p>R$</p> 
+    </div>
+    <div id="sifrao2">
+        <p>R$</p> 
+    </div>
+    <div id="sifrao3">
+        <p>R$</p> 
+    </div>
+    <div id="sifrao4">
+        <p>R$</p> 
+    </div>
 
 
     <table border='0'>
@@ -60,13 +72,15 @@
             $tamanho = $row["tamanho"];
     		$preco = $row["preco"];
     		
+            $preco = str_replace('.', ',', $preco);
 
     		//imprime na página uma nova linha dentro da tabela com os dados do aluno e um link para excluir o aluno passando o ID por parametro via GET.
     		echo "<tr>
-	
+
     				<td>$preco</td>
     				
     			</tr>";
+
     	}
         ?>  
     </table>
