@@ -109,7 +109,7 @@ ul{
 }
 
 #sobre{
-    color: #d7a41d;
+    color: #ececec;
 }
 @font-face {
     font-family: minhaFonte;
@@ -267,9 +267,12 @@ opacity: 1;
     color: #d7a41d;
 }
 #textolocal{
+    color: #d7a41d;
+}
+#sobre{
     color: #e9e7e6;
 }
-#textolocal:hover{
+#sobre:hover{
     color: #d7a41d;
 }
 
