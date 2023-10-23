@@ -48,7 +48,7 @@
         <p>Informações de Contato</p>
     </div>
     <div id=texto>
-        <p>Oferecendo preços imbatíveis, um serviço excepcional<br> e pratos que vão superar todas as suas expectativas,<br>  a Favorita Express é, sem dúvida, 'A Excelência em Sabor!'</p>
+        <p>Oferecendo preços imbatíveis, um serviço excepcional e pratos que vão superar todas as suas expectativas, a Favorita Express é, sem dúvida, 'A Excelência em Sabor!'</p>
     </div>
 	<img id="localizacaoimg" src="./imagens/localizaçãoimg.jpg">
 	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.0534742146842!2d-52.47676662616891!3d-23.095138244626764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9492976b1d2d93cd%3A0xb66ded064b2a2f63!2sPizzaria%20Favorita%20Express!5e0!3m2!1spt-BR!2sbr!4v1697829849358!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

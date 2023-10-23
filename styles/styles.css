@@ -78,17 +78,12 @@ ul{
     color: #d7a41d;
 }
 
-#telefone{
-    color: #ececec;
-    position: relative;
-    top: 276px;
-    left: 938px;
-}
+
 #textotel{
     font-size: 13px;
     color: #ececec;
     position: fixed;
-    top: 124px;
+    top: 123px;
     left: 894px;
     font-family: 'Merriweather Sans', sans-serif;
     cursor: pointer;
@@ -99,7 +94,7 @@ ul{
 #iconetel{
     font-size: 20px;
     position: fixed;
-    top: 123px;
+    top: 121px;
     left: 868px;
 }
 
@@ -114,7 +109,7 @@ ul{
     font-size: 15px;
     color: #ececec;
     position: fixed;
-    top: 122px;
+    top: 120px;
     left: 1056px;
     font-family: 'Merriweather Sans', sans-serif;
     cursor: pointer;
@@ -125,7 +120,7 @@ ul{
 #iconelocal{
     font-size: 20px;
     position: fixed;
-    top: 123px;
+    top: 118px;
     left: 1032px;
 }
 
@@ -169,7 +164,7 @@ ul{
     font-size: 30px;
     font-family: minhaFonte;
     margin: 0px;
-    top: 108px;
+    top: 104px;
 
 }
 #inscreva-se-btn:hover{

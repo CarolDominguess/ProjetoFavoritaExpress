@@ -353,8 +353,10 @@ iframe{
 }
 #texto{
     position: fixed;
-    top: 324px;
-    left: 780px;
+    width: 387px;
+    text-align: center;
+    top: 263px;
+    left: 765px;
     font-size: 17px;
     color: #e9e7e6;
     font-family: 'minhaFonte7';
