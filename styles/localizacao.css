@@ -326,12 +326,44 @@ iframe{
 #location{
     position: fixed;
     top: 414px;
-    left: 807px;
+    left: 744px;
+}
+#textlocation{
+    position: fixed;
+    top: 424px;
+    left: 777px;
+    font-size: 14px;
+    color: #e9e7e6;
+    font-family: 'minhaFonte7';
 }
 #relogio{
     height: 30px;
     position: fixed;
-    top: 520px;
-    left: 695px;
+    top: 498px;
+    left: 744px;
 
+}
+#textrelogio{
+    position: fixed;
+    top: 501px;
+    left: 780px;
+    font-size: 14px;
+    color: #e9e7e6;
+    font-family: 'minhaFonte7';
+}
+#texto{
+    position: fixed;
+    top: 324px;
+    left: 780px;
+    font-size: 17px;
+    color: #e9e7e6;
+    font-family: 'minhaFonte7';
+}
+#text1{
+    position: fixed;
+    top: 324px;
+    left: 780px;
+    font-size: 17px;
+    color: #e9e7e6;
+    font-family: 'minhaFonte7';
 }
