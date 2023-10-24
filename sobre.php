@@ -27,7 +27,7 @@
         <li><a class="exemplo" id="sobre" href="sobre.php">Sobre</a></li>
         <li><a class="exemplo" href="tamanho.php">Cardapio</a></li>
         <li><a class="exemplo" href="Redes.php" >Redes</a></li>
-        <li><a class="exemplo" href="listarproduto.php">Administração</a></li>
+        <li><a class="exemplo" href="acesse.php">Administração</a></li>
     </div>
     </ul>
     <div id="telefone">
