@@ -11,7 +11,8 @@ body {
             background-size: 100%;
             position: fixed;
             margin: 0;
-            overflow: hidden
+            overflow: hidden;
+            background-size: cover;
            
 }
 #logo{
@@ -276,47 +277,7 @@ opacity: 1;
     color: #d7a41d;
 }
 
-@media screen and (min-width: 1300px) {
-    body {
-            width: 100vw;
-            height: 100vh;
-            background-repeat: no-repeat;
-            background-image: url("../imagens/backloca.png");
-            background-size: 1649px;
-            position: fixed;
-            margin: 0;
-            overflow: hidden
-    }
 
-}
-@media screen and (min-width: 1612px) {
-    body {
-            width: 100vw;
-            height: 100vh;
-            background-repeat: no-repeat;
-            background-image: url("../imagens/backloca.png");
-            background-size: 1945px;
-            position: fixed;
-            margin: 0;
-            overflow: hidden
-    }
-
-}
-
-@media screen and (min-width: 1500px) {
-    ul{
-        text-align: left;
-        width: 100%;
-        color: rgb(243, 239, 239);
-        font-size: 15px;
-        font-family: 'Merriweather Sans', sans-serif;
-        position: fixed;
-        top: 100px;
-        right: auto;
-        
-    }
-
-}
 
 
 
@@ -338,12 +299,13 @@ iframe{
 
 #location{
     position: fixed;
-    top: 414px;
-    left: 744px;
+    top: 376px;
+    left: 743px;
+
 }
 #textlocation{
     position: fixed;
-    top: 424px;
+    top: 389px;
     left: 777px;
     font-size: 14px;
     color: #e9e7e6;
@@ -352,14 +314,14 @@ iframe{
 #relogio{
     height: 30px;
     position: fixed;
-    top: 498px;
-    left: 744px;
+    top: 457px;
+    left: 742px;
 
 }
 #textrelogio{
     position: fixed;
-    top: 501px;
-    left: 780px;
+    top: 461px;
+    left: 779px;
     font-size: 14px;
     color: #e9e7e6;
     font-family: 'minhaFonte7';
@@ -382,3 +344,24 @@ iframe{
     color: #e9e7e6;
     font-family: 'minhaFonte7';
 }
+#insta{
+    height: 50px;
+    position: fixed;
+    top: 524px;
+    left: 868px;
+}
+
+#face{
+    height: 50px;
+    position: fixed;
+    top: 524px;
+    left: 801px;
+}
+#whats{
+    height: 50px;
+    position: fixed;
+    top: 524px;
+    left: 936px;
+    cursor: pointer;
+}
+

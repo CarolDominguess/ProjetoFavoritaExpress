@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Favorita Express</title>
     <link rel="stylesheet" href="./styles/stylescadastrocliente.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <div class="cadastro">
         <form action="inserircliente.php" method="POST">
-            <h1>Cadastrar-se</h1>
+            <h1>CADASTRAR-SE</h1>
             <div class="caixas">
                 <input type="text" name="email" placeholder="E-mail" required>
                 <i class='bx bxs-user'></i>

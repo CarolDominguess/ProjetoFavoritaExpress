@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Favorita Express</title>
     <link rel="stylesheet" href="./styles/styleslogin.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -19,9 +19,6 @@
             <div class="caixas">
                 <input type="password" name="senha" placeholder="Senha" required>
                 <div class='bx bxs-lock-alt' ></div>
-            </div>
-            <div class="remember-forgot">
-                <label> <input type="checkbox"> Remember me</label>
             </div>
 
             <button type="submit" class="btn">Entrar</button>
@@ -64,7 +61,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
             $_SESSION['id'] = $usuario['id'];
             $_SESSION['nome'] = $usuario['nome'];
 
-            header("Location: index.php");
+            header("Location: listarproduto.php");
 
         } 
 

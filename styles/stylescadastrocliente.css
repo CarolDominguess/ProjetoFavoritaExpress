@@ -33,6 +33,7 @@ body{
 .cadastro h1 {
     font-size: 36px;
     text-align: center;
+    font-family: 'Merriweather Sans', sans-serif;
 }
 
 .cadastro .caixas {
@@ -73,19 +74,9 @@ body{
     margin-right: 3px;
 }
 
-.remember-forgot label input {
-    accent-color: #fff;
-    margin-right: 3px;
-}
 
-.remember-forgot a {
-    color: #fff;
-    text-decoration: none;
-}
 
-.remember-forgot a:hover {
-    text-decoration: underline;
-}
+
 
 .cadastro .btn {
     width: 100%;

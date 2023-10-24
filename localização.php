@@ -64,6 +64,16 @@
         <p>Quarta a Segunda: 18h30 às 23h</p>
         <p>Terça-feira: Fechado</p>
     </div>
+    <a href="https://www.instagram.com/favoritaexpress/">
+        <img id="insta" src="./imagens/instagram.png" alt="">
+    </a>
+    <a href="https://pt-br.facebook.com/Favoritaexpress/">
+        <img id="face" src="./imagens/facebook.png" alt="">
+    </a>
+
+    <a href="https://wa.me//5544999604040?text=Olá,%20gostaria%20de%20realizar%20um%20pedido!!">
+        <img id="whats" src="./imagens/whatsapp.png" alt="">
+    </a>
 	</body>
 	</div>
 </body>

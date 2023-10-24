@@ -11,7 +11,8 @@ body {
             background-size: 100%;
             position: fixed;
             margin: 0;
-            overflow: hidden
+            overflow: hidden;
+            background-size: cover;
            
 }
 #logo{
@@ -273,31 +274,3 @@ opacity: 1;
     color: #d7a41d;
 }
 
-@media screen and (min-width: 1500px) {
-    body {
-            width: 100vw;
-            height: 100vh;
-            background-repeat: no-repeat;
-            background-image: url("../imagens/pizza1.jpg");
-            background-size: 2000px;
-            position: fixed;
-            margin: 0;
-            overflow: hidden
-    }
-
-}
-
-@media screen and (min-width: 1500px) {
-    ul{
-        text-align: left;
-        width: 100%;
-        color: rgb(243, 239, 239);
-        font-size: 15px;
-        font-family: 'Merriweather Sans', sans-serif;
-        position: fixed;
-        top: 100px;
-        right: auto;
-        
-    }
-
-}
