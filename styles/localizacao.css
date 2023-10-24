@@ -276,13 +276,26 @@ opacity: 1;
     color: #d7a41d;
 }
 
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1300px) {
     body {
             width: 100vw;
             height: 100vh;
             background-repeat: no-repeat;
-            background-image: url("../imagens/pizza1.jpg");
-            background-size: 2000px;
+            background-image: url("../imagens/backloca.png");
+            background-size: 1649px;
+            position: fixed;
+            margin: 0;
+            overflow: hidden
+    }
+
+}
+@media screen and (min-width: 1612px) {
+    body {
+            width: 100vw;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-image: url("../imagens/backloca.png");
+            background-size: 1945px;
             position: fixed;
             margin: 0;
             overflow: hidden
