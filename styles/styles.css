@@ -202,23 +202,25 @@ opacity: 1;
 }
 
 #botaobaixo{
-background-color: #fac122;
-color: white;
-font-size: 35px;
-border-radius: 50px;
-text-align: center;
-position: fixed;
-top: 550px;
+    border: 2px solid #d2a01c;
+    background-color: #d2a01c;
+    border-radius: 50px;
+    right: 655px;
+    position: fixed;
+    font-size: 30px;
+    font-family: minhaFonte;
+    margin: 0px;
+    top: 529px;
 
 }
 #botaobaixo:hover{
-border: 2px solid #d2a01c;
-background: transparent;
-padding: 1px;
-border-radius: 50px;
-transition-delay: 0s;
-transition-duration: 0.4s;
-opacity: 1;
+    border: 2px solid #d2a01c;
+    background: transparent;
+    padding: -1px;
+    border-radius: 50px;
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+    opacity: 1;
 
 }
 #textbaixo:hover{
@@ -246,6 +248,7 @@ opacity: 1;
     text-align: center;
     position: relative;
     top: -8px;
+    color: #e9e7e6;
 }
 .exemplo{
     color: #e9e7e6;
@@ -264,6 +267,10 @@ opacity: 1;
 }
 #textolocal:hover{
     color: #d7a41d;
+}
+textbaixo:visited {
+    color: white; /* Altera a cor do link após ser visitado */
+    
 }
 
 
