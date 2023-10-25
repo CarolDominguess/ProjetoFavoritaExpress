@@ -13,5 +13,5 @@
     mysqli_query($conexao, $alterar);
 
     //Redireciona para a pagina inicial.
-    header("Location: listarproduto.php");
+    header("Location: listaralteracoes.php");
 ?>

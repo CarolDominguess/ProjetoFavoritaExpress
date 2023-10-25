@@ -10,5 +10,5 @@
     
     mysqli_query($conexao, $inserir);
 
-    header("Location: listarproduto.php");
+    header("Location: listaralteracoes.php");
 ?>
