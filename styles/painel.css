@@ -25,6 +25,9 @@ a:visited {
     color: rgb(0, 0, 0); /* Altera a cor do link após ser visitado */
     
 }
+a:hover{
+    color: #d7a41d;
+}
 
 @font-face {
     font-family: minhaFonte;
