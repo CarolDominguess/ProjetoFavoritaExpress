@@ -1,0 +1,19 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-image: url("../imagens/5.png");
+    background-size: 105%;
+    position: fixed;
+    margin: 0;
+    overflow: hidden;
+}
+
+#links{
+    position: relative;
+    top: 214px;
+    left: 4px;
+    text-align: center;
+    font-size: 27px;
+    font-family: cursive;
+}
