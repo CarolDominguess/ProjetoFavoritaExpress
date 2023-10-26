@@ -16,7 +16,11 @@
         Retirar: <input type="text" id="retirar" name="retirar"/><br/>
         Método: <input type="text" id="metodo" name="metodo"/><br/>
         Total: <input type="text" id="total" name="total"/><br/> 
-        Status: <input type="text" id="status" name="status"/><br/>         
+        <label for="status">Status:</label>
+        <select name="status" id="status">
+        <option value="FAZENDO">FAZENDO</option>
+        <option value="PRONTO">PRONTO</option>
+        </select><br/> <br/> 
         <input type="submit" value="Salvar"/>
     </form>
 </body>

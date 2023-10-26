@@ -3,7 +3,7 @@
 <head>    
     <title>Sistema Unipar</title>
 	<link rel="stylesheet" href=".//styles.css">
-	<link rel="stylesheet" href="./styles/tabela.css">
+	
 </head>
 <body>
     <h2>Lista de Pedido</h2>
@@ -21,7 +21,6 @@
 			<td><b>Total</b></td>
 			<td><b>Status</b></td>
     		<td><b>Editar</b></td>
-    		<td><b>Excluir</b></td>
     	</tr>
     	<!-- A partir daqui inicia a busca no banco de dados para trazer os alunos nas linhas da tabela -->
     	<?php
@@ -56,8 +55,8 @@
     				<td>$metodo</td>
     				<td>$total</td>
 					<td>$status</td>
-    				<td><a href='formeditarpedido.php?id=$id&nome=$nome&telefone=$telefone&quantidade=$quantidade&tamanho=$tamanho&sabores=$sabores&retirar=$retirar&metodo=$metodo&total=$total&status=$status'>Editar</a></td>
-    				<td><a href='excluirpedido.php?id=$id'>Excluir</a></td>
+    				<td><a href='formeditarpedidocozinha.php?id=$id&nome=$nome&telefone=$telefone&quantidade=$quantidade&tamanho=$tamanho&sabores=$sabores&retirar=$retirar&metodo=$metodo&total=$total&status=$status'>Editar</a></td>
+    				
     			</tr>";
     	}
     	?>    

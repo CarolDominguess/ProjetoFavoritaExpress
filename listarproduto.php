@@ -93,7 +93,7 @@
     <a href="cadastrobebidas.php">Novo Produto</a> <br><br>
 	<a href="index.php">Me leve de volta</a><br><br>
 	<a href="listaralteracoes.php">Alterar Preços</a><br><br>
-	<a href="cadastrarpedidos.php">Cadastrar pedido</a>
+	<a href="listarpedidos.php">Cadastrar pedido</a>
 
 </body>
 </html>
