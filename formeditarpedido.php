@@ -15,6 +15,7 @@
         $sabores = $_GET["sabores"];
         $retirar = $_GET["retirar"];
         $metodo = $_GET["metodo"];
+        $endereco = $_GET["endereco"];
         $total = $_GET["total"];
         $status = $_GET["status"];
     ?>
@@ -25,9 +26,14 @@
         Tamanho: <input type="text" id="tamanho" name="tamanho" value="<?php echo $tamanho; ?>" /><br/>
         Sabores: <input type="text" id="sabores" name="sabores" value="<?php echo $sabores; ?>" /><br/>
         Retirar: <input type="text" id="retirar" name="retirar" value="<?php echo $retirar; ?>" /><br/>         
-        Metódo de entrega: <input type="text" id="metodo" name="metodo" value="<?php echo $metodo; ?>" /><br/>       
+        Metódo de entrega: <input type="text" id="metodo" name="metodo" value="<?php echo $metodo; ?>" /><br/> 
+        Endereço de entrega: <input type="text" id="endereco" name="endereco" value="<?php echo $endereco; ?>" /><br/>        
         Total: <input type="text" id="total" name="total" value="<?php echo $total; ?>" /><br/>
-        Status: <input type="text" id="status" name="status" value="<?php echo $status; ?>" /><br/> 
+        <label for="status">Status:</label>
+        <select name="status" id="status">
+        <option value="FAZENDO">FAZENDO</option>
+        <option value="PRONTO">PRONTO</option>
+        </select> <br/><br/>
         <input type="submit" value="Salvar"/>
     </form>
 </body>

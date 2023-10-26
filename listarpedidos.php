@@ -18,6 +18,7 @@
 			<td><b>Sabores</b></td>
 			<td><b>Retirar ingrediente</b></td>
 			<td><b>Método de entrega</b></td>
+			<td><b>Endereço</b></td>
 			<td><b>Total</b></td>
 			<td><b>Status</b></td>
     		<td><b>Editar</b></td>
@@ -40,6 +41,7 @@
     		$sabores = $row["sabores"];
 			$retirar = $row["retirar"];
 			$metodo = $row["metodo"];
+			$endereco = $row["endereco"];
     		$total = $row["total"];
     		$status = $row["status"];
 	
@@ -54,16 +56,17 @@
 					<td>$sabores</td>
 					<td>$retirar</td>
     				<td>$metodo</td>
+					<td>$endereco</td>
     				<td>$total</td>
 					<td>$status</td>
-    				<td><a href='formeditarpedido.php?id=$id&nome=$nome&telefone=$telefone&quantidade=$quantidade&tamanho=$tamanho&sabores=$sabores&retirar=$retirar&metodo=$metodo&total=$total&status=$status'>Editar</a></td>
+    				<td><a href='formeditarpedido.php?id=$id&nome=$nome&telefone=$telefone&quantidade=$quantidade&tamanho=$tamanho&sabores=$sabores&retirar=$retirar&metodo=$metodo&endereco=$endereco&total=$total&status=$status'>Editar</a></td>
     				<td><a href='excluirpedido.php?id=$id'>Excluir</a></td>
     			</tr>";
     	}
     	?>    
     </table>
     <!-- Link para uma nova pagina de cadastro de aluno. -->
-    <a href="cadastropedido.php">Novo Produto</a> <br><br>
+    <a href="cadastropedido.php">Novo Pedido</a> <br><br>
 	<a href="index.php">Me leve de volta</a><br><br>
 	<a href="listaralteracoes.php">Alterar Preços</a><br><br>
 	<a href="telacozinha.php">Tela Cozinha</a><br><br>

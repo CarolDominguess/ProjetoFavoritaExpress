@@ -11,10 +11,21 @@
         Nome: <input type="text" id="nome" name="nome"/><br/>        
         Telefone: <input type="text" id="telefone" name="telefone"/><br/>
         Quantidade: <input type="text" id="quantidade" name="quantidade"/><br/>
-        Tamanho: <input type="text" id="tamanho" name="tamanho"/><br/>
+        <label for="tamanho">Tamanho:</label>
+        <select name="tamanho" id="tamanho">
+        <option value="PEQUENA">PEQUENA</option>
+        <option value="MÉDIA">MÉDIA</option>
+        <option value="GRANDE">GRANDE</option>
+        <option value="GIGANTE">GIGANTE</option>
+        </select><br/> 
         Sabores: <input type="text" id="sabores" name="sabores"/><br/>        
         Retirar: <input type="text" id="retirar" name="retirar"/><br/>
-        Método: <input type="text" id="metodo" name="metodo"/><br/>
+        <label for="metodo">Método de entrega:</label>
+        <select name="metodo" id="metodo">
+        <option value="ENTREGA">ENTREGA</option>
+        <option value="RETIRADA">RETIRADA</option>
+        </select><br/> 
+        Endereço de entrega: <input type="text" id="endereco" name="endereco"/><br/>
         Total: <input type="text" id="total" name="total"/><br/> 
         <label for="status">Status:</label>
         <select name="status" id="status">

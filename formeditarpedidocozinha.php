@@ -19,15 +19,14 @@
         $status = $_GET["status"];
     ?>
     <form action="editarpedidocozinha.php?id=<?php echo $id; ?>" method="post">
-        Nome: <input type="text" id="nome" name="nome" value="<?php echo $nome; ?>" /><br/>        
-        Telefone: <input type="text" id="telefone" name="telefone" value="<?php echo $telefone; ?>" /><br/>
-        Quantidade: <input type="text" id="quantidade" name="quantidade" value="<?php echo $quantidade; ?>" /><br/>       
-        Tamanho: <input type="text" id="tamanho" name="tamanho" value="<?php echo $tamanho; ?>" /><br/>
-        Sabores: <input type="text" id="sabores" name="sabores" value="<?php echo $sabores; ?>" /><br/>
-        Retirar: <input type="text" id="retirar" name="retirar" value="<?php echo $retirar; ?>" /><br/>         
-        Metódo de entrega: <input type="text" id="metodo" name="metodo" value="<?php echo $metodo; ?>" /><br/>       
-        Total: <input type="text" id="total" name="total" value="<?php echo $total; ?>" /><br/>
-        
+        Nome: <input type="text" id="nome" name="nome" readonly value="<?php echo $nome; ?>" /><br/>        
+        Telefone: <input type="text" id="telefone" name="telefone" readonly value="<?php echo $telefone; ?>" /><br/>
+        Quantidade: <input type="text" id="quantidade" name="quantidade" readonly value="<?php echo $quantidade; ?>" /><br/>       
+        Tamanho: <input type="text" id="tamanho" name="tamanho" readonly value="<?php echo $tamanho; ?>" /><br/>
+        Sabores: <input type="text" id="sabores" name="sabores" readonly value="<?php echo $sabores; ?>" /><br/>
+        Retirar: <input type="text" id="retirar" name="retirar" readonly value="<?php echo $retirar; ?>" /><br/>         
+        Metódo de entrega: <input type="text" id="metodo" name="metodo" readonly value="<?php echo $metodo; ?>" /><br/>       
+        Total: <input type="text" id="total" name="total" readonly value="<?php echo $total; ?>" /><br/>
         <label for="status">Status:</label>
         <select name="status" id="status">
         <option value="FAZENDO">FAZENDO</option>

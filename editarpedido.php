@@ -10,12 +10,13 @@
     $sabores = $_POST["sabores"];
     $retirar = $_POST["retirar"];
 	$metodo = $_POST["metodo"];
+    $endereco = $_POST["endereco"];
     $total = $_POST["total"];
     $status = $_POST["status"];
 
 
     //Cria o SQL para alterar os dados do aluno no banco de dados, o ID não precisa porque é autoincrement.
-    $alterar = "update pedido set nome = '$nome', telefone = '$telefone', quantidade ='$quantidade', tamanho ='$tamanho', sabores = '$sabores', retirar = '$retirar', metodo = '$metodo', total = '$total', status = '$status' where id = $id";
+    $alterar = "update pedido set nome = '$nome', telefone = '$telefone', quantidade ='$quantidade', tamanho ='$tamanho', sabores = '$sabores', retirar = '$retirar', metodo = '$metodo', endereco = '$endereco', total = '$total', status = '$status' where id = $id";
     //Executa o SQL no banco de dados da conexão.
     mysqli_query($conexao, $alterar);
 
