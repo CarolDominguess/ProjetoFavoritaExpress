@@ -6,9 +6,11 @@
 	<link rel="stylesheet" href="./styles/tabela.css">
 </head>
 <body>
-    <h2>Lista de Ingredientes</h2>
+	<h2 id="textestoque">ESTOQUE</h2>
+    <h2 id="textingredientes1">Lista de Ingredientes</h2>
     <br/>
-    <table border='1'>
+
+    <table id="tabela1" border='1'>
     	<tr>
     		<td><b>Código</b></td>
     		<td><b>Nome</b></td>
@@ -46,11 +48,15 @@
     	}
     	?>    
     </table>
+	<br>
+	<div id="links1">
 	<a href="cadastroproduto.php">Novo Produto</a> <br><br><br>
 	<a href="index.php">Me leve de volta</a>
-	<h2>Lista de Bebidas</h2>
+	</div>
+
+	<h2 id="textingredientes2">Lista de Bebidas</h2>
     <br/>
-    <table border='1'>
+    <table id="tabela2" border='1'>
     	<tr>
     		<td><b>Código</b></td>
     		<td><b>Nome</b></td>
@@ -89,11 +95,12 @@
     	?>    
     </table>
     <br/>
+	<div id="links2">
     <!-- Link para uma nova pagina de cadastro de aluno. -->
     <a href="cadastrobebidas.php">Novo Produto</a> <br><br>
 	<a href="index.php">Me leve de volta</a><br><br>
 	<a href="listaralteracoes.php">Alterar Preços</a><br><br>
 	<a href="listarpedidos.php">Cadastrar pedido</a>
-
+	</div>
 </body>
 </html>
