@@ -99,8 +99,6 @@
     <!-- Link para uma nova pagina de cadastro de aluno. -->
     <a href="cadastrobebidas.php">Novo Produto</a> <br><br>
 	<a href="index.php">Me leve de volta</a><br><br>
-	<a href="listaralteracoes.php">Alterar Preços</a><br><br>
-	<a href="listarpedidos.php">Cadastrar pedido</a>
 	</div>
 </body>
 </html>

@@ -9,51 +9,81 @@ body{
     overflow: hidden;
 }
 
-#links{
+    @font-face {
+        font-family: minhaFonte;
+        src: url(../fonts/AadPro-Bold.woff2);
+    }
+    @font-face {
+        font-family: minhaFonte2;
+        src: url(../fonts/Mooli-Regular.ttf);
+    }
+    @font-face {
+        font-family: minhaFonte3;
+        src: url(../fonts/JosefinSans-VariableFont_wght.ttf);
+    }
+    @font-face {
+        font-family: minhaFonte4;
+        src: url(../fonts/Nunito-VariableFont_wght.ttf);
+    }
+    @font-face {
+        font-family: minhaFonte5;
+        src: url(../fonts/MerriweatherSans-VariableFont_wght.ttf);
+    }
+    @font-face {
+        font-family: minhaFonte6;
+        src: url(../fonts/GraviolaSoftRegular.otf);
+    }
+    @font-face {
+        font-family: minhaFonte7;
+        src: url(../fonts/Graviola-Regular.otf);
+    }
+
+#textestoque{
     position: relative;
-    top: 214px;
-    left: 4px;
-    text-align: center;
-    font-size: 27px;
-    font-family: minhaFonte7;
-    color: black;
+    top: 36px;
+    left: 596px;
+    font-size: 50px;
+    font-family: monospace;
+}
+#textingredientes2{
+    position: relative;
+    top: -270px;
+    left: 756px;
+    font-family: monospace;
+}
+#links2{
+    position: relative;
+    top: -232px;
+    left: 783px;
+    font-family: monospace;
+
+}
+#tabela1{
+    position: relative;
+    top: 58px;
+    left: 110px;
+    font-size: 16px;
+    font-family: monospace;
+}
+#textingredientes1{
+    position: relative;
+    top: 58px;
+    left: 114px;
+    font-family: monospace;
+}
+#links1{
+    position: relative;
+    top: 58px;
+    left: 114px;
+    font-family: monospace;
 }
 a{
     text-decoration: none;
 }
-a:visited {
-    color: rgb(0, 0, 0); /* Altera a cor do link após ser visitado */
-    
-}
-a:hover{
-    color: #d7a41d;
-}
-
-@font-face {
-    font-family: minhaFonte;
-    src: url(../fonts/AadPro-Bold.woff2);
-}
-@font-face {
-    font-family: minhaFonte2;
-    src: url(../fonts/Mooli-Regular.ttf);
-}
-@font-face {
-    font-family: minhaFonte3;
-    src: url(../fonts/JosefinSans-VariableFont_wght.ttf);
-}
-@font-face {
-    font-family: minhaFonte4;
-    src: url(../fonts/Nunito-VariableFont_wght.ttf);
-}
-@font-face {
-    font-family: minhaFonte5;
-    src: url(../fonts/MerriweatherSans-VariableFont_wght.ttf);
-}
-@font-face {
-    font-family: minhaFonte6;
-    src: url(../fonts/GraviolaSoftRegular.otf);
-}
-@font-face {
-    font-family: minhaFonte7;
-    src: url(../fonts/Graviola-Regular.otf);
+#tabela2{
+    position: relative;
+    top: -267px;
+    left: 713px;
+    font-family: monospace;
+    font-size: 16px;
 }
