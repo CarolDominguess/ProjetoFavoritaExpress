@@ -39,7 +39,7 @@ body{
     }
 
     #pedidos{
-        position: relative
+        position: relative;
         top: 36px;
         left: 596px;
         font-size: 50px;
