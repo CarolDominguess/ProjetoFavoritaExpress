@@ -1,0 +1,59 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-image: url("../imagens/10.png");
+    background-size: 105%;
+    position: fixed;
+    margin: 0;
+    overflow: hidden;
+}
+
+#links{
+    position: relative;
+    top: 214px;
+    left: 4px;
+    text-align: center;
+    font-size: 27px;
+    font-family: minhaFonte7;
+    color: black;
+}
+a{
+    text-decoration: none;
+}
+a:visited {
+    color: rgb(0, 0, 0); /* Altera a cor do link após ser visitado */
+    
+}
+a:hover{
+    color: #d7a41d;
+}
+
+@font-face {
+    font-family: minhaFonte;
+    src: url(../fonts/AadPro-Bold.woff2);
+}
+@font-face {
+    font-family: minhaFonte2;
+    src: url(../fonts/Mooli-Regular.ttf);
+}
+@font-face {
+    font-family: minhaFonte3;
+    src: url(../fonts/JosefinSans-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: minhaFonte4;
+    src: url(../fonts/Nunito-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: minhaFonte5;
+    src: url(../fonts/MerriweatherSans-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: minhaFonte6;
+    src: url(../fonts/GraviolaSoftRegular.otf);
+}
+@font-face {
+    font-family: minhaFonte7;
+    src: url(../fonts/Graviola-Regular.otf);
+}
