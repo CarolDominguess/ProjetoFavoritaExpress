@@ -2,8 +2,8 @@
 <html lang="en">
 <head>    
     <title>Sistema Unipar</title>
-	<link rel="stylesheet" href=".//styles.css">
-	<link rel="stylesheet" href="./styles/tabela.css">
+	
+	<link rel="stylesheet" href="./styles/pedidos.css">
 </head>
 <body>
     <h2>Lista de Pedido</h2>
