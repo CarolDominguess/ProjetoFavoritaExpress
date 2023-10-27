@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="./styles/pedidos.css">
 </head>
 <body>
+<h2 id="pedidos">PEDIDOS</h2>
     <h2>Lista de Pedido</h2>
     <br/>
     <table border='1'>

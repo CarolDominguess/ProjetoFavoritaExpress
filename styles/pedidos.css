@@ -38,6 +38,14 @@ body{
         src: url(../fonts/Graviola-Regular.otf);
     }
 
+    #pedidos{
+        position: relative;
+        top: 36px;
+        left: 596px;
+        font-size: 50px;
+        font-family: monospace;
+    }
+
 
 a{
     text-decoration: none;
