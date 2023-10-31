@@ -60,7 +60,7 @@
     				<td>$total</td>
 					<td>$status</td>
     				<td><a href='formeditarpedido.php?id=$id&nome=$nome&telefone=$telefone&quantidade=$quantidade&tamanho=$tamanho&sabores=$sabores&retirar=$retirar&metodo=$metodo&endereco=$endereco&total=$total&status=$status'>Editar</a></td>
-    				<td><a href='excluirpedido.php?id=$id'>Excluir</a></td>
+    				<td><a id='excluir' href='excluirpedido.php?id=$id'>Excluir</a></td>
     			</tr>";
     	}
     	?>    

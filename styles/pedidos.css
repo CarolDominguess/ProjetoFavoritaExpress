@@ -50,6 +50,7 @@ body{
 a{
     text-decoration: none;
     font-family: monospace;
+    color: black;
 }
 table{
     font-family: monospace;
@@ -68,4 +69,16 @@ h2{
     top: 161px;
     position: relative;
     left: 53px;
+}
+#link3:visited{
+    color: rgb(0, 0, 0);
+}
+a:visited{
+    color: rgb(0, 0, 0);
+}
+#excluir:visited{
+    color: rgb(255, 9, 9);
+}
+#excluir{
+    color: brown;
 }
