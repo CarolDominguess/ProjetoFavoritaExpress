@@ -2,7 +2,7 @@
 <html lang="en">
 <head>    
     <title>Favorita Express</title>
-	<link rel="stylesheet" href=".//styles.css">
+	<link rel="stylesheet" href="./styles/cozinha.css">
 	
 </head>
 <body>
@@ -63,6 +63,6 @@
     </table>
     <!-- Link para uma nova pagina de cadastro de aluno. -->
 	<br><br>
-	<a href="index.php">Me leve de volta</a><br><br>
+	<a id="link" href="paineladmin.php">Me leve de volta</a><br><br>
 </body>
 </html>

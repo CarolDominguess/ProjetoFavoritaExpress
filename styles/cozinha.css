@@ -1,0 +1,67 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-image: url("../imagens/11.png");
+    background-size: 105%;
+    position: fixed;
+    margin: 0;
+    overflow: hidden;
+
+}
+#link{
+    text-decoration: none;
+    position: fixed;
+    top: 372px;
+    left: 573px;
+    font-family: monospace;
+}
+table{
+    position: fixed;
+    top: 188px;
+    left: 127px;
+    font-size: 16px;
+    font-family: monospace;
+}
+h2{
+    position: fixed;
+    top: 88px;
+    left: 545px;
+    font-size: 27px;
+    font-family: monospace;
+}
+
+
+
+
+
+
+
+@font-face {
+    font-family: minhaFonte;
+    src: url(../fonts/AadPro-Bold.woff2);
+}
+@font-face {
+    font-family: minhaFonte2;
+    src: url(../fonts/Mooli-Regular.ttf);
+}
+@font-face {
+    font-family: minhaFonte3;
+    src: url(../fonts/JosefinSans-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: minhaFonte4;
+    src: url(../fonts/Nunito-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: minhaFonte5;
+    src: url(../fonts/MerriweatherSans-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: minhaFonte6;
+    src: url(../fonts/GraviolaSoftRegular.otf);
+}
+@font-face {
+    font-family: minhaFonte7;
+    src: url(../fonts/Graviola-Regular.otf);
+}
