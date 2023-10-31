@@ -43,6 +43,7 @@ body {
     position: fixed;
     right: 295px;
     top: 54px;
+    font-weight: 100;
 }
 #caixa{
     width: 116vw;
