@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>    
-    <title>Sistema Unipar</title>
+    <title>Favorita Express</title>
 </head>
 <body>
     <h2>Cadastro de Produto</h2>
