@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./styles/tamanho.css">
     <link rel="stylesheet" href="./styles/precos.css">
 
-    <title> Favorita Express</title>
+    <title>Favorita Express</title>
 </head> 
 
 <body>

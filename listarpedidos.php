@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>    
-    <title>Sistema Unipar</title>
+    <title>Favorita Express</title>
 	
 	<link rel="stylesheet" href="./styles/pedidos.css">
 </head>

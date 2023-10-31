@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./styles/styles.css">
     
     
-    <title> Favorita Express</title>
+    <title>Favorita Express</title>
 </head> 
 
 <body>
