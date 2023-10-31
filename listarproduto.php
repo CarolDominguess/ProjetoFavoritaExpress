@@ -42,8 +42,8 @@
     				<td>$quantidade</td>
 					<td>$validade</td>
 					<td>$preco</td>
-    				<td><a href='formeditarproduto.php?id=$id&nome=$nome&quantidade=$quantidade&validade=$validade&preco=$preco'>Editar</a></td>
-    				<td><a href='excluirproduto.php?id=$id'>Excluir</a></td>
+    				<td><a id='editar' href='formeditarproduto.php?id=$id&nome=$nome&quantidade=$quantidade&validade=$validade&preco=$preco'>Editar</a></td>
+    				<td><a id='excluir' href='excluirproduto.php?id=$id'>Excluir</a></td>
     			</tr>";
     	}
     	?>    
@@ -87,8 +87,8 @@
     				<td>$quantidade</td>
 					<td>$validade</td>
 					<td>$preco</td>
-    				<td><a href='formeditarbebida.php?id=$id&nome=$nome&quantidade=$quantidade&validade=$validade&preco=$preco'>Editar</a></td>
-    				<td><a href='excluirbebida.php?id=$id'>Excluir</a></td>
+    				<td><a id='editar' href='formeditarbebida.php?id=$id&nome=$nome&quantidade=$quantidade&validade=$validade&preco=$preco'>Editar</a></td>
+    				<td><a id='excluir' href='excluirbebida.php?id=$id'>Excluir</a></td>
     			</tr>";
     	}
     	?>    

@@ -58,6 +58,7 @@ table{
     position: fixed;
     left: 50px;
     top: 177px;
+    text-align: center;
 }
 h2{
     font-family: monospace;
@@ -81,4 +82,10 @@ a:visited{
 }
 #excluir{
     color: brown;
+}
+#editar:visited{
+    color: rgb(4, 2, 114);
+}
+#editar{
+    color: rgb(4, 2, 114);
 }

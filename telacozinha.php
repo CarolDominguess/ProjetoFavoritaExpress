@@ -55,7 +55,7 @@
     				<td>$metodo</td>
     				<td>$total</td>
 					<td>$status</td>
-    				<td><a href='formeditarpedidocozinha.php?id=$id&nome=$nome&telefone=$telefone&quantidade=$quantidade&tamanho=$tamanho&sabores=$sabores&retirar=$retirar&metodo=$metodo&total=$total&status=$status'>Editar</a></td>
+    				<td><a id='editar' href='formeditarpedidocozinha.php?id=$id&nome=$nome&telefone=$telefone&quantidade=$quantidade&tamanho=$tamanho&sabores=$sabores&retirar=$retirar&metodo=$metodo&total=$total&status=$status'>Editar</a></td>
     				
     			</tr>";
     	}

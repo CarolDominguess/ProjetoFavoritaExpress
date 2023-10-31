@@ -20,17 +20,23 @@ table{
     position: fixed;
     top: 188px;
     left: 127px;
-    font-size: 16px;
+    font-size: 17px;
     font-family: monospace;
+    text-align: center;
 }
 h2{
     position: fixed;
     top: 88px;
     left: 545px;
-    font-size: 27px;
+    font-size: 32px;
     font-family: monospace;
 }
-
+#editar:visited{
+    color: rgb(4, 2, 114);
+}
+#editar{
+    color: rgb(4, 2, 114);
+}
 
 
 
