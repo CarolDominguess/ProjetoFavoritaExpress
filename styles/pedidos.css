@@ -53,8 +53,19 @@ a{
 }
 table{
     font-family: monospace;
-    font-size: 17px;
+    font-size: 16px;
+    position: fixed;
+    left: 50px;
+    top: 177px;
 }
 h2{
     font-family: monospace;
+    position: relative;
+    left: 50px;
+    top: 24px;
+}
+#link3{
+    top: 161px;
+    position: relative;
+    left: 53px;
 }

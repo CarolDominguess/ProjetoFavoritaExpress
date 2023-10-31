@@ -51,7 +51,6 @@
 	<br>
 	<div id="links1">
 	<a href="cadastroproduto.php">Novo Produto</a> <br><br><br>
-	<a href="index.php">Me leve de volta</a>
 	</div>
 
 	<h2 id="textingredientes2">Lista de Bebidas</h2>
@@ -96,9 +95,8 @@
     </table>
     <br/>
 	<div id="links2">
-    <!-- Link para uma nova pagina de cadastro de aluno. -->
     <a href="cadastrobebidas.php">Novo Produto</a> <br><br>
-	<a href="index.php">Me leve de volta</a><br><br>
 	</div>
+	<a id="link3" href="paineladmin.php">Me leve de volta</a><br><br>
 </body>
 </html>

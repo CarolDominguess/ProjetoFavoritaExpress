@@ -7,7 +7,6 @@
 </head>
 <body>
 <h2 id="pedidos">PEDIDOS</h2>
-    <h2>Lista de Pedido</h2>
     <br/>
     <table border='1'>
     	<tr>
@@ -67,10 +66,7 @@
     	?>    
     </table>
     <!-- Link para uma nova pagina de cadastro de aluno. -->
-    <a href="cadastropedido.php">Novo Pedido</a> <br><br>
-	<a href="index.php">Me leve de volta</a><br><br>
-	<a href="listaralteracoes.php">Alterar Preços</a><br><br>
-	<a href="telacozinha.php">Tela Cozinha</a><br><br>
-
+    <a id="link3" href="cadastropedido.php">Novo Pedido</a> <br><br>
+	<a id="link3" href="paineladmin.php">Me leve de volta</a><br><br>
 </body>
 </html>
