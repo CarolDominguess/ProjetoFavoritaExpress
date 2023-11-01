@@ -60,8 +60,8 @@ body{
 
 }
 #tabela1{
-    position: relative;
-    top: 58px;
+    position: fixed;
+    top: 244px;
     left: 110px;
     font-size: 16px;
     font-family: monospace;
@@ -84,8 +84,8 @@ a{
     text-decoration: none;
 }
 #tabela2{
-    position: relative;
-    top: -267px;
+    position: fixed;
+    top: 243px;
     left: 713px;
     font-family: monospace;
     font-size: 16px;
