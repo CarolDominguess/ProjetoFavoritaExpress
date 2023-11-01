@@ -26,7 +26,7 @@
         <li><a class="exemplo" id="home" href="index.php">Home</a></li>
         <li><a class="exemplo" href="sobre.php">Sobre</a></li>
         <li><a class="exemplo" href="tamanho.php">Cardapio</a></li>
-        <li><a class="exemplo" href="Redes.php" >Redes</a></li>
+        <li><a class="exemplo" href="Redes.php" >Promos</a></li>
         <li><a class="exemplo" href="acesse.php">Administração</a></li>
         
     </div>
