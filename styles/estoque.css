@@ -93,9 +93,10 @@ a{
 }
 #link3{
     position: relative;
-    top: 119px;
-    left: 610px;
+    top: -286px;
+    left: 1168px;
     font-family: monospace;
+
 }
 #links1:visited{
     color: rgb(0, 0, 0);
