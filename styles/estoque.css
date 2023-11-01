@@ -53,8 +53,8 @@ body{
 }
 #links2{
     position: relative;
-    top: -232px;
-    left: 783px;
+    top: 55px;
+    left: 720px;
     font-family: monospace;
     color: black;
 
@@ -93,14 +93,11 @@ a{
 }
 #link3{
     position: relative;
-    top: -165px;
+    top: 119px;
     left: 610px;
     font-family: monospace;
 }
 #links1:visited{
-    color: rgb(0, 0, 0);
-}
-#links2{
     color: rgb(0, 0, 0);
 }
 #links2:visited{

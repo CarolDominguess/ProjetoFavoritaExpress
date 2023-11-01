@@ -4,6 +4,7 @@
     
     $nome = $_POST["nome"];
     $quantidade = $_POST["quantidade"];
+    $validade = $_POST["validade"];
     $preco = $_POST["preco"];
 
     
