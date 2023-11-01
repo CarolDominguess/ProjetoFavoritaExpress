@@ -47,21 +47,21 @@ body{
 }
 #textingredientes2{
     position: relative;
-    top: -270px;
-    left: 756px;
+    top: -77px;
+    left: 715px;
     font-family: monospace;
 }
-#links2{
+#link2{
     position: relative;
-    top: 55px;
+    top: -121px;
     left: 720px;
     font-family: monospace;
-    color: black;
+    color: rgb(48, 152, 0);
 
 }
 #tabela1{
     position: fixed;
-    top: 244px;
+    top: 254px;
     left: 110px;
     font-size: 16px;
     font-family: monospace;
@@ -75,7 +75,7 @@ body{
 }
 #links1{
     position: relative;
-    top: 220px;
+    top: 15px;
     left: 114px;
     font-family: monospace;
     color: black;
@@ -85,7 +85,7 @@ a{
 }
 #tabela2{
     position: fixed;
-    top: 243px;
+    top: 253px;
     left: 713px;
     font-family: monospace;
     font-size: 16px;
@@ -100,15 +100,19 @@ a{
 #links1:visited{
     color: rgb(0, 0, 0);
 }
-#links2:visited{
-    color: rgb(0, 0, 0);
+
+#link2:visited{
+    color: rgb(48, 152, 0);
 }
+
 #link3:visited{
     color: rgb(0, 0, 0);
 }
+
 a:visited{
-    color: rgb(0, 0, 0);
+    color: rgb(22, 106, 4);
 }
+
 #excluir:visited{
     color: rgb(255, 9, 9);
 }

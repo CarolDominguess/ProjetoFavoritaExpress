@@ -94,7 +94,7 @@
     	?>    
     </table>
     <br/>
-	<div id="links2">
+	<div id="link2">
     <a href="cadastrobebidas.php">Novo Produto</a> <br><br>
 	</div>
 	<a id="link3" href="paineladmin.php">Me leve de volta</a><br><br>
