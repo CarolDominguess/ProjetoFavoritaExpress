@@ -67,11 +67,23 @@ h2{
     top: 24px;
 }
 #link3{
-    top: 161px;
+    top: -9px;
     position: relative;
     left: 53px;
+    color: rgb(4 114 6);
+}
+#link4{
+    top: -89px;
+    position: relative;
+    left: 1254px;
 }
 #link3:visited{
+    color: rgb(4 114 6);
+}
+a:visited{
+    color: rgb(0, 0, 0);
+}
+#link4:visited{
     color: rgb(0, 0, 0);
 }
 a:visited{
