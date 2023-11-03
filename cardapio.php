@@ -13,19 +13,15 @@
 </head> 
 
 <body>
-    <header>
-        <div id="menudireito">
-            <a href="cardapio.php" id="inscreva-se-btn"><li id="text">Faça seu pedido</li></a>
-            <h1 id="sabores1">Opçoes de Sabores</h1>
-        </div>
-    </header>
 <div id="scroll">
+    <a href="tamanho.php" id="inscreva-se-btn2"><li id="text">Voltar</li></a>
+    <a href="https://wa.me//5544999604040?text=Olá,%20gostaria%20de%20realizar%20um%20pedido!!" id="inscreva-se-btn"><li id="text">Faça seu pedido</li></a>
+    <h1 id="sabores1">Opçoes de Sabores</h1>
     <div id="caixa">
         <div id="pizza1"><p id="texto1">Brocolis com bacon</p></div>
         <div id="pizza2"><p id="texto2">Pepperoni</p></div>
         <div id="pizza3"><p id="texto3">Burrata</p></div>
         <div id="pizza7"><p id="texto7">Lombo Canadense</p></div>
-        
         
     </div>
     <div id="caixaaa">

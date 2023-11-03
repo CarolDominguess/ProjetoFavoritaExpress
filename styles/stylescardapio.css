@@ -35,15 +35,14 @@ body {
             overflow-x: hidden;
 }
 #sabores1{
-    text-align: center;
-    width: 60%;
     color: rgb(255, 255, 255);
     font-size: 50px;
     font-family: 'minhaFonte8';
-    position: fixed;
-    right: 295px;
-    top: 54px;
     font-weight: 100;
+    position: relative;
+    top: 56px;
+    left: 478px;
+    width: 594px;
 }
 #caixa{
     width: 116vw;
@@ -127,7 +126,7 @@ body {
 }
 #texto5{
     position: relative;
-    top: 285px;
+    top: 297px;
     left: 13px;
 }
 #pizza6{
@@ -139,7 +138,7 @@ body {
 }
 #texto6{
     position: relative;
-    top: 284px;
+    top: 297px;
     left: 18px;
 }
 #pizza4{
@@ -153,14 +152,14 @@ body {
 
 #texto4{
     position: relative;
-    top: 287px;
+    top: 298px;
     left: 49px;
 }
 #caixaa{
     width: 96vw;
     height: 15rem;
     background: transparent;
-    margin: 30rem auto 0 auto;
+    margin: 32rem auto 0 auto;
     border: solid 0px;
     display: flex;
     padding: 3rem;
@@ -184,7 +183,7 @@ body {
     width: 96vw;
     height: 15rem;
     background: transparent;
-    margin: -43rem auto 0 auto;
+    margin: -45rem auto 0 auto;
     border: solid 0px;
     display: flex;
     padding: 3rem;
@@ -224,7 +223,7 @@ body {
 }
 #texto11{
     position: relative;
-    top: 288px;
+    top: 296px;
     left: 6px;
 }
 #pizza9{
@@ -487,6 +486,18 @@ ul{
     src: url(../fonts/GROBOLD.ttf);
 }
 
+#inscreva-se-btn2{
+    border: 2px solid #ca0808;
+    background-color: #ca0808;
+    border-radius: 50px;
+    right: 1180px;
+    position: fixed;
+    font-size: 30px;
+    font-family: minhaFonte;
+    margin: 0px;
+    top: 70px;
+}
+
 
 #inscreva-se-btn{
     border: 2px solid #ca0808;
@@ -498,7 +509,6 @@ ul{
     font-family: minhaFonte;
     margin: 0px;
     top: 70px;
-
 }
 #inscreva-se-btn:hover{
 border: 2px solid white;
@@ -510,6 +520,16 @@ transition-duration: 0.4s;
 opacity: 1;
 
 }
+#inscreva-se-btn2:hover{
+    border: 2px solid white;
+    background: transparent;
+    padding: -1px;
+    border-radius: 50px;
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+    opacity: 1;
+    
+    }
 
 #menudireito{
     font-family: 'Merriweather Sans', sans-serif;
