@@ -101,3 +101,40 @@ a:visited{
 #editar{
     color: rgb(4, 2, 114);
 }
+
+#text{
+    color: white;
+    font-size: 14px;
+    font-family: monospace;
+    margin: 0;
+    width: 173px;
+    height: 34px;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    top: 8px;
+
+}
+#link{
+    border: 2px solid #050303;
+    background-color: #000000;
+    border-radius: 89px;
+    right: 1112px;
+    position: fixed;
+    font-size: 36px;
+    font-family: monospace;
+    margin: 0px;
+    top: 89px;
+}
+#link:hover{
+    border: 2px solid rgb(0, 0, 0);
+    background: transparent;
+    padding: -1px;
+    border-radius: 50px;
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+    opacity: 1;
+    }
+#text:hover{
+    color: black;
+}

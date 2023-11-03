@@ -97,6 +97,6 @@
 	<div id="link2">
     <a href="cadastrobebidas.php">Novo Produto</a> <br><br>
 	</div>
-	<a id="link3" href="paineladmin.php">Me leve de volta</a><br><br>
+	<a id="link" href="paineladmin.php"><p id="text">Me leve de volta</p></a><br><br>
 </body>
 </html>

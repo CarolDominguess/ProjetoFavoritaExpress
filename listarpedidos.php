@@ -67,6 +67,6 @@
     </table>
     <!-- Link para uma nova pagina de cadastro de aluno. -->
     <a id="link3" href="cadastropedido.php">Novo Pedido</a> <br><br>
-	<a id="link4" href="paineladmin.php">Me leve de volta</a><br><br>
+	<a id="link" href="paineladmin.php"><p id="text">Me leve de volta</p></a><br><br>
 </body>
 </html>
