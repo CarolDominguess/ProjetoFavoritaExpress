@@ -16,5 +16,7 @@
 
 ✔Adicionalmente, introduzimos um sistema de autenticação e registro exclusivo para administradores. Isso possibilita a realização de modificações nos preços dos itens de pizza disponíveis no site. Além disso, criamos uma funcionalidade que simplifica o processo de cadastro de produtos no estoque, permitindo, inclusive, a inclusão das datas de vencimento de cada item. Também desenvolvemos um painel de gerenciamento de pedidos e seus estados de processamento. Isso torna mais eficiente a tarefa de acompanhamento dos pedidos para a equipe responsável no balcão, garantindo que possam verificar facilmente o status de cada pedido, incluindo se ele está pronto ou não.
 
+✨Prévia da tela inicial
 
+<img width="960" alt="Captura de tela 2023-11-01 205154" src="https://github.com/CarolDominguess/ProjetoFavoritaExpress/assets/104910331/1d5f1b39-3d3c-4a1d-b040-899ddf8d082e">
 
