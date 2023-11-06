@@ -1,0 +1,276 @@
+A {text-decoration: none;}
+    * {
+            margin:0;
+            box-sizing: 0;
+        }
+body {
+            width: 100vw;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-image: url("../imagens/backgroundmaisescuro.png");
+            background-size: 100%;
+            position: fixed;
+            margin: 0;
+            overflow: hidden;
+            background-size: cover;
+           
+}
+#logo{
+    text-align: center;
+}
+#logo1{
+    width: 286px;
+    height: 224px;
+    
+}
+#banner1{
+    position: relative;
+    top: 416px;
+    left: 802px;
+    height: 345px;
+    width: 226px;
+}
+#banner2{
+    position: relative;
+    top: 415px;
+    left: 840px;
+    height: 347px;
+    width: 226px;
+}
+.exemplo{
+    transition-delay: 0s;
+    transition-duration: 0.3s;
+}
+#display{
+    display: flex;
+}
+#texto1{
+    text-align: left;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-family: minhaFonte7;
+    position: fixed;
+    top: 257px;
+    left: 145px;
+}
+#texto2{
+    text-align: center;
+    width: 100%;
+    font-size: 18px;
+    font-family: minhaFonte7;
+    position: fixed;
+    top: 324px;
+    left: -326px;
+    color: #d7a41d;
+    font-weight: 100;
+
+}
+#texto3{
+    text-align: center;
+    width: 100%;
+    font-size: 18px;
+    font-family: minhaFonte7;
+    position: fixed;
+    top: 412px;
+    left: -326px;
+    color: rgb(189, 189, 189);
+    font-weight: 100;
+
+}
+
+
+#menu {
+    margin-top:-28%;
+    
+}
+header{
+display: block;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+
+}
+
+li{
+display: inline-block;
+margin: 20px;
+
+}
+
+ul{
+    text-align: left;
+    width: 100%;
+    color: rgb(243, 239, 239);
+    font-size: 15px;
+    font-family: 'Merriweather Sans', sans-serif;
+    position: fixed;
+    top: 100px;
+    
+}
+
+#promo{
+    color: #d7a41d;
+}
+@font-face {
+    font-family: minhaFonte;
+    src: url(../fonts/AadPro-Bold.woff2);
+}
+@font-face {
+    font-family: minhaFonte2;
+    src: url(../fonts/Mooli-Regular.ttf);
+}
+@font-face {
+    font-family: minhaFonte3;
+    src: url(../fonts/JosefinSans-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: minhaFonte4;
+    src: url(../fonts/Nunito-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: minhaFonte5;
+    src: url(../fonts/MerriweatherSans-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: minhaFonte6;
+    src: url(../fonts/GraviolaSoftRegular.otf);
+}
+@font-face {
+    font-family: minhaFonte7;
+    src: url(../fonts/Graviola-Regular.otf);
+}
+
+
+
+#maissobre{
+    border: 2px solid #d7a41d;
+    background-color: #d7a41d;
+    border-radius: 50px;
+    right: 970px;
+    position: fixed;
+    font-size: 30px;
+    font-family: minhaFonte;
+    margin: 0px;
+    top: 514px;
+}
+#maissobre:hover{
+    border: 2px solid white;
+    background: transparent;
+    padding: -1px;
+    border-radius: 50px;
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+    opacity: 1;
+    
+    }
+
+#inscreva-se-btn{
+    border: 2px solid #ca0808;
+    background-color: #ca0808;
+    border-radius: 50px;
+    right: 62px; 
+    position: fixed;
+    font-size: 30px;
+    font-family: minhaFonte;
+    margin: 0px;
+    top: 108px;
+
+}
+#inscreva-se-btn:hover{
+border: 2px solid white;
+background: transparent;
+padding: -1px;
+border-radius: 50px;
+transition-delay: 0s;
+transition-duration: 0.4s;
+opacity: 1;
+
+}
+
+#menudireito{
+    font-family: 'Merriweather Sans', sans-serif;
+    right: 10px; 
+    position:absolute;
+    font-size: 25px;
+    font-family: minhaFonte;
+    display: inline-block;
+    margin: 0px;
+    
+}
+
+#text{
+    color: white;
+    font-size: 15px;
+    font-family: minhaFonte7;
+    margin:0;
+    width: 150px;
+    cursor: pointer; 
+    text-align: center;
+    position: relative;
+    top: -6px;
+}
+#textotel{
+    font-size: 13px;
+    color: #ececec;
+    position: fixed;
+    top: 124px;
+    left: 894px;
+    font-family: 'Merriweather Sans', sans-serif;
+    cursor: pointer;
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+
+}
+#iconetel{
+    font-size: 20px;
+    position: fixed;
+    top: 123px;
+    left: 868px;
+}
+
+
+#localizacao{
+    color: #ececec;
+    position: relative;
+    top: 276px;
+    left: 938px;
+}
+#textolocal{
+    font-size: 15px;
+    color: #ececec;
+    position: fixed;
+    top: 122px;
+    left: 1056px;
+    font-family: 'Merriweather Sans', sans-serif;
+    cursor: pointer;
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+
+}
+#iconelocal{
+    font-size: 20px;
+    position: fixed;
+    top: 123px;
+    left: 1032px;
+}
+
+.exemplo{
+    color: #e9e7e6;
+}
+.exemplo:hover{
+    color: #d7a41d;
+}
+#textotel{
+    color: #e9e7e6;
+}
+#textotel:hover{
+    color: #d7a41d;
+}
+#textolocal{
+    color: #e9e7e6;
+}
+#textolocal:hover{
+    color: #d7a41d;
+}
+

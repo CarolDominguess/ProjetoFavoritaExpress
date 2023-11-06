@@ -7,7 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/localizacao.css">
+    <link rel="stylesheet" href="./styles/promos.css">
+    
 
     <title>Favorita Express</title>
 </head> 
@@ -23,9 +24,9 @@
     <div id="menu">
     <ul>
         <li><a class="exemplo" href="index.php">Home</a></li>
-        <li><a class="exemplo" id="sobre" href="sobre.php">Sobre</a></li>
+        <li><a class="exemplo" href="sobre.php">Sobre</a></li>
         <li><a class="exemplo" href="tamanho.php">Cardapio</a></li>
-        <li><a class="exemplo" href="promos.php" >Promos</a></li>
+        <li><a class="exemplo" id="promo" href="promos.php" >Promos</a></li>
         <li><a class="exemplo" href="acesse.php">Administração</a></li>
     </div>
     </ul>
@@ -43,38 +44,13 @@
         <a href="https://wa.me//5544999604040?text=Olá,%20gostaria%20de%20realizar%20um%20pedido!!" id="inscreva-se-btn" style="color: #f8dddd;"><li id="text">Faça seu pedido</li></a>
     </div>
     </header>
-    <body>
-    <div id=texto1>
-        <p>Informações de Contato</p>
-    </div>
-    <div id=texto>
-        <p>Oferecendo preços imbatíveis, um serviço excepcional e pratos que vão superar todas as suas expectativas, a Favorita Express é, sem dúvida, 'A Excelência em Sabor!'</p>
-    </div>
-	<img id="localizacaoimg" src="./imagens/localizaçãoimg.jpg">
-	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.0534742146842!2d-52.47676662616891!3d-23.095138244626764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9492976b1d2d93cd%3A0xb66ded064b2a2f63!2sPizzaria%20Favorita%20Express!5e0!3m2!1spt-BR!2sbr!4v1697829849358!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-	<img id="location" src="./imagens/location.png">
-	<img id="relogio" src="./imagens/clock.png">
-
-    <div id=textlocation>
-        <p>Av. Dep. Heitor de, A. Furtado, n° 2688 - Jardim Sao Jorge, Paranavaí</p>
-        <p>Av. Parigot de Souza, n° 3509 - Jardim Ibirapuera, Paranavaí</p>
-    </div>
-
-    <div id=textrelogio>
-        <p>Quarta a Segunda: 18h30 às 23h</p>
-        <p>Terça-feira: Fechado</p>
-    </div>
-    <a href="https://www.instagram.com/favoritaexpress/">
-        <img id="insta" src="./imagens/instagram.png" alt="">
-    </a>
-    <a href="https://pt-br.facebook.com/Favoritaexpress/">
-        <img id="face" src="./imagens/facebook.png" alt="">
-    </a>
-
-    <a href="https://wa.me//5544999604040?text=Olá,%20gostaria%20de%20realizar%20um%20pedido!!">
-        <img id="whats" src="./imagens/whatsapp.png" alt="">
-    </a>
-	</body>
+    <div id="display">
+    <img id="banner1" src="./imagens/banner1.png">
+    <img id="banner2" src="./imagens/banner2.png">
+        <p id="texto1">Welcome to Favorita Express</p>
+        <h2 id="texto2">Com prazer! Nossos talentosos chefs dedicam-se incansavelmente <br>durante 6 horas diárias, em 6 dias da semana, eles estão preparados e ansiosos em <br>receber visitantes extraordinários a cada noite.</h2>
+        <p id="texto3">Gostaríamos de aproveitar esta oportunidade para recebê-lo em nossa Pizza House.<br> Oferecemos um ambiente acolhedor e amigável para compartilhar uma refeição com a <br>família e amigos a qualquer hora do dia ou da noite.</p>
+        <a href="maissobre.php" id="maissobre" style="color: #f8dddd;"><li id="text">Saiba mais</li></a>
 	</div>
 </body>
 </html>
