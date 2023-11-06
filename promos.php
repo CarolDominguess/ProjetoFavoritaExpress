@@ -45,12 +45,10 @@
     </div>
     </header>
     <div id="display">
-    <img id="banner1" src="./imagens/banner1.png">
-    <img id="banner2" src="./imagens/banner2.png">
-        <p id="texto1">Welcome to Favorita Express</p>
-        <h2 id="texto2">Com prazer! Nossos talentosos chefs dedicam-se incansavelmente <br>durante 6 horas diárias, em 6 dias da semana, eles estão preparados e ansiosos em <br>receber visitantes extraordinários a cada noite.</h2>
-        <p id="texto3">Gostaríamos de aproveitar esta oportunidade para recebê-lo em nossa Pizza House.<br> Oferecemos um ambiente acolhedor e amigável para compartilhar uma refeição com a <br>família e amigos a qualquer hora do dia ou da noite.</p>
-        <a href="maissobre.php" id="maissobre" style="color: #f8dddd;"><li id="text">Saiba mais</li></a>
+    <img id="banner1" src="./imagens/bannerpromo1.png">
+    <img id="banner2" src="./imagens/bannerpromo2.png">
+    <img id="banner3" src="./imagens/bannerpromo3.png">
+        
 	</div>
 </body>
 </html>

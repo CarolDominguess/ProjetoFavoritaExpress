@@ -25,17 +25,24 @@ body {
 }
 #banner1{
     position: relative;
-    top: 416px;
-    left: 802px;
-    height: 345px;
-    width: 226px;
+    top: 395px;
+    left: 580px;
+    height: 377px;
+    width: 251px;
 }
 #banner2{
     position: relative;
-    top: 415px;
-    left: 840px;
-    height: 347px;
-    width: 226px;
+    top: 395px;
+    left: 663px;
+    height: 377px;
+    width: 251px;
+}
+#banner3{
+    position: relative;
+    top: 395px;
+    left: -269px;
+    height: 377px;
+    width: 251px;
 }
 .exemplo{
     transition-delay: 0s;
@@ -44,41 +51,6 @@ body {
 #display{
     display: flex;
 }
-#texto1{
-    text-align: left;
-    width: 100%;
-    color: rgb(255, 255, 255);
-    font-size: 40px;
-    font-family: minhaFonte7;
-    position: fixed;
-    top: 257px;
-    left: 145px;
-}
-#texto2{
-    text-align: center;
-    width: 100%;
-    font-size: 18px;
-    font-family: minhaFonte7;
-    position: fixed;
-    top: 324px;
-    left: -326px;
-    color: #d7a41d;
-    font-weight: 100;
-
-}
-#texto3{
-    text-align: center;
-    width: 100%;
-    font-size: 18px;
-    font-family: minhaFonte7;
-    position: fixed;
-    top: 412px;
-    left: -326px;
-    color: rgb(189, 189, 189);
-    font-weight: 100;
-
-}
-
 
 #menu {
     margin-top:-28%;
@@ -141,29 +113,6 @@ ul{
     src: url(../fonts/Graviola-Regular.otf);
 }
 
-
-
-#maissobre{
-    border: 2px solid #d7a41d;
-    background-color: #d7a41d;
-    border-radius: 50px;
-    right: 970px;
-    position: fixed;
-    font-size: 30px;
-    font-family: minhaFonte;
-    margin: 0px;
-    top: 514px;
-}
-#maissobre:hover{
-    border: 2px solid white;
-    background: transparent;
-    padding: -1px;
-    border-radius: 50px;
-    transition-delay: 0s;
-    transition-duration: 0.4s;
-    opacity: 1;
-    
-    }
 
 #inscreva-se-btn{
     border: 2px solid #ca0808;
