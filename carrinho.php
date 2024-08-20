@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/carrinho.css">
     
     
     <title>Favorita Express</title>
@@ -15,11 +15,6 @@
 
 <body>
     <header>
-        <div class="cabecalho">
-		    <div id="logo">
-			<img id="logo1" src="./imagens/logo.png" width="290" height="255">
-		    </div>
-        </div>
 
     <div id="menu">
     <ul>
@@ -34,7 +29,7 @@
 
     
     </header>
-    <h2 id="texto">Faça seu pedido agora!</h2>
+    <h2 id="textocarrinho">Monte seu carrinho!</h2>
     <div id="botaoembaixo">
         <a href="#" id="botaobaixo"><li id="textbaixo">FINALIZAR</li></a>
     </div>
