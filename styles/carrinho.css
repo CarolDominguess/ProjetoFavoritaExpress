@@ -1,173 +1,137 @@
-A {text-decoration: none;}
-    * {
-            margin:0;
-            box-sizing: 0;
-        }
+/* Estilização geral */
 body {
-            width: 100vw;
-            height: 100vh;
-            background-repeat: no-repeat;
-            background-image: url("../imagens/pizza1.jpg");
-            background-size: 100%;
-            position: fixed;
-            margin: 0;
-            overflow: hidden;
-           
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f3e9; /* Cor de fundo suave semelhante a um tom de creme */
+    margin: 0;
+    padding: 20px;
+    color: #333;
+    box-sizing: border-box;
 }
 
-#textocarrinho{
+h1 {
+    font-family: 'Georgia', serif;
+    color: #c0392b; /* Cor vermelha de pizzaria */
     text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+/* Formulário */
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    margin: 0 auto;
+    overflow-x: auto; /* Permite rolar horizontalmente se necessário */
+}
+
+/* Tabela */
+table {
     width: 100%;
-    color: rgb(255, 255, 255);
-    font-size: 50px;
-    font-family: 'Merriweather Sans', sans-serif;
-    position: fixed;
-    top: 90px;
-    
+    border-collapse: collapse;
+    margin-bottom: 20px;
 }
 
-header{
-display: block;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
-
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
 }
 
-
-
-@font-face {
-    font-family: minhaFonte;
-    src: url(../fonts/AadPro-Bold.woff2);
-}
-@font-face {
-    font-family: minhaFonte2;
-    src: url(../fonts/Mooli-Regular.ttf);
-}
-@font-face {
-    font-family: minhaFonte3;
-    src: url(../fonts/JosefinSans-VariableFont_wght.ttf);
-}
-@font-face {
-    font-family: minhaFonte4;
-    src: url(../fonts/Nunito-VariableFont_wght.ttf);
-}
-@font-face {
-    font-family: minhaFonte5;
-    src: url(../fonts/MerriweatherSans-VariableFont_wght.ttf);
-}
-@font-face {
-    font-family: minhaFonte6;
-    src: url(../fonts/GraviolaSoftRegular.otf);
-}
-@font-face {
-    font-family: minhaFonte7;
-    src: url(../fonts/Graviola-Regular.otf);
+th {
+    background-color: #e74c3c; /* Cor vermelha para cabeçalhos */
+    color: #fff;
+    font-size: 1.2rem;
+    font-family: 'Georgia', serif;
 }
 
-
-
-#botaobaixo{
-    border: 11px solid #d2a01c;
-    background-color: #d2a01c;
-    border-radius: 50px;
-    right: 639px;
-    position: fixed;
-    font-size: 30px;
-    font-family: minhaFonte;
-    margin: 0px;
-    top: 529px;
-    list-style-type: none
-
+td {
+    background-color: #f9f9f9;
 }
 
-#botaobaixo:hover{
-    border: 2px solid #d2a01c;
-    background: transparent;
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #f1c40f; /* Cor amarela ao passar o mouse */
+    color: #fff;
+}
+
+/* Inputs e seletores */
+select, input[type="number"], input[type="checkbox"] {
     padding: 10px;
-    border-radius: 50px;
-    transition-delay: 0s;
-    transition-duration: 0.4s;
-    opacity: 1;
-
-}
-#textbaixo:hover{
-    color: #d2a01c;
-}
-
-#botaoembaixo{
-    text-align: center;
+    border-radius: 6px;
+    border: 1px solid #ccc;
     width: 100%;
-    color: rgb(243, 239, 239);
-    font-size: 70px;
-    font-family: 'Merriweather Sans', sans-serif;
-    position: fixed;
-    top: 400px;
-   left: -86px;
-    
+    box-sizing: border-box;
 }
 
-#textbaixo{
-    font-size: 15px;
-    font-family: minhaFonte;
-    margin:0;
-    width: 150px;
-    cursor: pointer; 
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+/* Seção de bebidas */
+#opcoes-bebidas {
+    display: none;
+    margin-top: 15px;
+}
+
+.bebida {
+    margin-bottom: 10px;
+}
+
+.bebida input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Total e botão de envio */
+p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: right;
+    color: #333;
+    margin-top: 20px;
+}
+
+input[type="submit"] {
+    background-color: #e74c3c; /* Vermelho de pizzaria */
+    color: #fff;
+    border: none;
+    padding: 15px 25px;
     text-align: center;
-    position: relative;
-    top: -1px;
-    color: #e9e7e6;
+    font-size: 1rem;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-textbaixo:visited {
-    color: white; /* Altera a cor do link após ser visitado */
-    
+input[type="submit"]:hover {
+    background-color: #c0392b; /* Tom mais escuro de vermelho */
 }
 
-
-
-
-
-
-
-@media screen and (min-width: 1500px) {
-    body {
-            width: 100vw;
-            height: 100vh;
-            background-repeat: no-repeat;
-            background-image: url("../imagens/pizza1.jpg");
-            background-size: 2000px;
-            position: fixed;
-            margin: 0;
-            overflow: hidden
-    }
-
+/* Link de navegação */
+a {
+    color: #3498db; /* Azul para links */
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
 }
 
-@media screen and (min-width: 1500px) {
-    ul{
-        text-align: left;
-        width: 100%;
-        color: rgb(243, 239, 239);
-        font-size: 15px;
-        font-family: 'Merriweather Sans', sans-serif;
-        position: fixed;
-        top: 100px;
-        right: auto;
-        
-    }
-
-}
-@media screen and (max-width: 1172px) {
-    #texto{
-        text-align: center;
-        width: 100%;
-        color: rgb(243, 239, 239);
-        font-size: 70px;
-        font-family: 'Merriweather Sans', sans-serif;
-        position: fixed;
-        top: 5000px;
-        
-    }
-
+a:hover {
+    text-decoration: underline;
 }
