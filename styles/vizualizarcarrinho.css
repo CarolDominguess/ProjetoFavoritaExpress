@@ -1,66 +1,56 @@
+/* Estilo do corpo */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
     margin: 0;
     padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
+/* Estilo do título */
 h1 {
     text-align: center;
-    color: #e74c3c;
-    margin-bottom: 30px;
-    font-size: 36px;
+    color: #c0392b;
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
+/* Estilo da tabela */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-bottom: 20px;
     background-color: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Estilo das células da tabela */
 th, td {
-    padding: 12px;
+    padding: 15px;
     text-align: center;
     border-bottom: 1px solid #ddd;
 }
 
+/* Estilo dos cabeçalhos da tabela */
 th {
     background-color: #e74c3c;
-    color: white;
-    font-size: 18px;
-    text-transform: uppercase;
-}
-
-td {
-    font-size: 16px;
-    color: #555;
-}
-
-tr:nth-child(even) {
-    background-color: #f4f4f4;
-}
-
-tr:hover {
-    background-color: #f1c40f;
     color: #fff;
+    font-weight: bold;
 }
 
-td:last-child {
-    text-align: center;
+/* Estilo das células alternadas da tabela */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
 
+/* Estilo dos botões */
 button {
     background-color: #e74c3c;
     color: #fff;
     border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
+    padding: 10px 20px;
     cursor: pointer;
+    border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
@@ -68,27 +58,25 @@ button:hover {
     background-color: #c0392b;
 }
 
-button:focus {
-    outline: none;
-}
-
-p {
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 20px;
-    color: #555;
-}
-
+/* Estilo do link para voltar */
 a {
-    display: block;
-    text-align: center;
+    display: inline-block;
     margin-top: 20px;
-    color: #e74c3c;
     text-decoration: none;
-    font-size: 18px;
+    background-color: #2980b9;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 a:hover {
-    text-decoration: underline;
+    background-color: #1c5980;
+}
+
+/* Estilo para a mensagem de carrinho vazio */
+p {
+    text-align: center;
+    font-size: 1.2em;
+    color: #888;
 }

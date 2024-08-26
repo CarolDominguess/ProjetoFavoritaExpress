@@ -1,135 +1,103 @@
-/* Estilização geral */
+/* Arquivo: styles/carrinho.css */
+
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f7f3e9; /* Cor de fundo suave semelhante a um tom de creme */
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    background: #f0f0f0;
     color: #333;
-    box-sizing: border-box;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    font-family: 'Georgia', serif;
-    color: #c0392b; /* Cor vermelha de pizzaria */
-    text-align: center;
+    color: #2c3e50;
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 10px;
     margin-bottom: 20px;
-    font-size: 2rem;
 }
 
-/* Formulário */
 form {
-    background: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 100%;
-    margin: 0 auto;
-    overflow-x: auto; /* Permite rolar horizontalmente se necessário */
+    margin: 0;
 }
 
-/* Tabela */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
 }
 
-th, td {
-    padding: 12px;
+table th, table td {
     border: 1px solid #ddd;
+    padding: 12px;
     text-align: left;
 }
 
-th {
-    background-color: #e74c3c; /* Cor vermelha para cabeçalhos */
+table th {
+    background-color: #2c3e50;
     color: #fff;
-    font-size: 1.2rem;
-    font-family: 'Georgia', serif;
 }
 
-td {
+table tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
-tr:nth-child(even) {
-    background-color: #f2f2f2;
+table tr:hover {
+    background-color: #f1f1f1;
 }
 
-tr:hover {
-    background-color: #f1c40f; /* Cor amarela ao passar o mouse */
-    color: #fff;
+select, input[type="number"], button {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 14px;
+    margin: 5px 0;
 }
 
-/* Inputs e seletores */
-select, input[type="number"], input[type="checkbox"] {
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-input[type="checkbox"] {
-    width: auto;
-    margin-right: 10px;
-}
-
-label {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 1rem;
-}
-
-/* Seção de bebidas */
-#opcoes-bebidas {
-    display: none;
-    margin-top: 15px;
-}
-
-.bebida {
-    margin-bottom: 10px;
-}
-
-.bebida input[type="checkbox"] {
-    margin-right: 10px;
-}
-
-/* Total e botão de envio */
-p {
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-align: right;
-    color: #333;
-    margin-top: 20px;
-}
-
-input[type="submit"] {
-    background-color: #e74c3c; /* Vermelho de pizzaria */
+button {
+    background-color: #2c3e50;
     color: #fff;
     border: none;
-    padding: 15px 25px;
-    text-align: center;
-    font-size: 1rem;
-    margin-top: 20px;
     cursor: pointer;
-    border-radius: 8px;
-    transition: background-color 0.3s;
-    width: 100%;
-    box-sizing: border-box;
+    padding: 10px 15px;
+    font-size: 16px;
 }
 
-input[type="submit"]:hover {
-    background-color: #c0392b; /* Tom mais escuro de vermelho */
+button:hover {
+    background-color: #34495e;
 }
 
-/* Link de navegação */
-a {
-    color: #3498db; /* Azul para links */
-    text-decoration: none;
-    font-size: 1rem;
-    display: block;
-    text-align: center;
+.bebidas-container {
     margin-top: 20px;
+}
+
+.bebidas-container h3 {
+    color: #2c3e50;
+}
+
+.bebidas-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.bebidas-container input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 20px;
+    display: inline-block;
 }
 
 a:hover {

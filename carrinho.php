@@ -1,140 +1,158 @@
+<?php
+session_start();
+
+// Inicializa o carrinho na sessão, se ainda não existir
+if (!isset($_SESSION['carrinho'])) {
+    $_SESSION['carrinho'] = [];
+}
+
+// Adiciona o pedido ao carrinho
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $produto = 'Pizza';
+    $tamanho = $_POST['tamanho'];
+    $sabores = $_POST['sabor'];
+    $quantidade = $_POST['quantidade'];
+    $tem_bebida = isset($_POST['tem_bebida']);
+    $bebidas = $tem_bebida ? $_POST['bebida'] : [];
+
+    // Define preços
+    $precos_pizza = ['pequeno' => 35, 'médio' => 45, 'grande' => 55, 'gigante' => 75];
+    $precos_bebida = ['coca-cola' => 7, 'agua' => 4, 'guarana' => 5, 'suco-laranja' => 9];
+
+    // Calcula preço total
+    $preco_pizza = $precos_pizza[$tamanho] * $quantidade;
+    $preco_bebida = 0;
+    foreach ($bebidas as $bebida) {
+        $preco_bebida += $precos_bebida[$bebida];
+    }
+    $preco_total = $preco_pizza + $preco_bebida;
+
+    // Adiciona ao carrinho
+    $_SESSION['carrinho'][] = [
+        'produto' => $produto,
+        'tamanho' => $tamanho,
+        'sabores' => $sabores,
+        'quantidade' => $quantidade,
+        'tem_bebida' => $tem_bebida,
+        'bebidas' => $bebidas,
+        'preco' => $preco_total
+    ];
+
+    header('Location: visualizar_carrinho.php');
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <title>Faça Seu Pedido</title>
+    <!-- Link para o arquivo CSS externo -->
     <link rel="stylesheet" href="./styles/carrinho.css">
-    <script>
-        function atualizarSabores() {
-            var tamanho = document.getElementById('tamanho').value;
-            var saboresContainer = document.getElementById('sabores');
-            var preco = document.getElementById('preco');
-            var total = document.getElementById('total');
-            var precoPizza = {
-                pequeno: 35,
-                médio: 45,
-                grande: 55,
-                gigante: 75
-            };
-            
-            var quantidadeSabores = {
-                pequeno: 1,
-                médio: 3,
-                grande: 4,
-                gigante: 4
-            };
+    <style>
+        /* Adicione o CSS aqui */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
 
-            var numSabores = quantidadeSabores[tamanho] || 1;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .bebidas-container {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .bebidas-container label {
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Faça Seu Pedido</h1>
+    <form action="carrinho.php" method="post">
+        <table>
+            <tr>
+                <td>Produto: Pizza</td>
+                <td>
+                    Tamanho: 
+                    <select name="tamanho" id="tamanho" onchange="atualizarCampos()">
+                        <option value="pequeno">Pequeno</option>
+                        <option value="médio">Médio</option>
+                        <option value="grande">Grande</option>
+                        <option value="gigante">Gigante</option>
+                    </select>
+                </td>
+                <td>
+                    Sabores:
+                    <div id="sabores-container">
+                        <select name="sabor[]" id="sabor">
+                            <option value="mussarela">Mussarela</option>
+                            <option value="calabresa">Calabresa</option>
+                            <option value="portuguesa">Portuguesa</option>
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    Quantidade: <input type="number" name="quantidade" value="1" min="1">
+                </td>
+                <td>
+                    Bebida: 
+                    <input type="checkbox" name="tem_bebida" id="tem_bebida" onchange="toggleBebidas()">
+                </td>
+            </tr>
+        </table>
+
+        <div class="bebidas-container" id="bebidas-container">
+            <h3>Escolha suas bebidas</h3>
+            <label><input type="checkbox" name="bebida[]" value="coca-cola"> Coca-Cola (R$ 7,00)</label>
+            <label><input type="checkbox" name="bebida[]" value="agua"> Água (R$ 4,00)</label>
+            <label><input type="checkbox" name="bebida[]" value="guarana"> Guaraná (R$ 5,00)</label>
+            <label><input type="checkbox" name="bebida[]" value="suco-laranja"> Suco de Laranja (R$ 9,00)</label>
+        </div>
+
+        <button type="submit">Adicionar ao Carrinho</button>
+    </form>
+
+    <script>
+        function toggleBebidas() {
+            var bebidasContainer = document.getElementById('bebidas-container');
+            var checkbox = document.getElementById('tem_bebida');
+            bebidasContainer.style.display = checkbox.checked ? 'block' : 'none';
+        }
+
+        function atualizarCampos() {
+            var tamanho = document.getElementById('tamanho').value;
+            var saboresContainer = document.getElementById('sabores-container');
+            var quantidadeSabores = { pequeno: 1, médio: 2, grande: 3, gigante: 3 };
+
             saboresContainer.innerHTML = '';
-            for (var i = 0; i < numSabores; i++) {
+
+            for (var i = 0; i < quantidadeSabores[tamanho]; i++) {
                 var select = document.createElement('select');
                 select.name = 'sabor[]';
                 select.innerHTML = '<option value="mussarela">Mussarela</option><option value="calabresa">Calabresa</option><option value="portuguesa">Portuguesa</option>';
                 saboresContainer.appendChild(select);
             }
-
-            var precoAtual = precoPizza[tamanho] || 0;
-            preco.textContent = `R$ ${precoAtual},00`;
-            total.textContent = `${precoAtual},00`;
         }
 
-        function toggleBebidas() {
-            var bebidasContainer = document.getElementById('opcoes-bebidas');
-            var temBebida = document.getElementById('tem-bebida').checked;
-            bebidasContainer.style.display = temBebida ? 'block' : 'none';
-            atualizarTotal();
-        }
-
-        function atualizarTotal() {
-            var tamanho = document.getElementById('tamanho').value;
-            var precoPizza = {
-                pequeno: 35,
-                médio: 45,
-                grande: 55,
-                gigante: 75
-            };
-            
-            var total = precoPizza[tamanho] || 0;
-            var checkboxes = document.querySelectorAll('#opcoes-bebidas input[type="checkbox"]:checked');
-            var precoBebidas = {
-                'coca-cola': 7,
-                'pepsi': 5,
-                'agua': 4,
-                'guarana': 6
-            };
-            checkboxes.forEach(function(checkbox) {
-                total += precoBebidas[checkbox.value] || 0;
-            });
-
-            document.getElementById('total').textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
-        }
+        // Inicialização ao carregar a página
+        atualizarCampos();
     </script>
-</head>
-<body>
-    <h1>Faça Seu Pedido</h1>
-
-    <form action="adicionar_ao_carrinho.php" method="post">
-        <table>
-            <thead>
-                <tr>
-                    <th>Produto</th>
-                    <th>Tamanho</th>
-                    <th>Sabor</th>
-                    <th>Bebida</th>
-                    <th>Quantidade</th>
-                    <th>Preço</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Pizza Margherita</td>
-                    <td>
-                        <select name="tamanho" id="tamanho" onchange="atualizarSabores()">
-                            <option value="pequeno">Pequeno</option>
-                            <option value="médio">Médio</option>
-                            <option value="grande">Grande</option>
-                            <option value="gigante">Gigante</option>
-                        </select>
-                    </td>
-                    <td id="sabores">
-                        <select name="sabor[]">
-                            <option value="mussarela">Mussarela</option>
-                            <option value="calabresa">Calabresa</option>
-                            <option value="portuguesa">Portuguesa</option>
-                        </select>
-                    </td>
-                    <td>
-                        <input type="checkbox" id="tem-bebida" name="tem_bebida" onchange="toggleBebidas()">
-                        <label for="tem-bebida">Adicionar Bebida</label>
-                    </td>
-                    <td><input type="number" name="quantidade" value="1" min="1"></td>
-                    <td id="preco">R$ 30,00</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <div id="opcoes-bebidas" style="display: none;">
-            <h2>Escolha suas bebidas:</h2>
-            <div class="bebida">
-                <input type="checkbox" id="coca-cola" name="bebida[]" value="coca-cola">
-                <label for="coca-cola">Coca-Cola (R$ 7,00)</label>
-            </div>
-            <div class="bebida">
-                <input type="checkbox" id="pepsi" name="bebida[]" value="pepsi">
-                <label for="pepsi">Pepsi (R$ 5,00)</label>
-            </div>
-            <div class="bebida">
-                <input type="checkbox" id="agua" name="bebida[]" value="agua">
-                <label for="agua">Água (R$ 4,00)</label>
-            </div>
-            <div class="bebida">
-                <input type="checkbox" id="guarana" name="bebida[]" value="guarana">
-                <label for="guarana">Guaraná (R$ 6,00)</label>
-            </div>
-        </div>
-
-        <p>Total: R$ <span id="total">30,00</span></p>
-        <input type="submit" value="Adicionar ao Carrinho">
-    </form>
 </body>
 </html>
