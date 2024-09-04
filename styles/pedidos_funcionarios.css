@@ -1,0 +1,77 @@
+/* Define o estilo geral da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff5e6; /* Fundo com um leve tom de amarelo */
+    color: #333; /* Cor do texto principal */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Estilo para o título principal */
+h1 {
+    background-color: #ffcc00; /* Amarelo vibrante */
+    color: #800000; /* Vermelho escuro */
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para cada pedido */
+.pedido {
+    background-color: #ffeb99; /* Amarelo suave */
+    border: 2px solid #cc0000; /* Borda vermelha escura */
+    padding: 15px;
+    margin: 15px 0;
+    width: 80%;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para o texto em negrito */
+p strong {
+    color: #cc0000; /* Vermelho escuro para destacar o texto */
+}
+
+/* Estilo para a lista de itens */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #ffe066; /* Amarelo para os itens da lista */
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #cc0000; /* Borda vermelha */
+}
+
+/* Estilo para o botão de excluir */
+button {
+    background-color: #cc0000; /* Vermelho para o botão */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff3300; /* Vermelho mais claro ao passar o mouse */
+}
+
+/* Linha divisória entre os pedidos */
+hr {
+    border: 1px solid #cc0000; /* Vermelha */
+    width: 80%;
+    margin: 20px auto;
+}

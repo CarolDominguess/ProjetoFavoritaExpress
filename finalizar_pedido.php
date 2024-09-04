@@ -15,24 +15,33 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $telefone = $_POST['telefone'];
     $forma_entrega = $_POST['forma_entrega'];
 
-    // Adicione os dados do pedido à sessão
-    $_SESSION['pedido_finalizado'] = [
+    // Crie o pedido finalizado
+    $pedido_finalizado = [
         'nome' => htmlspecialchars($nome),
         'cpf' => htmlspecialchars($cpf),
         'telefone' => htmlspecialchars($telefone),
         'forma_entrega' => htmlspecialchars($forma_entrega),
         'carrinho' => $_SESSION['carrinho'],
-        'total' => array_sum(array_column($_SESSION['carrinho'], 'preco')) // Garantia de que total é um número float
+        'total' => array_sum(array_column($_SESSION['carrinho'], 'preco'))
     ];
+
+    // Verifique se a sessão de pedidos já existe, se não, inicialize-a
+    if (!isset($_SESSION['pedidos'])) {
+        $_SESSION['pedidos'] = [];
+    }
+
+    // Adicione o novo pedido à lista de pedidos
+    $_SESSION['pedidos'][] = $pedido_finalizado;
 
     // Limpe o carrinho após finalização
     unset($_SESSION['carrinho']);
 
-    // Redirecione para a página de recebimento de pedidos
-    header('Location: receber_pedidos.php');
+    // Redirecione para a página dos funcionários que vão receber os pedidos
+    header('Location: pedidos_funcionarios.php');
     exit;
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-BR">

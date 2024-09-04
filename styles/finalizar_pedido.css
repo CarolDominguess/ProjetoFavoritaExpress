@@ -1,0 +1,87 @@
+/* Define o estilo geral da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff5e6; /* Fundo com tom de amarelo claro */
+    color: #333; /* Cor do texto */
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilo do contêiner principal */
+.container {
+    background-color: #ffeb99; /* Fundo amarelo suave */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    border: 2px solid #cc0000; /* Borda vermelha */
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em uma coluna */
+    align-items: center; /* Alinha os elementos no centro horizontalmente */
+}
+
+/* Estilo para o título */
+h1 {
+    text-align: center;
+    color: #cc0000; /* Vermelho escuro */
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+/* Estilo para os rótulos dos campos */
+label {
+    display: block;
+    font-weight: bold;
+    color: #800000; /* Vermelho escuro para os rótulos */
+    margin-top: 15px;
+    text-align: left; /* Alinha o texto do rótulo à esquerda */
+    width: 100%; /* Faz com que o rótulo ocupe a largura total do contêiner */
+}
+
+/* Estilo para os campos de texto (input e select) com tamanho menor */
+input[type="text"], select {
+    width: 70%; /* Ajuste o valor conforme o tamanho desejado */
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #cc0000; /* Borda vermelha */
+    background-color: #fff; /* Fundo branco para os inputs */
+    font-size: 14px; /* Fonte menor para acompanhar o tamanho dos campos */
+    box-sizing: border-box;
+}
+
+/* Estilo para o botão de finalizar */
+button[type="submit"] {
+    width: 70%; /* Ajuste o valor conforme o tamanho desejado */
+    background-color: #cc0000; /* Vermelho para o botão */
+    color: white;
+    border: none;
+    padding: 12px;
+    margin-top: 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #ff3300; /* Vermelho mais claro ao passar o mouse */
+}
+
+/* Link para voltar ao carrinho */
+a {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #cc0000; /* Vermelho para o link */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ff3300; /* Vermelho mais claro ao passar o mouse */
+}
