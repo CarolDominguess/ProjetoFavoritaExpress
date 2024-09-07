@@ -40,10 +40,15 @@ label {
     text-align: left; /* Alinha o texto do rótulo à esquerda */
     width: 100%; /* Faz com que o rótulo ocupe a largura total do contêiner */
 }
+form {
+    position: fixed;
+    left: 542px;
+    top: 119px;
+}
 
 /* Estilo para os campos de texto (input e select) com tamanho menor */
 input[type="text"], select {
-    width: 70%; /* Ajuste o valor conforme o tamanho desejado */
+    width: 180%; /* Ajuste o valor conforme o tamanho desejado */
     padding: 8px;
     margin-top: 5px;
     border-radius: 5px;
@@ -55,12 +60,14 @@ input[type="text"], select {
 
 /* Estilo para o botão de finalizar */
 button[type="submit"] {
-    width: 70%; /* Ajuste o valor conforme o tamanho desejado */
-    background-color: #cc0000; /* Vermelho para o botão */
+    position: fixed;
+    width: 17%;
+    left: 590px;
+    background-color: #cc0000;
     color: white;
     border: none;
     padding: 12px;
-    margin-top: 20px;
+    margin-top: 27px;
     font-size: 18px;
     border-radius: 5px;
     cursor: pointer;

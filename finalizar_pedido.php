@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     unset($_SESSION['carrinho']);
 
     // Redirecione para a página dos funcionários que vão receber os pedidos
-    header('Location: pedidos_funcionarios.php');
+    header('Location: confirmar_pedido.php');
     exit;
 }
 ?>

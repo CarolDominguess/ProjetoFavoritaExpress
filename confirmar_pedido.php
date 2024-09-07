@@ -26,3 +26,4 @@ echo "<p>Obrigado, $nome! Seu pedido foi confirmado com sucesso.</p>";
 echo "<p>Valor Total: R$ " . number_format($valor_total, 2, ',', '.') . "</p>";
 echo "<p><a href='carrinho.php'>Fazer Novo Pedido</a></p>";
 ?>
+    
