@@ -1,14 +1,3 @@
-<?php
-session_start();
-
-// Defina a variável de controle antes de acessar a página de pedidos
-$_SESSION['acesso_pedidos'] = true;
-
-// Redirecione para a página de pedidos
-header('Location: pedidos_pizzaria.php');
-exit;
-?>
-
 
 <!DOCTYPE html>
 <html lang="en">
