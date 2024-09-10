@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $telefone = $_POST['telefone'];
     $forma_entrega = $_POST['forma_entrega'];
 
-    // Crie o pedido finalizado
+    // Crie o pedido finalizado (ainda não confirmamos aqui, apenas preparamos os dados)
     $pedido_finalizado = [
         'nome' => htmlspecialchars($nome),
         'cpf' => htmlspecialchars($cpf),
@@ -25,22 +25,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         'total' => array_sum(array_column($_SESSION['carrinho'], 'preco'))
     ];
 
-    // Verifique se a sessão de pedidos já existe, se não, inicialize-a
-    if (!isset($_SESSION['pedidos'])) {
-        $_SESSION['pedidos'] = [];
+    // Armazene os dados do pedido temporariamente na sessão para a próxima página de confirmação
+    $_SESSION['pedido_em_confirmacao'] = $pedido_finalizado;
+
+    if (isset($_SESSION['carrinho'])) {
+        unset($_SESSION['carrinho']);
     }
 
-    // Adicione o novo pedido à lista de pedidos
-    $_SESSION['pedidos'][] = $pedido_finalizado;
-
-    // Limpe o carrinho após finalização
-    unset($_SESSION['carrinho']);
-
-    // Redirecione para a página dos funcionários que vão receber os pedidos
+    // Redirecione para a página de confirmação do pedido
     header('Location: confirmar_pedido.php');
+
     exit;
 }
 ?>
+
+
 
 
 <!DOCTYPE html>

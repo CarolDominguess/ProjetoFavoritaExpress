@@ -44,7 +44,7 @@ session_start();
             background-color: #f2f2f2;
         }
 
-        .back-button, .finalize-button {
+        .back-button, .finalize-button, .clear-button {
             display: block;
             text-align: center;
             margin-top: 20px;
@@ -52,12 +52,19 @@ session_start();
             color: #007bff;
         }
 
-        .back-button:hover, .finalize-button:hover {
+        .back-button:hover, .finalize-button:hover, .clear-button:hover {
             text-decoration: underline;
         }
 
         .finalize-button {
             background-color: #28a745;
+            color: #fff;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        .clear-button {
+            background-color: #dc3545;
             color: #fff;
             padding: 10px;
             border-radius: 4px;
@@ -106,6 +113,7 @@ session_start();
             <p>Total: R$ <?php echo number_format(array_sum(array_column($_SESSION['carrinho'], 'preco')), 2, ',', '.'); ?></p>
 
             <a href="finalizar_pedido.php" class="finalize-button">Finalizar Pedido</a>
+
         <?php else: ?>
             <p>Seu carrinho está vazio.</p>
         <?php endif; ?>

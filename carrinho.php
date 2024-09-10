@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $bebidas = $tem_bebida ? $_POST['bebida'] : [];
 
     // Define preços
-    $precos_pizza = ['pequeno' => 35, 'médio' => 45, 'grande' => 55, 'gigante' => 75];
+    $precos_pizza = ['pequena' => 35, 'médio' => 45, 'grande' => 55, 'gigante' => 75];
     $precos_bebida = ['coca-cola' => 7, 'agua' => 4, 'guarana' => 5, 'suco-laranja' => 9];
 
     // Calcula preço total
@@ -92,7 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <td>
                     Tamanho: 
                     <select name="tamanho" id="tamanho" onchange="atualizarCampos()">
-                        <option value="pequeno">Pequeno</option>
+                        <option value="pequena">Pequena</option>
                         <option value="médio">Médio</option>
                         <option value="grande">Grande</option>
                         <option value="gigante">Gigante</option>
@@ -102,8 +102,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     Sabores:
                     <div id="sabores-container">
                         <select name="sabor[]" id="sabor">
-                            <option value="mussarela">Mussarela</option>
-                            <option value="calabresa">Calabresa</option>
+                            <option value="mussarela">Frango Exótico</option>
+                            <option value="calabresa">Filé de frango</option>
+                            <option value="portuguesa">Tomate Seco</option>
+                            <option value="portuguesa">Marguerita Especial</option>
+                            <option value="portuguesa">Portuguesa</option>
+                            <option value="portuguesa">Portuguesa</option>
+                            <option value="portuguesa">Portuguesa</option>
                             <option value="portuguesa">Portuguesa</option>
                         </select>
                     </div>
@@ -139,14 +144,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         function atualizarCampos() {
             var tamanho = document.getElementById('tamanho').value;
             var saboresContainer = document.getElementById('sabores-container');
-            var quantidadeSabores = { pequeno: 1, médio: 2, grande: 3, gigante: 3 };
+            var quantidadeSabores = { pequena: 1, médio: 2, grande: 3, gigante: 3 };
 
             saboresContainer.innerHTML = '';
 
             for (var i = 0; i < quantidadeSabores[tamanho]; i++) {
                 var select = document.createElement('select');
                 select.name = 'sabor[]';
-                select.innerHTML = '<option value="mussarela">Mussarela</option><option value="calabresa">Calabresa</option><option value="portuguesa">Portuguesa</option>';
+                select.innerHTML = '<option value="Frango Exótico">Frango Exótico</option><option value="Lombo Canadense">Lombo Canadense</option><option value="portuguesa">Portuguesa</option>';
                 saboresContainer.appendChild(select);
             }
         }
