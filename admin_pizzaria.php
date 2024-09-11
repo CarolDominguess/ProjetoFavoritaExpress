@@ -15,7 +15,7 @@
         <div class="menu">
             <a href="pedidos_pizzaria.php">Pedidos</a>
             <a href="produtos.php">Gerenciar Produtos</a>
-            <a href="funcionarios.php">Funcionários</a>
+            <a href="lista_funcionarios.php">Funcionários</a>
             <a href="relatorios.php">Relatórios</a>
             <a href="listar_fornecedores.php">Fornecedores</a> <!-- Link adicionado -->
         </div>
