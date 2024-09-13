@@ -1,14 +1,20 @@
 <?php
 session_start();
 
-// Verifique se o pedido em confirmação existe
-if (!isset($_SESSION['pedido_em_confirmacao'])) {
+// Verifica se o carrinho e os dados do cliente existem na sessão
+if (!isset($_SESSION['carrinho']) || empty($_SESSION['carrinho'])) {
     echo "Erro: Nenhum pedido para confirmar.";
     exit;
 }
 
-// Obtenha os dados do pedido
-$pedido = $_SESSION['pedido_em_confirmacao'];
+$dados_cliente = [
+    'nome' => $_SESSION['nome'] ?? 'Nome não informado',
+    'cpf' => $_SESSION['cpf'] ?? 'CPF não informado',
+    'telefone' => $_SESSION['telefone'] ?? 'Telefone não informado',
+    'forma_entrega' => $_SESSION['forma_entrega'] ?? 'Forma de entrega não informada'
+];
+
+$total_pedido = number_format(array_sum(array_column($_SESSION['carrinho'], 'preco')), 2, ',', '.');
 ?>
 
 <!DOCTYPE html>
@@ -74,10 +80,10 @@ $pedido = $_SESSION['pedido_em_confirmacao'];
         <h1>Confirmar Pedido</h1>
 
         <h2>Detalhes do Cliente:</h2>
-        <p><strong>Nome:</strong> <?php echo $pedido['nome']; ?></p>
-        <p><strong>CPF:</strong> <?php echo $pedido['cpf']; ?></p>
-        <p><strong>Telefone:</strong> <?php echo $pedido['telefone']; ?></p>
-        <p><strong>Forma de Entrega:</strong> <?php echo ucfirst($pedido['forma_entrega']); ?></p>
+        <p><strong>Nome:</strong> <?php echo htmlspecialchars($dados_cliente['nome']); ?></p>
+        <p><strong>CPF:</strong> <?php echo htmlspecialchars($dados_cliente['cpf']); ?></p>
+        <p><strong>Telefone:</strong> <?php echo htmlspecialchars($dados_cliente['telefone']); ?></p>
+        <p><strong>Forma de Entrega:</strong> <?php echo htmlspecialchars(ucfirst($dados_cliente['forma_entrega'])); ?></p>
 
         <h2>Itens do Pedido:</h2>
         <table>
@@ -92,7 +98,7 @@ $pedido = $_SESSION['pedido_em_confirmacao'];
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($pedido['carrinho'] as $item): ?>
+                <?php foreach ($_SESSION['carrinho'] as $item): ?>
                     <tr>
                         <td><?php echo htmlspecialchars($item['produto']); ?></td>
                         <td><?php echo htmlspecialchars(ucfirst($item['tamanho'])); ?></td>
@@ -105,9 +111,8 @@ $pedido = $_SESSION['pedido_em_confirmacao'];
             </tbody>
         </table>
 
-        <p><strong>Total:</strong> R$ <?php echo number_format($pedido['total'], 2, ',', '.'); ?></p>
+        <p><strong>Total:</strong> R$ <?php echo $total_pedido; ?></p>
 
-        <!-- Link para confirmar o pedido -->
         <a href="processar_pedido.php" class="finalize-button">Confirmar e Finalizar Pedido</a>
     </div>
 </body>

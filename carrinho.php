@@ -48,10 +48,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Faça Seu Pedido</title>
-    <!-- Link para o arquivo CSS externo -->
     <link rel="stylesheet" href="./styles/carrinho.css">
     <style>
-        /* Adicione o CSS aqui */
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
@@ -101,16 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <td>
                     Sabores:
                     <div id="sabores-container">
-                        <select name="sabor[]" id="sabor">
-                            <option value="mussarela">Frango Exótico</option>
-                            <option value="calabresa">Filé de frango</option>
-                            <option value="portuguesa">Tomate Seco</option>
-                            <option value="portuguesa">Marguerita Especial</option>
-                            <option value="portuguesa">Portuguesa</option>
-                            <option value="portuguesa">Portuguesa</option>
-                            <option value="portuguesa">Portuguesa</option>
-                            <option value="portuguesa">Portuguesa</option>
-                        </select>
+                        <!-- Opções de sabores serão carregadas dinamicamente -->
                     </div>
                 </td>
                 <td>
@@ -151,7 +140,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             for (var i = 0; i < quantidadeSabores[tamanho]; i++) {
                 var select = document.createElement('select');
                 select.name = 'sabor[]';
-                select.innerHTML = '<option value="Frango Exótico">Frango Exótico</option><option value="Lombo Canadense">Lombo Canadense</option><option value="portuguesa">Portuguesa</option>';
+                select.innerHTML = '<option value="mussarela">Frango Exótico</option><option value="calabresa">Filé de frango</option><option value="portuguesa">Tomate Seco</option><option value="portuguesa">Marguerita Especial</option><option value="portuguesa">Portuguesa</option>';
                 saboresContainer.appendChild(select);
             }
         }

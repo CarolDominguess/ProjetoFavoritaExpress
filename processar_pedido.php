@@ -1,28 +1,53 @@
 <?php
 session_start();
+include 'conexao.php'; // arquivo com a conexão ao banco de dados
 
-// Verifique se há um pedido para processar
-if (!isset($_SESSION['pedido_em_confirmacao'])) {
-    echo "Erro: Nenhum pedido para processar.";
+// Verifica se o pedido em confirmação existe
+if (!isset($_SESSION['carrinho']) || empty($_SESSION['carrinho'])) {
+    echo "Erro: Nenhum pedido para confirmar.";
     exit;
 }
 
-// Obtenha os dados do pedido finalizado
-$pedido = $_SESSION['pedido_em_confirmacao'];
+// Obtém os dados do pedido da sessão
+$pedido = [
+    'nome' => $_SESSION['nome'],
+    'cpf' => $_SESSION['cpf'],
+    'telefone' => $_SESSION['telefone'],
+    'forma_entrega' => $_SESSION['forma_entrega'],
+    'carrinho' => $_SESSION['carrinho'],
+    'total' => array_sum(array_column($_SESSION['carrinho'], 'preco'))
+];
 
-// Aqui, você pode adicionar lógica para salvar o pedido no banco de dados ou enviar para outro sistema
+// Armazena os dados do cliente
+$nome = $pedido['nome'];
+$cpf = $pedido['cpf'];
+$telefone = $pedido['telefone'];
+$forma_entrega = $pedido['forma_entrega'];
+$total = $pedido['total'];
 
-// Após processar o pedido, adicione-o à lista de pedidos
-if (!isset($_SESSION['pedidos'])) {
-    $_SESSION['pedidos'] = [];
-}
+// Insere o pedido na tabela de pedidos
+$query_pedido = "INSERT INTO pedidos (nome_cliente, cpf, telefone, forma_entrega, total) VALUES (?, ?, ?, ?, ?)";
+$stmt_pedido = $conn->prepare($query_pedido);
+$stmt_pedido->bind_param('ssssd', $nome, $cpf, $telefone, $forma_entrega, $total);
 
-$_SESSION['pedidos'][] = $pedido;
+if ($stmt_pedido->execute()) {
+    // Obtém o ID do pedido inserido
+    $pedido_id = $conn->insert_id;
 
-// Limpe os dados do pedido em confirmação e o carrinho
-unset($_SESSION['pedido_em_confirmacao']);
+    // Insere os itens do pedido na tabela de itens_pedido
+    $query_item = "INSERT INTO itens_pedido (pedido_id, produto, tamanho, sabor, bebida, quantidade, preco) VALUES (?, ?, ?, ?, ?, ?, ?)";
+    $stmt_item = $conn->prepare($query_item);
 
-// Redirecione para uma página de sucesso ou agradecimento
-header('Location: pedido_finalizado.php');
-exit;
-?>
+    foreach ($pedido['carrinho'] as $item) {
+        $produto = $item['produto'];
+        $tamanho = $item['tamanho'];
+        $sabores = !empty($item['sabores']) ? implode(', ', $item['sabores']) : '';
+        $bebidas = !empty($item['bebidas']) ? implode(', ', $item['bebidas']) : '';
+        $quantidade = $item['quantidade'];
+        $preco = $item['preco'];
+
+        $stmt_item->bind_param('isssdd', $pedido_id, $produto, $tamanho, $sabores, $bebidas, $quantidade, $preco);
+        $stmt_item->execute();
+    }
+
+    // Limpa

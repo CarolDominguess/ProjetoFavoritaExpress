@@ -34,13 +34,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Redirecione para a página de confirmação do pedido
     header('Location: confirmar_pedido.php');
-
     exit;
 }
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -48,29 +44,94 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <title>Finalizar Pedido</title>
     <link rel="stylesheet" href="./styles/finalizar_pedido.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+        }
+
+        input, select {
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>Finalizar Pedido</h1>
+    <div class="container">
+        <h1>Finalizar Pedido</h1>
 
-    <form action="finalizar_pedido.php" method="post">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required>
+        <form action="finalizar_pedido.php" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf" required>
+            
+            <label for="telefone">Telefone:</label>
+            <input type="text" id="telefone" name="telefone" required>
+            
+            <label for="forma_entrega">Forma de Entrega:</label>
+            <select id="forma_entrega" name="forma_entrega" required>
+                <option value="entrega">Entrega</option>
+                <option value="retirada">Retirada</option>
+            </select>
+            
+            <button type="submit">Finalizar Pedido</button>
+        </form>
         
-        <label for="cpf">CPF:</label>
-        <input type="text" id="cpf" name="cpf" required>
-        
-        <label for="telefone">Telefone:</label>
-        <input type="text" id="telefone" name="telefone" required>
-        
-        <label for="forma_entrega">Forma de Entrega:</label>
-        <select id="forma_entrega" name="forma_entrega" required>
-            <option value="entrega">Entrega</option>
-            <option value="retirada">Retirada</option>
-        </select>
-        
-        <button type="submit">Finalizar Pedido</button>
-    </form>
-    
-    <a href="visualizar_carrinho.php">Voltar ao Carrinho</a>
+        <a href="visualizar_carrinho.php">Voltar ao Carrinho</a>
+    </div>
 </body>
 </html>
