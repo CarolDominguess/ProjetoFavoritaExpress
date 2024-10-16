@@ -1,94 +1,76 @@
-/* Define o estilo geral da página */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #fff5e6; /* Fundo com tom de amarelo claro */
-    color: #333; /* Cor do texto */
-    margin: 0;
-    padding: 0;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
 }
 
-/* Estilo do contêiner principal */
 .container {
-    background-color: #ffeb99; /* Fundo amarelo suave */
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 400px;
-    border: 2px solid #cc0000; /* Borda vermelha */
-    display: flex;
-    flex-direction: column; /* Organiza os elementos em uma coluna */
-    align-items: center; /* Alinha os elementos no centro horizontalmente */
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo para o título */
 h1 {
     text-align: center;
-    color: #cc0000; /* Vermelho escuro */
-    margin-bottom: 20px;
-    font-size: 28px;
+    color: #333;
 }
 
-/* Estilo para os rótulos dos campos */
-label {
-    display: block;
-    font-weight: bold;
-    color: #800000; /* Vermelho escuro para os rótulos */
-    margin-top: 15px;
-    text-align: left; /* Alinha o texto do rótulo à esquerda */
-    width: 100%; /* Faz com que o rótulo ocupe a largura total do contêiner */
-}
 form {
-    position: fixed;
-    left: 542px;
-    top: 119px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaçamento entre os campos do formulário */
 }
 
-/* Estilo para os campos de texto (input e select) com tamanho menor */
-input[type="text"], select {
-    width: 180%; /* Ajuste o valor conforme o tamanho desejado */
-    padding: 8px;
+label {
+    font-weight: bold;
+    color: #555;
+}
+
+input, select {
+    padding: 10px;
     margin-top: 5px;
-    border-radius: 5px;
-    border: 1px solid #cc0000; /* Borda vermelha */
-    background-color: #fff; /* Fundo branco para os inputs */
-    font-size: 14px; /* Fonte menor para acompanhar o tamanho dos campos */
-    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
 }
 
-/* Estilo para o botão de finalizar */
-button[type="submit"] {
-    position: fixed;
-    width: 17%;
-    left: 590px;
-    background-color: #cc0000;
-    color: white;
-    border: none;
+button {
+    margin-top: 20px;
     padding: 12px;
-    margin-top: 27px;
-    font-size: 18px;
-    border-radius: 5px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-button[type="submit"]:hover {
-    background-color: #ff3300; /* Vermelho mais claro ao passar o mouse */
+button:hover {
+    background-color: #218838;
 }
 
-/* Link para voltar ao carrinho */
 a {
     display: block;
     text-align: center;
-    margin-top: 15px;
-    color: #cc0000; /* Vermelho para o link */
+    margin-top: 20px;
     text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
+    color: #007bff;
 }
 
 a:hover {
-    color: #ff3300; /* Vermelho mais claro ao passar o mouse */
+    text-decoration: underline;
+}
+
+/* Estilo para o campo de endereço que será exibido quando a entrega for selecionada */
+#endereco_field {
+    display: none;
+    margin-top: 10px;
+}
+
+#endereco_field label, #endereco_field input {
+    display: block;
+    width: 100%; /* Campo de endereço ocupa toda a largura */
 }
