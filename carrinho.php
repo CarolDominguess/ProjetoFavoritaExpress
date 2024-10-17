@@ -1,152 +1,111 @@
 <?php
 session_start();
 
-// Inicializa o carrinho na sessão, se ainda não existir
-if (!isset($_SESSION['carrinho'])) {
-    $_SESSION['carrinho'] = [];
-}
-
-// Adiciona o pedido ao carrinho
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $produto = 'Pizza';
-    $tamanho = $_POST['tamanho'];
-    $sabores = $_POST['sabor'];
-    $quantidade = $_POST['quantidade'];
-    $tem_bebida = isset($_POST['tem_bebida']);
-    $bebidas = $tem_bebida ? $_POST['bebida'] : [];
-
-    // Define preços
-    $precos_pizza = ['pequena' => 35, 'médio' => 45, 'grande' => 55, 'gigante' => 75];
-    $precos_bebida = ['coca-cola' => 7, 'agua' => 4, 'guarana' => 5, 'suco-laranja' => 9];
-
-    // Calcula preço total
-    $preco_pizza = $precos_pizza[$tamanho] * $quantidade;
-    $preco_bebida = 0;
-    foreach ($bebidas as $bebida) {
-        $preco_bebida += $precos_bebida[$bebida];
-    }
-    $preco_total = $preco_pizza + $preco_bebida;
-
-    // Adiciona ao carrinho
-    $_SESSION['carrinho'][] = [
-        'produto' => $produto,
-        'tamanho' => $tamanho,
-        'sabores' => $sabores,
-        'quantidade' => $quantidade,
-        'tem_bebida' => $tem_bebida,
-        'bebidas' => $bebidas,
-        'preco' => $preco_total
-    ];
-
-    header('Location: visualizar_carrinho.php');
+// Verifique se o carrinho está definido
+if (!isset($_SESSION['carrinho']) || empty($_SESSION['carrinho'])) {
+    echo "Seu carrinho está vazio.";
     exit;
 }
+
+// Função para calcular o preço com base no tamanho da pizza
+function calcularPrecoPizza($tamanho) {
+    switch ($tamanho) {
+        case 'pequena':
+            return 25.00;
+        case 'media':
+            return 35.00;
+        case 'grande':
+            return 55.00;
+        case 'gigante':
+            return 65.00;
+        default:
+            return 0;
+    }
+}
+
+// Função para calcular o preço da bebida
+function calcularPrecoBebida($bebida) {
+    switch ($bebida) {
+        case 'coca-cola':
+            return 7.00;
+        case 'fanta':
+            return 5.00;
+        case 'guarana':
+            return 5.00;
+        case 'suco-laranja':
+            return 9.00;
+        default:
+            return 0;
+    }
+}
+
+// Função para excluir item do carrinho
+if (isset($_POST['excluir'])) {
+    $indiceExcluir = $_POST['excluir'];
+    unset($_SESSION['carrinho'][$indiceExcluir]);
+    $_SESSION['carrinho'] = array_values($_SESSION['carrinho']); // Reindexa o array
+}
+
+// Calcular o total
+$total = 0;
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Faça Seu Pedido</title>
-    <link rel="stylesheet" href="./styles/carrinho.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f9f9f9;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-
-        .bebidas-container {
-            display: none;
-            margin-top: 10px;
-        }
-
-        .bebidas-container label {
-            display: block;
-            margin-bottom: 5px;
-        }
-    </style>
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="styles/carrinho.css">
 </head>
 <body>
-    <h1>Faça Seu Pedido</h1>
-    <form action="carrinho.php" method="post">
+    <div class="container">
+        <h1>Seu Carrinho</h1>
         <table>
             <tr>
-                <td>Produto: Pizza</td>
-                <td>
-                    Tamanho: 
-                    <select name="tamanho" id="tamanho" onchange="atualizarCampos()">
-                        <option value="pequena">Pequena</option>
-                        <option value="médio">Médio</option>
-                        <option value="grande">Grande</option>
-                        <option value="gigante">Gigante</option>
-                    </select>
-                </td>
-                <td>
-                    Sabores:
-                    <div id="sabores-container">
-                        <!-- Opções de sabores serão carregadas dinamicamente -->
-                    </div>
-                </td>
-                <td>
-                    Quantidade: <input type="number" name="quantidade" value="1" min="1">
-                </td>
-                <td>
-                    Bebida: 
-                    <input type="checkbox" name="tem_bebida" id="tem_bebida" onchange="toggleBebidas()">
-                </td>
+                <th>Tamanho</th>
+                <th>Sabores</th>
+                <th>Quantidade</th>
+                <th>Bebida</th>
+                <th>Preço</th>
+                <th>Ação</th>
             </tr>
+
+            <?php foreach ($_SESSION['carrinho'] as $index => $item): ?>
+                <?php
+                    $precoPizza = calcularPrecoPizza($item['tamanho']);
+                    $precoBebida = calcularPrecoBebida($item['bebida']);
+                    $precoItem = ($precoPizza + $precoBebida) * $item['quantidade'];
+                    $total += $precoItem;
+                ?>
+                <tr>
+                    <td><?php echo ucfirst($item['tamanho']); ?></td>
+                    <td>
+                        <?php 
+                        // Verificar se "sabores" é um array
+                        if (is_array($item['sabores'])) {
+                            echo implode(', ', $item['sabores']);
+                        } else {
+                            echo $item['sabores']; // Exibe o sabor diretamente se não for array
+                        }
+                        ?>
+                    </td>
+                    <td><?php echo $item['quantidade']; ?></td>
+                    <td><?php echo $item['bebida']; ?></td>
+                    <td>R$ <?php echo number_format($precoItem, 2, ',', '.'); ?></td>
+                    <td>
+                        <form action="carrinho.php" method="POST">
+                            <input type="hidden" name="excluir" value="<?php echo $index; ?>">
+                            <button type="submit">Excluir</button>
+                        </form>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
         </table>
 
-        <div class="bebidas-container" id="bebidas-container">
-            <h3>Escolha suas bebidas</h3>
-            <label><input type="checkbox" name="bebida[]" value="coca-cola"> Coca-Cola (R$ 7,00)</label>
-            <label><input type="checkbox" name="bebida[]" value="agua"> Água (R$ 4,00)</label>
-            <label><input type="checkbox" name="bebida[]" value="guarana"> Guaraná (R$ 5,00)</label>
-            <label><input type="checkbox" name="bebida[]" value="suco-laranja"> Suco de Laranja (R$ 9,00)</label>
-        </div>
+        <h2>Total: R$ <?php echo number_format($total, 2, ',', '.'); ?></h2>
 
-        <button type="submit">Adicionar ao Carrinho</button>
-    </form>
-
-    <script>
-        function toggleBebidas() {
-            var bebidasContainer = document.getElementById('bebidas-container');
-            var checkbox = document.getElementById('tem_bebida');
-            bebidasContainer.style.display = checkbox.checked ? 'block' : 'none';
-        }
-
-        function atualizarCampos() {
-            var tamanho = document.getElementById('tamanho').value;
-            var saboresContainer = document.getElementById('sabores-container');
-            var quantidadeSabores = { pequena: 1, médio: 2, grande: 3, gigante: 3 };
-
-            saboresContainer.innerHTML = '';
-
-            for (var i = 0; i < quantidadeSabores[tamanho]; i++) {
-                var select = document.createElement('select');
-                select.name = 'sabor[]';
-                select.innerHTML = '<option value="mussarela">Frango Exótico</option><option value="calabresa">Filé de frango</option><option value="portuguesa">Tomate Seco</option><option value="portuguesa">Marguerita Especial</option><option value="portuguesa">Portuguesa</option>';
-                saboresContainer.appendChild(select);
-            }
-        }
-
-        // Inicialização ao carregar a página
-        atualizarCampos();
-    </script>
+        <a href="pedido.php">Continuar Pedindo</a>
+        <a href="finalizar_pedido.php">Finalizar Pedido</a>
+    </div>
 </body>
 </html>

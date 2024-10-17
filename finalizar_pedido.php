@@ -1,59 +1,98 @@
 <?php
 session_start();
 
-// Verifique se o formulário foi enviado
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Verifique se o carrinho está definido e não está vazio
-    if (!isset($_SESSION['carrinho']) || empty($_SESSION['carrinho'])) {
-        echo "Erro: O carrinho está vazio.";
-        exit;
-    }
+// Verifique se o carrinho está definido
+if (!isset($_SESSION['carrinho']) || empty($_SESSION['carrinho'])) {
+    echo "Seu carrinho está vazio.";
+    exit;
+}
 
-    // Receba os dados do cliente
-    $nome = htmlspecialchars($_POST['nome']);
-    $cpf = htmlspecialchars($_POST['cpf']);
-    $telefone = htmlspecialchars($_POST['telefone']);
-    $forma_entrega = htmlspecialchars($_POST['forma_entrega']);
+// Conecte-se ao banco de dados
+$servername = "localhost"; // Normalmente 'localhost'
+$username = "root"; // Seu usuário do MySQL
+$password = ""; // Sua senha do MySQL
+$database = "sistemaunipar"; // O nome do seu banco de dados
 
-    // Inicialize a variável do endereço e da taxa de entrega
-    $endereco = null;
-    $taxa_entrega = 0;
+$conn = new mysqli($servername, $username, $password, $database);
 
-    // Se for entrega, receba o endereço e adicione a taxa de entrega
-    if ($forma_entrega === 'entrega') {
-        if (isset($_POST['endereco']) && !empty($_POST['endereco'])) {
-            $endereco = htmlspecialchars($_POST['endereco']);
-            $taxa_entrega = 7.00; // Taxa de entrega
-        } else {
-            echo "Erro: O campo de endereço é obrigatório para entrega.";
-            exit;
-        }
-    }
+if ($conn->connect_error) {
+    die("Falha na conexão: " . $conn->connect_error);
+}
 
-    // Calcular o total do pedido, incluindo a taxa de entrega, se aplicável
-    $total_pedido = array_sum(array_column($_SESSION['carrinho'], 'preco')) + $taxa_entrega;
-
-    // Crie o pedido finalizado (ainda não confirmamos aqui, apenas preparamos os dados)
-    $pedido_finalizado = [
-        'nome' => $nome,
-        'cpf' => $cpf,
-        'telefone' => $telefone,
-        'forma_entrega' => $forma_entrega,
-        'endereco' => $endereco,
-        'carrinho' => $_SESSION['carrinho'],
-        'taxa_entrega' => $taxa_entrega,
-        'total' => $total_pedido
+// Funções para calcular o preço das pizzas e bebidas
+function calcularPrecoPizza($tamanho) {
+    $precos = [
+        'pequena' => 25.00,
+        'media' => 35.00,
+        'grande' => 55.00,
+        'gigante' => 65.00
     ];
 
-    // Armazene os dados do pedido temporariamente na sessão para a próxima página de confirmação
-    $_SESSION['pedido_em_confirmacao'] = $pedido_finalizado;
+    return isset($precos[$tamanho]) ? $precos[$tamanho] : 0;
+}
 
-    // Limpe o carrinho após finalizar o pedido
+function calcularPrecoBebida($bebida) {
+    $precos = [
+        'coca-cola' => 7.00,
+        'fanta' => 5.00,
+        'guarana' => 5.00,
+        'suco-laranja' => 9.00
+    ];
+
+    return isset($precos[$bebida]) ? $precos[$bebida] : 0;
+}
+
+// Calcular o preço total do pedido
+$total = 0;
+foreach ($_SESSION['carrinho'] as $item) {
+    $precoPizza = calcularPrecoPizza($item['tamanho']);
+    $precoBebida = calcularPrecoBebida($item['bebida']);
+    $precoItem = ($precoPizza + $precoBebida) * $item['quantidade'];
+    $total += $precoItem;
+}
+
+// Adicionar taxa de entrega se for entrega
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $nome = $_POST['nome'];
+    $cpf = $_POST['cpf'];
+    $telefone = $_POST['telefone'];
+    $forma_entrega = $_POST['forma_entrega'];
+    $endereco = $forma_entrega == 'entrega' ? $_POST['endereco'] : '';
+
+    // Adiciona taxa de entrega se for entrega
+    if ($forma_entrega == 'entrega') {
+        $total += 7.00;
+    }
+
+    // Salvar pedido no banco de dados
+    $stmt = $conn->prepare("INSERT INTO pedidos (nome, cpf, telefone, forma_entrega, endereco, total) VALUES (?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("sssssd", $nome, $cpf, $telefone, $forma_entrega, $endereco, $total);
+    $stmt->execute();
+    $pedido_id = $stmt->insert_id; // ID do pedido inserido
+
+    // Agora, vamos salvar os itens do pedido na tabela itens_pedido
+    foreach ($_SESSION['carrinho'] as $item) {
+        $precoPizza = calcularPrecoPizza($item['tamanho']);
+        $precoBebida = calcularPrecoBebida($item['bebida']);
+        $precoItem = ($precoPizza + $precoBebida) * $item['quantidade'];
+
+        $sabores = implode(", ", $item['sabores']); // Transformar os sabores em uma string
+
+        $stmt = $conn->prepare("INSERT INTO itens_pedido (pedido_id, tamanho, sabores, quantidade, bebida, preco) VALUES (?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("issdss", $pedido_id, $item['tamanho'], $sabores, $item['quantidade'], $item['bebida'], $precoItem);
+        $stmt->execute();
+    }
+
+    // Limpar o carrinho após o pedido ser finalizado
     unset($_SESSION['carrinho']);
 
-    // Redirecione para a página de confirmação do pedido
-    header('Location: confirmar_pedido.php');
-    exit;
+    // Fechar a conexão com o banco de dados
+    $stmt->close();
+    $conn->close();
+
+    // Redirecionar para a página de sucesso
+    header("Location: pedido_sucesso.php");
+    exit();
 }
 ?>
 
@@ -62,18 +101,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Finalizar Pedido</title>
-    <link rel="stylesheet" href="styles/finalizar_pedido.css"> <!-- Link para o CSS externo -->
+    <link rel="stylesheet" href="styles/finalizar_pedido.css">
     <script>
-        // Função para exibir/esconder o campo de endereço com base na opção de entrega selecionada
-        function toggleEnderecoField() {
-            var formaEntrega = document.getElementById('forma_entrega').value;
-            var enderecoField = document.getElementById('endereco_field');
-
-            // Mostrar o campo de endereço apenas se a forma de entrega for "Entrega"
+        function toggleEndereco() {
+            var formaEntrega = document.querySelector('input[name="forma_entrega"]:checked').value;
+            var enderecoContainer = document.getElementById('endereco_container');
+            var totalContainer = document.getElementById('total_container');
             if (formaEntrega === 'entrega') {
-                enderecoField.style.display = 'block';
+                enderecoContainer.style.display = 'block';
+                totalContainer.innerHTML = "Total: R$ <?php echo number_format($total + 7.00, 2, ',', '.'); ?>";
             } else {
-                enderecoField.style.display = 'none';
+                enderecoContainer.style.display = 'none';
+                totalContainer.innerHTML = "Total: R$ <?php echo number_format($total, 2, ',', '.'); ?>";
             }
         }
     </script>
@@ -82,32 +121,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="container">
         <h1>Finalizar Pedido</h1>
 
-        <form action="finalizar_pedido.php" method="post">
+        <form action="finalizar_pedido.php" method="POST">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required>
-            
+
             <label for="cpf">CPF:</label>
             <input type="text" id="cpf" name="cpf" required>
-            
+
             <label for="telefone">Telefone:</label>
             <input type="text" id="telefone" name="telefone" required>
-            
-            <label for="forma_entrega">Forma de Entrega:</label>
-            <select id="forma_entrega" name="forma_entrega" required onchange="toggleEnderecoField()">
-                <option value="retirada">Retirada</option>
-                <option value="entrega">Entrega</option>
-            </select>
-            
-            <!-- Campo de endereço que aparecerá apenas quando a opção "Entrega" for selecionada -->
-            <div id="endereco_field">
-                <label for="endereco">Endereço:</label>
-                <input type="text" id="endereco" name="endereco">
+
+            <label>Forma de Entrega:</label>
+            <input type="radio" id="entrega" name="forma_entrega" value="entrega" onclick="toggleEndereco()" required>
+            <label for="entrega">Entrega</label>
+            <input type="radio" id="retirada" name="forma_entrega" value="retirada" onclick="toggleEndereco()" required>
+            <label for="retirada">Retirada</label>
+
+            <div id="endereco_container" style="display: none;">
+                <label for="endereco">Endereço de Entrega:</label>
+                <input type="text" id="endereco" name="endereco" placeholder="Rua, Número, Bairro" required>
             </div>
+
+            <h2 id="total_container">Total: R$ <?php echo number_format($total, 2, ',', '.'); ?></h2>
 
             <button type="submit">Finalizar Pedido</button>
         </form>
-        
-        <a href="visualizar_carrinho.php">Voltar ao Carrinho</a>
     </div>
 </body>
 </html>
