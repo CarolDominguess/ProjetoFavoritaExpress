@@ -59,7 +59,7 @@ $total = 0;
 </head>
 <body>
     <div class="container">
-        <h1>Seu Carrinho</h1>
+        <h1>Seu Carrinh</h1>
         <table>
             <tr>
                 <th>Tamanho</th>

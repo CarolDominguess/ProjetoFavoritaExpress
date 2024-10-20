@@ -8,10 +8,10 @@ if (!isset($_SESSION['carrinho']) || empty($_SESSION['carrinho'])) {
 }
 
 // Conecte-se ao banco de dados
-$servername = "localhost"; // Normalmente 'localhost'
-$username = "root"; // Seu usuário do MySQL
-$password = ""; // Sua senha do MySQL
-$database = "sistemaunipar"; // O nome do seu banco de dados
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "sistemaunipar";
 
 $conn = new mysqli($servername, $username, $password, $database);
 
@@ -27,7 +27,6 @@ function calcularPrecoPizza($tamanho) {
         'grande' => 55.00,
         'gigante' => 65.00
     ];
-
     return isset($precos[$tamanho]) ? $precos[$tamanho] : 0;
 }
 
@@ -38,7 +37,6 @@ function calcularPrecoBebida($bebida) {
         'guarana' => 5.00,
         'suco-laranja' => 9.00
     ];
-
     return isset($precos[$bebida]) ? $precos[$bebida] : 0;
 }
 
@@ -64,22 +62,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $total += 7.00;
     }
 
-    // Salvar pedido no banco de dados
-    $stmt = $conn->prepare("INSERT INTO pedidos (nome, cpf, telefone, forma_entrega, endereco, total) VALUES (?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("sssssd", $nome, $cpf, $telefone, $forma_entrega, $endereco, $total);
-    $stmt->execute();
-    $pedido_id = $stmt->insert_id; // ID do pedido inserido
-
-    // Agora, vamos salvar os itens do pedido na tabela itens_pedido
+    // Insere os dados diretamente na tabela pedidos
     foreach ($_SESSION['carrinho'] as $item) {
         $precoPizza = calcularPrecoPizza($item['tamanho']);
         $precoBebida = calcularPrecoBebida($item['bebida']);
         $precoItem = ($precoPizza + $precoBebida) * $item['quantidade'];
 
-        $sabores = implode(", ", $item['sabores']); // Transformar os sabores em uma string
+        // Verifique se 'sabores' é um array válido
+        if (isset($item['sabores']) && is_array($item['sabores'])) {
+            $sabores = implode(", ", $item['sabores']);
+        } else {
+            $sabores = ''; // Se 'sabores' não for um array, deixe como string vazia
+        }
 
-        $stmt = $conn->prepare("INSERT INTO itens_pedido (pedido_id, tamanho, sabores, quantidade, bebida, preco) VALUES (?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("issdss", $pedido_id, $item['tamanho'], $sabores, $item['quantidade'], $item['bebida'], $precoItem);
+        // Salva as informações diretamente na tabela pedidos
+        $stmt = $conn->prepare("INSERT INTO pedidos (nome, cpf, telefone, forma_entrega, endereco, tamanho_pizza, sabores, quantidade, bebida, preco, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("sssssssdssd", $nome, $cpf, $telefone, $forma_entrega, $endereco, $item['tamanho'], $sabores, $item['quantidade'], $item['bebida'], $precoItem, $total);
         $stmt->execute();
     }
 
