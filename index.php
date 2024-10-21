@@ -49,7 +49,7 @@
     <h2 id="texto">The Best Pizza in Town</h2>
     <h2 id="texto2">Sabores totalmente autenticos</h2>
     <div id="botaoembaixo">
-        <a href="#" id="botaobaixo"><li id="textbaixo">VER MAIS</li></a>
+        <a href="acompanhar_pedido.php" id="botaobaixo"><li id="textbaixo">Acompanhar Pedido</li></a>
     </div>
 </body>
 </html>

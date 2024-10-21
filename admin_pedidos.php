@@ -11,57 +11,34 @@ if ($conn->connect_error) {
     die("Falha na conexão: " . $conn->connect_error);
 }
 
-// Obter todos os pedidos, organizando do mais antigo para o mais recente
-$sql = "SELECT * FROM pedidos ORDER BY id ASC";  // Ordena pelo id em ordem crescente (mais antigos primeiro)
-$result = $conn->query($sql);
+// Verifique se o status foi alterado e atualizado no banco de dados
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['pedido_id'])) {
+    $pedido_id = $_POST['pedido_id'];
+    $novo_status = $_POST['status'];
 
-// Exibir pedidos
+    // Atualize o status do pedido no banco de dados
+    $stmt = $conn->prepare("UPDATE pedidos SET status = ? WHERE id = ?");
+    $stmt->bind_param("si", $novo_status, $pedido_id);
+    $stmt->execute();
+    $stmt->close();
+}
+
+// Obter todos os pedidos
+$sql = "SELECT * FROM pedidos ORDER BY id ASC";
+$result = $conn->query($sql);
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <title>Administração de Pedidos</title>
     <link rel="stylesheet" href="styles/admin_pedidos.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            width: 90%; /* Aumenta a largura do container */
-            max-width: 1200px; /* Limita a largura máxima */
-            margin: auto; /* Centraliza o container */
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            padding: 10px;
-            text-align: left;
-            border: none; /* Remove as bordas da tabela */
-        }
-        th {
-            background-color: green; /* Cor de fundo para cabeçalho */
-            color: white; /* Cor do texto do cabeçalho */
-        }
-        .remove-btn {
-            color: red;
-            cursor: pointer;
-        }
-    </style>
     <script>
         function removeRow(button) {
-            // Obtém a linha (tr) correspondente ao botão clicado
-            var row = button.parentNode.parentNode;
-            row.parentNode.removeChild(row);
+            console.log("Botão clicado!"); // Log para verificar se a função é chamada
+            var row = button.parentNode.parentNode; // Obtém a linha
+            row.classList.add("hide-row"); // Adiciona a classe que esconde a linha
         }
     </script>
 </head>
@@ -79,13 +56,13 @@ $result = $conn->query($sql);
                     <th>Endereço</th>
                     <th>Total</th>
                     <th>Data</th>
+                    <th>Status</th>
                     <th>Ações</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
                 if ($result->num_rows > 0) {
-                    // Exibe os pedidos na tabela
                     while ($row = $result->fetch_assoc()) {
                         echo "<tr>";
                         echo "<td>{$row['id']}</td>";
@@ -96,11 +73,22 @@ $result = $conn->query($sql);
                         echo "<td>{$row['endereco']}</td>";
                         echo "<td>R$ " . number_format($row['total'], 2, ',', '.') . "</td>";
                         echo "<td>{$row['data_pedido']}</td>";
-                        echo "<td><a href='ver_pedido.php?id={$row['id']}'>Ver detalhes</a> | <span class='remove-btn' onclick='removeRow(this)'>Remover</span></td>";
+                        echo "<td>
+                                <form method='POST' action=''>
+                                    <input type='hidden' name='pedido_id' value='{$row['id']}'>
+                                    <select name='status' onchange='this.form.submit()'>
+                                        <option value='Recebido' " . ($row['status'] == 'Recebido' ? 'selected' : '') . ">Recebido</option>
+                                        <option value='Preparando' " . ($row['status'] == 'Preparando' ? 'selected' : '') . ">Preparando</option>
+                                        <option value='Enviado' " . ($row['status'] == 'Enviado' ? 'selected' : '') . ">Enviado</option>
+                                        <option value='Entregue' " . ($row['status'] == 'Entregue' ? 'selected' : '') . ">Entregue</option>
+                                    </select>
+                                </form>
+                              </td>";
+                        echo "<td><a href='ver_pedido.php?id={$row['id']}'>Ver detalhes</a> | <button class='remove-btn' onclick='removeRow(this)'>Remover da Lista</button></td>";
                         echo "</tr>";
                     }
                 } else {
-                    echo "<tr><td colspan='9'>Nenhum pedido encontrado.</td></tr>";
+                    echo "<tr><td colspan='10'>Nenhum pedido encontrado.</td></tr>";
                 }
                 ?>
             </tbody>

@@ -6,104 +6,112 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f0f2f5;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* Estilização do contêiner principal */
-.container {
-    max-width: 1200px;
-    margin: 40px auto;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9fafc;
+    margin: 0;
     padding: 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    color: #333;
 }
 
-/* Cabeçalho principal */
+/* Container principal - ajustado para mais largura */
+.container {
+    width: 95%; /* Aumentando a largura */
+    max-width: 1300px; /* Ajustando o limite máximo da largura */
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabeçalho */
 h1 {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     color: #333;
-    font-size: 2.5rem;
-    letter-spacing: 1.5px;
-}
-
-/* Cada pedido */
-.pedido-item {
-    margin-bottom: 40px;
-    border-bottom: 2px solid #e9e9e9;
-    padding-bottom: 20px;
-}
-
-.pedido-item h2 {
-    color: #28a745;
     font-size: 1.8rem;
-    margin-bottom: 15px;
+    font-weight: 600;
 }
 
-.pedido-item p {
-    font-size: 1rem;
-    margin: 5px 0;
-}
-
-/* Estilo da tabela */
+/* Estilização da tabela */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
+    font-size: 0.9rem;
 }
 
-table thead {
-    background-color: #28a745;
+thead {
+    background-color: #007bff;
     color: #fff;
 }
 
-table th, table td {
-    text-align: left;
+th, td {
     padding: 12px;
-    font-size: 1rem;
+    text-align: left;
 }
 
-table th {
-    letter-spacing: 1px;
+th {
     font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
-table tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
 
-table tbody tr:hover {
-    background-color: #f1f1f1;
+tbody tr:hover {
+    background-color: #e9ecef;
 }
 
-/* Botões */
-button {
-    padding: 10px 20px;
-    font-size: 1rem;
+/* Botão de ação - botão remover ajustado */
+.remove-btn {
+    background-color: #dc3545;
     color: #fff;
-    background-color: #f10000;
+    padding: 8px 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: 600;
     transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #ba0909;
+.remove-btn:hover {
+    background-color: #bd2130;
 }
 
-/* Total do pedido */
-.pedido-item p strong {
-    font-size: 1.2rem;
+/* Link para detalhes */
+a {
+    color: #007bff;
+    text-decoration: none;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
+/* Dropdown de status */
+select {
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 0.9rem;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+select:hover, select:focus {
+    border-color: #007bff;
+}
+
+/* Melhorando o layout do rodapé */
 footer {
     text-align: center;
     margin-top: 20px;
-    font-size: 0.9rem;
-    color: #999;
+    font-size: 0.8rem;
+    color: #888;
+}
+/* styles/admin_pedidos.css */
+.hide-row {
+    display: none; /* Esconde a linha */
 }
