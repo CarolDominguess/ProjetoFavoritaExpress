@@ -6,7 +6,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $tamanho = $_POST['tamanho'];
     $sabores = $_POST['sabores'];
     $quantidade = $_POST['quantidade'];
-    $bebida = isset($_POST['bebida']) ? $_POST['bebida'] : 'Nenhuma';
+
+    // Verifica se a checkbox de bebida está marcada
+    if (isset($_POST['escolher_bebida'])) {
+        $bebida = $_POST['bebida']; // Se marcada, pega a bebida selecionada
+    } else {
+        $bebida = null; // Se não marcada, define a bebida como null
+    }
 
     // Inicialize o carrinho se não estiver configurado
     if (!isset($_SESSION['carrinho'])) {
@@ -18,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         'tamanho' => $tamanho,
         'sabores' => $sabores,
         'quantidade' => $quantidade,
-        'bebida' => $bebida,
+        'bebida' => $bebida, // Pode ser null se a bebida não for selecionada
     ];
 
     // Adiciona o pedido ao array de carrinho

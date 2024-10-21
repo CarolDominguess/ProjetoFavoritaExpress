@@ -51,16 +51,20 @@ foreach ($_SESSION['carrinho'] as $item) {
 
 // Adicionar taxa de entrega se for entrega
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $forma_entrega = $_POST['forma_entrega'];
+    $endereco = ($forma_entrega == 'entrega') ? $_POST['endereco'] : '';
+
+    if ($forma_entrega == 'entrega' && empty($endereco)) {
+        die("Erro: Endereço de entrega não fornecido.");
+    }
+
+    if ($forma_entrega == 'entrega') {
+        $total += 7.00; // Adiciona a taxa de entrega
+    }
+
     $nome = $_POST['nome'];
     $cpf = $_POST['cpf'];
     $telefone = $_POST['telefone'];
-    $forma_entrega = $_POST['forma_entrega'];
-    $endereco = $forma_entrega == 'entrega' ? $_POST['endereco'] : '';
-
-    // Adiciona taxa de entrega se for entrega
-    if ($forma_entrega == 'entrega') {
-        $total += 7.00;
-    }
 
     // Insere os dados diretamente na tabela pedidos
     foreach ($_SESSION['carrinho'] as $item) {
@@ -68,14 +72,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $precoBebida = calcularPrecoBebida($item['bebida']);
         $precoItem = ($precoPizza + $precoBebida) * $item['quantidade'];
 
-        // Verifique se 'sabores' é um array válido
         if (isset($item['sabores']) && is_array($item['sabores'])) {
             $sabores = implode(", ", $item['sabores']);
         } else {
-            $sabores = ''; // Se 'sabores' não for um array, deixe como string vazia
+            $sabores = '';
         }
 
-        // Salva as informações diretamente na tabela pedidos
         $stmt = $conn->prepare("INSERT INTO pedidos (nome, cpf, telefone, forma_entrega, endereco, tamanho_pizza, sabores, quantidade, bebida, preco, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
         $stmt->bind_param("sssssssdssd", $nome, $cpf, $telefone, $forma_entrega, $endereco, $item['tamanho'], $sabores, $item['quantidade'], $item['bebida'], $precoItem, $total);
         $stmt->execute();
@@ -83,8 +85,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Limpar o carrinho após o pedido ser finalizado
     unset($_SESSION['carrinho']);
-
-    // Fechar a conexão com o banco de dados
     $stmt->close();
     $conn->close();
 
@@ -102,9 +102,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="styles/finalizar_pedido.css">
     <script>
         function toggleEndereco() {
-            var formaEntrega = document.querySelector('input[name="forma_entrega"]:checked').value;
+            var formaEntrega = document.querySelector('input[name="forma_entrega"]:checked');
             var enderecoContainer = document.getElementById('endereco_container');
             var totalContainer = document.getElementById('total_container');
+
+            if (!formaEntrega) {
+                alert("Por favor, selecione a forma de entrega.");
+                return;
+            }
+
+            formaEntrega = formaEntrega.value;
+
             if (formaEntrega === 'entrega') {
                 enderecoContainer.style.display = 'block';
                 totalContainer.innerHTML = "Total: R$ <?php echo number_format($total + 7.00, 2, ',', '.'); ?>";
@@ -113,13 +121,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 totalContainer.innerHTML = "Total: R$ <?php echo number_format($total, 2, ',', '.'); ?>";
             }
         }
+
+        function validateForm() {
+            var formaEntrega = document.querySelector('input[name="forma_entrega"]:checked');
+            if (!formaEntrega) {
+                alert("Por favor, selecione a forma de entrega.");
+                return false;
+            }
+
+            if (formaEntrega.value === 'entrega') {
+                var endereco = document.getElementById('endereco').value;
+                if (!endereco) {
+                    alert("Por favor, informe o endereço de entrega.");
+                    return false;
+                }
+            }
+            return true;
+        }
     </script>
 </head>
 <body>
     <div class="container">
         <h1>Finalizar Pedido</h1>
 
-        <form action="finalizar_pedido.php" method="POST">
+        <!-- Formulário com validação -->
+        <form action="finalizar_pedido.php" method="POST" onsubmit="return validateForm();">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required>
 
@@ -137,7 +163,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             <div id="endereco_container" style="display: none;">
                 <label for="endereco">Endereço de Entrega:</label>
-                <input type="text" id="endereco" name="endereco" placeholder="Rua, Número, Bairro" required>
+                <input type="text" id="endereco" name="endereco" placeholder="Rua, Número, Bairro">
             </div>
 
             <h2 id="total_container">Total: R$ <?php echo number_format($total, 2, ',', '.'); ?></h2>

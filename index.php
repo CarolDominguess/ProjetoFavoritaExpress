@@ -43,7 +43,7 @@
     </div>
 
     <div id="menudireito">
-        <a href="carrinho.php" id="inscreva-se-btn" style="color: #f8dddd;"><li id="text">Faça seu pedido</li></a>
+        <a href="pedido.php" id="inscreva-se-btn" style="color: #f8dddd;"><li id="text">Faça seu pedido</li></a>
     </div>
     </header>
     <h2 id="texto">The Best Pizza in Town</h2>

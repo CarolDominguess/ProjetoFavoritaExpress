@@ -1,11 +1,9 @@
 <?php
-session_start();
-
 // Conecte-se ao banco de dados
-$servername = "localhost"; // Normalmente 'localhost'
-$username = "root"; // Seu usuário do MySQL
-$password = ""; // Sua senha do MySQL
-$database = "sistemaunipar"; // O nome do seu banco de dados
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "sistemaunipar";
 
 $conn = new mysqli($servername, $username, $password, $database);
 
@@ -13,49 +11,63 @@ if ($conn->connect_error) {
     die("Falha na conexão: " . $conn->connect_error);
 }
 
-// Verificar se o pedido deve ser removido
-if (isset($_GET['remover_id'])) {
-    $remover_id = intval($_GET['remover_id']);
-    
-    // Atualizar o status do pedido para 'removido'
-    $sql_remover = "UPDATE pedidos SET status = 'removido' WHERE id = ?";
-    $stmt = $conn->prepare($sql_remover);
-    $stmt->bind_param("i", $remover_id);
-    
-    if ($stmt->execute()) {
-        echo "Pedido removido da lista com sucesso!";
-    } else {
-        echo "Erro ao remover o pedido.";
-    }
-    $stmt->close();
-}
-
-// Consultar pedidos que estão com status 'ativo'
-$sql = "SELECT pedidos.id, pedidos.nome, pedidos.cpf, pedidos.telefone, pedidos.forma_entrega, pedidos.endereco, pedidos.total, pedidos.data 
-        FROM pedidos 
-        WHERE pedidos.status = 'ativo'
-        ORDER BY pedidos.data DESC";
-
+// Obter todos os pedidos, organizando do mais antigo para o mais recente
+$sql = "SELECT * FROM pedidos ORDER BY id ASC";  // Ordena pelo id em ordem crescente (mais antigos primeiro)
 $result = $conn->query($sql);
 
-if ($result === false) {
-    // Se a consulta falhar, mostre o erro
-    echo "Erro na consulta SQL: " . $conn->error;
-    exit;
-}
+// Exibir pedidos
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <title>Administração de Pedidos</title>
     <link rel="stylesheet" href="styles/admin_pedidos.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            width: 90%; /* Aumenta a largura do container */
+            max-width: 1200px; /* Limita a largura máxima */
+            margin: auto; /* Centraliza o container */
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: none; /* Remove as bordas da tabela */
+        }
+        th {
+            background-color: green; /* Cor de fundo para cabeçalho */
+            color: white; /* Cor do texto do cabeçalho */
+        }
+        .remove-btn {
+            color: red;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function removeRow(button) {
+            // Obtém a linha (tr) correspondente ao botão clicado
+            var row = button.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+        }
+    </script>
 </head>
 <body>
     <div class="container">
-        <h1>Pedidos da Pizzaria</h1>
-
+        <h1>Pedidos Recebidos</h1>
         <table>
             <thead>
                 <tr>
@@ -67,30 +79,28 @@ if ($result === false) {
                     <th>Endereço</th>
                     <th>Total</th>
                     <th>Data</th>
-                    <th>Detalhes</th>
                     <th>Ações</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
-                // Verificar se há resultados antes de tentar acessar num_rows
                 if ($result->num_rows > 0) {
+                    // Exibe os pedidos na tabela
                     while ($row = $result->fetch_assoc()) {
                         echo "<tr>";
-                        echo "<td>" . $row['id'] . "</td>";
-                        echo "<td>" . $row['nome'] . "</td>";
-                        echo "<td>" . $row['cpf'] . "</td>";
-                        echo "<td>" . $row['telefone'] . "</td>";
-                        echo "<td>" . ($row['forma_entrega'] == 'entrega' ? 'Entrega' : 'Retirada') . "</td>";
-                        echo "<td>" . ($row['forma_entrega'] == 'entrega' ? $row['endereco'] : '-') . "</td>";
+                        echo "<td>{$row['id']}</td>";
+                        echo "<td>{$row['nome']}</td>";
+                        echo "<td>{$row['cpf']}</td>";
+                        echo "<td>{$row['telefone']}</td>";
+                        echo "<td>{$row['forma_entrega']}</td>";
+                        echo "<td>{$row['endereco']}</td>";
                         echo "<td>R$ " . number_format($row['total'], 2, ',', '.') . "</td>";
-                        echo "<td>" . date('d/m/Y H:i', strtotime($row['data'])) . "</td>";
-                        echo "<td><a href='detalhes_pedido.php?id=" . $row['id'] . "'>Ver Detalhes</a></td>";
-                        echo "<td><a href='admin_pedidos.php?remover_id=" . $row['id'] . "'>Remover da lista</a></td>";
+                        echo "<td>{$row['data_pedido']}</td>";
+                        echo "<td><a href='ver_pedido.php?id={$row['id']}'>Ver detalhes</a> | <span class='remove-btn' onclick='removeRow(this)'>Remover</span></td>";
                         echo "</tr>";
                     }
                 } else {
-                    echo "<tr><td colspan='10'>Nenhum pedido encontrado</td></tr>";
+                    echo "<tr><td colspan='9'>Nenhum pedido encontrado.</td></tr>";
                 }
                 ?>
             </tbody>

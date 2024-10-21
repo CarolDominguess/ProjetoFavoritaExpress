@@ -1,0 +1,123 @@
+/* Resetando margens e preenchimento para evitar problemas com estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Container principal */
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+/* Cabeçalho */
+h1 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+/* Tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.9rem;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #555;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+td {
+    color: #555;
+}
+
+td:last-child {
+    text-align: right;
+}
+
+/* Detalhes do Pedido */
+p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+p strong {
+    color: #333;
+}
+
+/* Estilo dos preços */
+td:last-child {
+    font-weight: bold;
+    color: #4CAF50;
+    font-size: 1rem;
+}
+
+/* Cores e ajustes de borda */
+hr {
+    margin: 25px 0;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+/* Adicionando espaçamento entre os itens */
+table, .container {
+    margin-bottom: 25px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    table, th, td {
+        font-size: 0.8rem;
+    }
+
+    th, td {
+        padding: 8px 10px;
+    }
+}
