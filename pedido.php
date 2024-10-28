@@ -1,43 +1,34 @@
 <?php
-session_start(); // Inicia a sessão
+session_start(); // Começa a sessão
 
-// Verifique se o formulário foi enviado
+// Se o formulário foi enviado
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Pega os dados do formulário
     $tamanho = $_POST['tamanho'];
     $sabores = $_POST['sabores'];
     $quantidade = $_POST['quantidade'];
+    
+    // Se o usuário escolheu uma bebida
+    $bebida = isset($_POST['escolher_bebida']) ? $_POST['bebida'] : null;
 
-    // Verifica se a checkbox de bebida está marcada
-    if (isset($_POST['escolher_bebida'])) {
-        $bebida = $_POST['bebida']; // Se marcada, pega a bebida selecionada
-    } else {
-        $bebida = null; // Se não marcada, define a bebida como null
-    }
-
-    // Inicialize o carrinho se não estiver configurado
+    // Se o carrinho não existir, cria um novo
     if (!isset($_SESSION['carrinho'])) {
         $_SESSION['carrinho'] = [];
     }
 
-    // Adicione o pedido ao carrinho
+    // Cria o pedido e adiciona no carrinho
     $pedido = [
         'tamanho' => $tamanho,
         'sabores' => $sabores,
         'quantidade' => $quantidade,
-        'bebida' => $bebida, // Pode ser null se a bebida não for selecionada
+        'bebida' => $bebida, // Pode ser null se não houver bebida
     ];
 
-    // Adiciona o pedido ao array de carrinho
-    $_SESSION['carrinho'][] = $pedido;
+    $_SESSION['carrinho'][] = $pedido; // Adiciona o pedido no carrinho
 
-    // Verifique se o pedido foi realmente adicionado ao carrinho
-    if (!empty($_SESSION['carrinho'])) {
-        // Redirecionar para a página de visualização do carrinho
-        header('Location: carrinho.php');
-        exit;
-    } else {
-        echo "Erro: Não foi possível adicionar o pedido ao carrinho.";
-    }
+    // Vai para a página do carrinho
+    header('Location: carrinho.php');
+    exit;
 }
 ?>
 
@@ -48,19 +39,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <title>Faça seu Pedido</title>
     <link rel="stylesheet" href="styles/pedido.css">
     <script>
+        // Atualiza os sabores da pizza com base no tamanho
         function atualizarSabores() {
             var tamanho = document.getElementById('tamanho').value;
             var saboresContainer = document.getElementById('sabores_container');
 
-            // Limpar os sabores atuais
+            // Limpa os sabores antigos
             saboresContainer.innerHTML = '';
 
-            var numSabores = 1; // padrão para pizza pequena
-            if (tamanho === 'media') numSabores = 2;
-            else if (tamanho === 'grande') numSabores = 3;
-            else if (tamanho === 'gigante') numSabores = 4;
+            // Define quantos sabores escolher
+            var numSabores = tamanho === 'pequena' ? 1 : (tamanho === 'media' ? 2 : (tamanho === 'grande' ? 3 : 4));
 
-            // Criar campos de sabores com base no tamanho
+            // Adiciona os campos de sabores
             for (var i = 1; i <= numSabores; i++) {
                 var label = document.createElement('label');
                 label.innerHTML = 'Sabor ' + i + ':';
@@ -69,8 +59,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 select.name = 'sabores[]';
                 select.required = true;
 
-                // Opções de sabores
-                var sabores = ['Calabresa', 'Queijo', 'Hortelã', 'Frango com Catupiry', 'Atum'];
+                // Lista de sabores
+                var sabores = [
+                    'Banana Caramelizada',
+                    'Brocolis com bacon',
+                    'Burrata',
+                    'Charge',
+                    'CheeseCake',
+                    'Chocolate ao Leite com M&M´s',
+                    'Chocolate Branco com M&M´s',
+                    'Filé de frango com champignon',
+                    'Frango Exótico',
+                    'Lombo Canadense',
+                    'Levíssimo Seara',
+                    'Marguerita Especial',
+                    'Marshmallow com Kit Kat®',
+                    'Pepperoni',
+                    'Presunto Alemão com Tomate Cereja',
+                    'Presunto com Champignon',
+                    'Quatro Queijos',
+                    'Romeu e Julieta',
+                    'Sensação',
+                    'Tomate Seco com Rúcula'
+                ];
+
+                // Adiciona os sabores ao select
                 sabores.forEach(function(sabor) {
                     var option = document.createElement('option');
                     option.value = sabor;
@@ -78,16 +91,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     select.appendChild(option);
                 });
 
+                // Adiciona o campo de sabor ao container
                 saboresContainer.appendChild(label);
                 saboresContainer.appendChild(select);
                 saboresContainer.appendChild(document.createElement('br'));
             }
         }
 
+        // Mostra ou esconde a seção de bebidas
         function toggleBebida() {
             var checkbox = document.getElementById('escolher_bebida');
             var bebidasContainer = document.getElementById('bebidas_container');
-            bebidasContainer.style.display = checkbox.checked ? 'block' : 'none';
+            bebidasContainer.style.display = checkbox.checked ? 'block' : 'none'; // Mostra ou esconde
         }
     </script>
 </head>
@@ -104,7 +119,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </select>
 
             <div id="sabores_container">
-                <!-- Campos de sabores serão gerados dinamicamente aqui -->
+                <!-- Campos de sabores vão aqui -->
             </div>
 
             <label for="quantidade">Quantidade:</label>
@@ -126,5 +141,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <button type="submit">Adicionar ao Carrinho</button>
         </form>
     </div>
+
+    <script>
+        // Chama a função para atualizar os sabores quando a página carrega
+        atualizarSabores();
+    </script>
 </body>
 </html>
