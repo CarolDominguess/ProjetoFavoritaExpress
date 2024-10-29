@@ -14,10 +14,12 @@
     <div class="container">
         <div class="menu">
             <a href="admin_pedidos.php">Pedidos</a>
-            <a href="produtos.php">Gerenciar Produtos</a>
+            <a href="listarproduto.php">Gerenciar Produtos</a>
             <a href="lista_funcionarios.php">Funcionários</a>
             <a href="relatorios.php">Relatórios</a>
+            <a href="listaralteracoes.php">Preços</a>
             <a href="listar_fornecedores.php">Fornecedores</a> <!-- Link adicionado -->
+            <a href="index.php">Sair</a>
         </div>
 
         <div class="content">

@@ -1,4 +1,6 @@
 <?php
+session_start(); // Inicie a sessão
+
 // Conecte-se ao banco de dados
 $servername = "localhost";
 $username = "root";
@@ -12,15 +14,28 @@ if ($conn->connect_error) {
 }
 
 // Verifique se o status foi alterado e atualizado no banco de dados
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['pedido_id'])) {
-    $pedido_id = $_POST['pedido_id'];
-    $novo_status = $_POST['status'];
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if (isset($_POST['pedido_id']) && isset($_POST['status'])) {
+        $pedido_id = $_POST['pedido_id'];
+        $novo_status = $_POST['status'];
 
-    // Atualize o status do pedido no banco de dados
-    $stmt = $conn->prepare("UPDATE pedidos SET status = ? WHERE id = ?");
-    $stmt->bind_param("si", $novo_status, $pedido_id);
-    $stmt->execute();
-    $stmt->close();
+        // Atualize o status do pedido no banco de dados
+        $stmt = $conn->prepare("UPDATE pedidos SET status = ? WHERE id = ?");
+        $stmt->bind_param("si", $novo_status, $pedido_id);
+        $stmt->execute();
+        $stmt->close();
+    }
+
+    // Verifique se a solicitação é para remover um pedido da lista
+    if (isset($_POST['remove_id'])) {
+        $remove_id = $_POST['remove_id'];
+        
+        // Adiciona o pedido à sessão de removidos
+        if (!isset($_SESSION['removed_orders'])) {
+            $_SESSION['removed_orders'] = [];
+        }
+        $_SESSION['removed_orders'][] = $remove_id;
+    }
 }
 
 // Obter todos os pedidos
@@ -35,10 +50,22 @@ $result = $conn->query($sql);
     <title>Administração de Pedidos</title>
     <link rel="stylesheet" href="styles/admin_pedidos.css">
     <script>
-        function removeRow(button) {
-            console.log("Botão clicado!"); // Log para verificar se a função é chamada
-            var row = button.parentNode.parentNode; // Obtém a linha
-            row.classList.add("hide-row"); // Adiciona a classe que esconde a linha
+        function removeRow(button, pedidoId) {
+            if (confirm("Tem certeza que deseja remover este pedido da lista?")) {
+                // Cria um formulário temporário para enviar a solicitação de remoção
+                var form = document.createElement("form");
+                form.method = "POST";
+                form.action = "";
+
+                var input = document.createElement("input");
+                input.type = "hidden";
+                input.name = "remove_id";
+                input.value = pedidoId;
+
+                form.appendChild(input);
+                document.body.appendChild(form);
+                form.submit();
+            }
         }
     </script>
 </head>
@@ -64,6 +91,10 @@ $result = $conn->query($sql);
                 <?php
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
+                        // Verifica se o pedido foi removido da lista
+                        if (isset($_SESSION['removed_orders']) && in_array($row['id'], $_SESSION['removed_orders'])) {
+                            continue; // Pula a iteração se o pedido estiver na lista removida
+                        }
                         echo "<tr>";
                         echo "<td>{$row['id']}</td>";
                         echo "<td>{$row['nome']}</td>";
@@ -84,7 +115,7 @@ $result = $conn->query($sql);
                                     </select>
                                 </form>
                               </td>";
-                        echo "<td><a href='ver_pedido.php?id={$row['id']}'>Ver detalhes</a> | <button class='remove-btn' onclick='removeRow(this)'>Remover da Lista</button></td>";
+                        echo "<td><a href='ver_pedido.php?id={$row['id']}'>Ver detalhes</a> | <button class='remove-btn' onclick='removeRow(this, {$row['id']})'>Remover da Lista</button></td>";
                         echo "</tr>";
                     }
                 } else {
@@ -93,6 +124,7 @@ $result = $conn->query($sql);
                 ?>
             </tbody>
         </table>
+        <a id="voltar" href="admin_pizzaria.php">Voltar para Painel</a>
     </div>
 </body>
 </html>

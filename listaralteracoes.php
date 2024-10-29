@@ -2,7 +2,7 @@
 <html lang="en">
 <head>    
     <title>Favorita Express</title>
-	<link rel="stylesheet" href=".//styles.css">
+	<link rel="stylesheet" href="./styles/alteracoes.css">
 </head>
 <body>
 	<h2 id="texto">Lista de precos</h2>

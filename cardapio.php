@@ -15,7 +15,7 @@
 <body>
 <div id="scroll">
     <a href="tamanho.php" id="inscreva-se-btn2"><li id="text">Voltar</li></a>
-    <a href="https://wa.me//5544999604040?text=Olá,%20gostaria%20de%20realizar%20um%20pedido!!" id="inscreva-se-btn"><li id="text">Faça seu pedido</li></a>
+    <a href="pedido.php" id="inscreva-se-btn"><li id="text">Faça seu pedido</li></a>
     <h1 id="sabores1">Opçoes de Sabores</h1>
     <div id="caixa">
         <div id="pizza1"><p id="texto1">Brocolis com bacon</p></div>

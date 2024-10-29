@@ -40,7 +40,7 @@
     <a id="textolocal" href="localização.php">Localização</a>
     </div>
     <div id="menudireito">
-        <a href="https://wa.me//5544999604040?text=Olá,%20gostaria%20de%20realizar%20um%20pedido!!" id="inscreva-se-btn" style="color: #f8dddd;"><li id="text">Faça seu pedido</li></a>
+        <a href="pedido.php" id="inscreva-se-btn" style="color: #f8dddd;"><li id="text">Faça seu pedido</li></a>
     </div>
     </header>
     <body>

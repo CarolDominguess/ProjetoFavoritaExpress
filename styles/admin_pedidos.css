@@ -117,3 +117,10 @@ footer {
 .hide-row {
     display: none; /* Esconde a linha */
 }
+
+#voltar{
+    position: relative;
+    top: -847px;
+    right: -12px;
+    
+}
