@@ -47,7 +47,7 @@
     </div>
     </header>
     <h2 id="texto">The Best Pizza in Town</h2>
-    <h2 id="texto2">Sabores totalmente autenticos</h2>
+    <h2 id="texto2">Sabores totalmente autênticos</h2>
     <div id="botaoembaixo">
         <a href="acompanhar_pedido.php" id="botaobaixo"><li id="textbaixo">Acompanhar Pedido</li></a>
     </div>
