@@ -27,7 +27,7 @@ body {
 /* Cabeçalho */
 h1 {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     color: #333;
     font-size: 1.8rem;
     font-weight: 600;
@@ -42,12 +42,13 @@ table {
 }
 
 thead {
-    background-color: #007bff;
+    background-color: #d2a01c;
     color: #fff;
+    height: 42px;
 }
 
 th, td {
-    padding: 12px;
+    padding: 6px;
     text-align: left;
 }
 
@@ -66,12 +67,13 @@ tbody tr:hover {
 
 /* Botão de ação - botão remover ajustado */
 .remove-btn {
-    background-color: #dc3545;
+    background-color: #ca0808;
     color: #fff;
-    padding: 8px 15px;
+    padding: 6px 13px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 11px;
     font-weight: 600;
     transition: background-color 0.3s ease;
 }
@@ -101,7 +103,7 @@ select {
 }
 
 select:hover, select:focus {
-    border-color: #007bff;
+    border-color: #87d48c;
 }
 
 /* Melhorando o layout do rodapé */

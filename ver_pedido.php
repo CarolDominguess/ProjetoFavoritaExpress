@@ -84,8 +84,8 @@ $sabores = isset($pedido['sabores']) ? explode(",", $pedido['sabores']) : [];
                 <?php
                 // Certifique-se de que 'tamanho', 'bebida', 'sabores' e 'quantidade' estão no banco de dados
                 // Se não existirem, ajuste de acordo com a estrutura do banco
-                $tamanho = isset($pedido['tamanho']) ? $pedido['tamanho'] : 'Indefinido';
-                $bebida = isset($pedido['bebida']) ? $pedido['bebida'] : 'Indefinido';
+                $tamanho = isset($pedido['tamanho_pizza']) ? $pedido['tamanho_pizza'] : 'Indefinido';
+                $bebida = isset($pedido['bebida']) ? $pedido['bebida'] : 'Sem bebidas';
                 $quantidade = isset($pedido['quantidade']) ? $pedido['quantidade'] : 1;  // A quantidade pode vir da tabela
                 $sabores_str = !empty($sabores) ? implode(", ", $sabores) : 'Sem sabores';
 
