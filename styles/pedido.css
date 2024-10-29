@@ -64,8 +64,9 @@ select:focus, input[type="number"]:focus {
 }
 
 input[type="checkbox"] {
+    margin-top: -15px;
     width: auto;
-    margin-right: 10px;
+    margin-right: 274px;
 }
 
 #bebidas_container {

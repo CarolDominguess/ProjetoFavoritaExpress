@@ -131,10 +131,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div id="bebidas_container" style="display: none;">
                 <label for="bebida">Escolha sua bebida:</label>
                 <select id="bebida" name="bebida">
-                    <option value="coca-cola">Coca-Cola</option>
-                    <option value="fanta">Fanta</option>
-                    <option value="guarana">Guaraná</option>
-                    <option value="suco-laranja">Suco de Laranja</option>
+                    <option value="coca-cola">Coca-Cola (lata): R$ 5,00</option>
+                    <option value="fanta">Fanta (lata): R$ 5,00</option>
+                    <option value="guarana">Guaraná (lata): R$ 4,00</option>
+                    <option value="suco-laranja">Suco de Laranja (300 ml): R$ 8,00</option>
+                    <option value="agua-sem-gas">Água mineral (500 ml): R$ 3,00</option>
+                    <option value="agua-com-gas">Água com gás: R$ 4,00</option>
                 </select>
             </div>
 

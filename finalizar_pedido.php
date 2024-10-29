@@ -95,6 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 ?>
 
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -102,16 +103,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="styles/finalizar_pedido.css">
     <script>
         function toggleEndereco() {
-            var formaEntrega = document.querySelector('input[name="forma_entrega"]:checked');
+            var formaEntrega = document.getElementById('forma_entrega').value;
             var enderecoContainer = document.getElementById('endereco_container');
             var totalContainer = document.getElementById('total_container');
-
-            if (!formaEntrega) {
-                alert("Por favor, selecione a forma de entrega.");
-                return;
-            }
-
-            formaEntrega = formaEntrega.value;
 
             if (formaEntrega === 'entrega') {
                 enderecoContainer.style.display = 'block';
@@ -123,13 +117,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
         function validateForm() {
-            var formaEntrega = document.querySelector('input[name="forma_entrega"]:checked');
-            if (!formaEntrega) {
-                alert("Por favor, selecione a forma de entrega.");
-                return false;
-            }
+            var formaEntrega = document.getElementById('forma_entrega').value;
 
-            if (formaEntrega.value === 'entrega') {
+            if (formaEntrega === 'entrega') {
                 var endereco = document.getElementById('endereco').value;
                 if (!endereco) {
                     alert("Por favor, informe o endereço de entrega.");
@@ -155,11 +145,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <label for="telefone">Telefone:</label>
             <input type="text" id="telefone" name="telefone" required>
 
-            <label>Forma de Entrega:</label>
-            <input type="radio" id="entrega" name="forma_entrega" value="entrega" onclick="toggleEndereco()" required>
-            <label for="entrega">Entrega</label>
-            <input type="radio" id="retirada" name="forma_entrega" value="retirada" onclick="toggleEndereco()" required>
-            <label for="retirada">Retirada</label>
+            <label for="forma_entrega">Forma de Entrega:</label>
+            <select id="forma_entrega" name="forma_entrega" onchange="toggleEndereco()" required>
+                <option value="">Selecione</option>
+                <option value="entrega">Entrega</option>
+                <option value="retirada">Retirada</option>
+            </select>
 
             <div id="endereco_container" style="display: none;">
                 <label for="endereco">Endereço de Entrega:</label>
