@@ -1,5 +1,5 @@
 <?php
-// Exibir erros
+// Mostrar erros na tela
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -7,32 +7,32 @@ error_reporting(E_ALL);
 session_start();
 
 // Conectar ao banco de dados
-$servername = "localhost";
-$username = "root"; // Usuário do banco de dados
-$password = ""; // Senha do banco de dados
-$dbname = "sistemaunipar"; // Nome do banco de dados
+$servidor = "localhost";
+$usuario = "root";
+$senha = "";
+$banco = "sistemaunipar";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servidor, $usuario, $senha, $banco);
 
-// Verifica a conexão
+// Verificar conexão
 if ($conn->connect_error) {
-    die("Falha na conexão: " . $conn->connect_error);
+    die("Erro na conexão: " . $conn->connect_error);
 }
 
-// Variável para armazenar a mensagem de sucesso ou erro
+// Mensagem de sucesso ou erro
 $mensagem = "";
 
-// Verifica se a requisição de exclusão foi feita
+// Se clicou em excluir
 if (isset($_POST['excluir'])) {
     $funcionario_id = $_POST['funcionario_id'];
 
-    // SQL para excluir o funcionário
+    // Apagar o funcionário
     $sql = "DELETE FROM funcionarios WHERE id = $funcionario_id";
 
     if ($conn->query($sql) === TRUE) {
         $mensagem = "Funcionário excluído com sucesso!";
     } else {
-        $mensagem = "Erro ao excluir funcionário: " . $conn->error;
+        $mensagem = "Erro ao excluir: " . $conn->error;
     }
 }
 
@@ -41,6 +41,11 @@ $sql = "SELECT f.id, f.nome, f.cargo, f.data_admissao, s.nome AS setor
         FROM funcionarios f
         JOIN setores s ON f.setor_id = s.id";
 $result = $conn->query($sql);
+
+// Se der erro na consulta
+if ($result === false) {
+    die("Erro na consulta: " . $conn->error);
+}
 ?>
 
 <!DOCTYPE html>
@@ -80,7 +85,7 @@ $result = $conn->query($sql);
                 </tr>
             </thead>
             <tbody>
-                <?php if ($result->num_rows > 0): ?>
+                <?php if ($result && $result->num_rows > 0): ?>
                     <?php while ($row = $result->fetch_assoc()): ?>
                         <tr>
                             <td><?php echo htmlspecialchars($row['id']); ?></td>
@@ -106,7 +111,7 @@ $result = $conn->query($sql);
     </div>
 
     <script>
-        // Função para esconder a mensagem após 2 segundos
+        // Esconder a mensagem depois de 2 segundos
         document.addEventListener('DOMContentLoaded', (event) => {
             const mensagem = document.querySelector('.mensagem-resultado');
             if (mensagem) {
@@ -114,16 +119,17 @@ $result = $conn->query($sql);
                     mensagem.style.opacity = 0;
                     setTimeout(() => {
                         mensagem.style.display = 'none';
-                    }, 1500); // Tempo para a transição de opacidade
-                }, 1000); // Tempo antes de esconder (2 segundos)
+                    }, 1500);
+                }, 1000);
             }
         });
     </script>
 </body>
+<a id="voltar" href="admin_pizzaria.php">Voltar para Painel</a>
 
 </html>
 
 <?php
-// Fechar a conexão com o banco de dados
+// Fechar a conexão com o banco
 $conn->close();
 ?>

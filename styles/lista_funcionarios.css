@@ -94,7 +94,7 @@ button.button-excluir:hover {
 
 .button-adicionar {
     display: inline-block;
-    background-color: #3498db;
+    background-color: #34db7a;
     color: white;
     padding: 10px 20px;
     border-radius: 4px;
@@ -105,7 +105,7 @@ button.button-excluir:hover {
 }
 
 .button-adicionar:hover {
-    background-color: #2980b9;
+    background-color: #29b93f;
     transform: scale(1.05);
 }
 
@@ -142,4 +142,18 @@ button.button-excluir:hover {
         font-weight: bold;
         white-space: nowrap;
     }
+}
+
+#voltar {
+    position: fixed;
+    bottom: 490px;
+    left: 140px;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
 }
