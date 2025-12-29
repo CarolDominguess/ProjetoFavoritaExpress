@@ -1,22 +1,23 @@
+# Análise de Usabilidade em E-commerces
 
-# Favorita Express
+📌 Este projeto corresponde ao meu **Trabalho de Conclusão de Curso (TCC)**, desenvolvido com foco na área de **Qualidade de Software (QA)** e **Experiência do Usuário (UX)**.
 
-📌Este projeto foi desenvolvido por mim e minha colega de classe com o objetivo de criar um sistema completo, incluindo toda a documentação, para uma empresa local.
+💡 A proposta do trabalho foi analisar como as **Heurísticas de Usabilidade de Jakob Nielsen** impactam a experiência do usuário em plataformas de e-commerce amplamente utilizadas.
 
-💡Nossa proposta consistiu em criar um cardápio virtual aprimorado, de fácil visualização, em um novo site para a empresa.
+## 🎯 Objetivo
+
+Avaliar e comparar a usabilidade de dois grandes e-commerces — **Mercado Livre** e **eBay** — identificando pontos fortes, falhas de interface e oportunidades de melhoria sob a ótica de QA e UX.
 
 ## 📚 Documentação
 
-📄[FavoritaExpress](https://erratic-beet-0ba.notion.site/Documenta-o-Projeto-Pizzaria-fb75e3bc2ed4488aaaea4bc4ab36a81a?pvs=4)
+📄 TCC completo disponível em PDF neste repositório
 
+## 🚀 Análises e Contribuições para QA
 
-## 🚀Melhorias
+📌 Foi realizada uma análise detalhada de usabilidade baseada nas **10 Heurísticas de Nielsen**, permitindo identificar inconsistências de interface, problemas de navegação e pontos que impactam negativamente a experiência do usuário.
 
-📌Foram feitas melhorias significativas na estética do site empresarial. O visual renovado agora oferece uma experiência mais atraente e agradável para os visitantes. Através da aplicação de um design mais moderno, elementos visuais harmoniosos e uma paleta de cores aprimorada, conseguimos elevar a qualidade estética do site, tornando-o mais convidativo e profissional. 
+✔ A partir dessa avaliação, foram levantadas oportunidades de melhoria relacionadas à clareza das informações, feedback do sistema, prevenção de erros e consistência visual. O trabalho também contou com a **coleta de feedback de usuários reais**, fortalecendo a análise sob a perspectiva do usuário final, prática essencial na área de QA.
 
-✔Adicionalmente, introduzimos um sistema de autenticação e registro exclusivo para administradores. Isso possibilita a realização de modificações nos preços dos itens de pizza disponíveis no site. Além disso, criamos uma funcionalidade que simplifica o processo de cadastro de produtos no estoque, permitindo, inclusive, a inclusão das datas de vencimento de cada item. Também desenvolvemos um painel de gerenciamento de pedidos e seus estados de processamento. Isso torna mais eficiente a tarefa de acompanhamento dos pedidos para a equipe responsável no balcão, garantindo que possam verificar facilmente o status de cada pedido, incluindo se ele está pronto ou não.
+## ✨ Considerações Finais
 
-✨Prévia da tela inicial
-
-<img width="960" alt="Captura de tela 2023-11-01 205154" src="https://github.com/CarolDominguess/ProjetoFavoritaExpress/assets/104910331/1d5f1b39-3d3c-4a1d-b040-899ddf8d082e">
-
+Este projeto evidencia a importância da **usabilidade como critério de qualidade de software**, demonstrando habilidades relevantes para atuação como **QA Júnior / Estagiária**, especialmente em testes manuais, testes exploratórios e análise de experiência do usuário.
